@@ -27,7 +27,7 @@ const readmeContent = `# [forge-dapp-starters](https://github.com/ArcBlock/forge
 
 ## Packages Included
 
-${packageList.concat(packageList).join('\n')}
+${packageList.join('\n')}
 
 ## Contribution
 
