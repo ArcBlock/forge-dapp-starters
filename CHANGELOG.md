@@ -1,3 +1,6 @@
+## 0.22.2 (May 30, 2019)
+
+
 ## 0.11.1 (May 30, 2019)
   - Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters
   - fix: repo name
