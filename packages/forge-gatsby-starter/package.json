@@ -1,0 +1,101 @@
+{
+  "name": "forge-gatsby-starter",
+  "version": "0.10.1",
+  "private": true,
+  "description": "dApp starter build with gatsby and xmark that can run on forge powered blockchain",
+  "scripts": {
+    "lint": "eslint api src",
+    "clean": "rm -rf public api/dist",
+    "serve": "gatsby serve",
+    "build:gatsby": "gatsby build",
+    "build:api": "netlify-lambda build api/functions",
+    "build": "npm run clean && npm-run-all build:*",
+    "start:gatsby": "gatsby develop --host 0.0.0.0",
+    "start:api": "nodemon api/index.js -w api",
+    "start": "npm-run-all --parallel start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcBlock/forge-javascript-starters.git"
+  },
+  "keywords": [],
+  "author": "wangshijun <shijun@arcblock.io> (http://github.com/wangshijun)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ArcBlock/forge-javascript-starters/issues"
+  },
+  "homepage": "https://github.com/ArcBlock/forge-javascript-starters#readme",
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx,css,less,scss,json,graphql}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@arcblock/did": "^0.28.0",
+    "@arcblock/did-auth": "^0.28.0",
+    "@arcblock/did-auth-storage-mongo": "0.21.1",
+    "@arcblock/did-util": "^0.28.0",
+    "@arcblock/forge-util": "^0.28.0",
+    "@arcblock/forge-wallet": "^0.28.0",
+    "@arcblock/gatsby-config": "^3.76.0",
+    "@arcblock/gatsby-theme": "^3.75.0",
+    "@arcblock/graphql-client": "^0.28.0",
+    "@arcblock/mcrypto": "^0.28.0",
+    "@arcblock/react-forge": "^0.5.13",
+    "@arcblock/react-hooks": "^0.5.0",
+    "@babel/polyfill": "^7.4.4",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "date-and-time": "^0.6.3",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "express-bearer-token": "^2.4.0",
+    "flat": "^4.1.0",
+    "gatsby": "2.3.23",
+    "js-cookie": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "mongoose": "5.4.23",
+    "morgan": "^1.9.1",
+    "multibase": "^0.6.0",
+    "prop-types": "^15.7.2",
+    "qrcode.react": "^0.9.3",
+    "react": "^16.8.6",
+    "react-content-loader": "^4.2.1",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-jss": "^8.6.1",
+    "react-use": "^8.4.0",
+    "serverless-http": "^2.0.1",
+    "store": "^2.0.12",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "netlify-lambda": "^1.4.7",
+    "npm-run-all": "^4.1.5",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  }
+}
