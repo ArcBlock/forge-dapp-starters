@@ -1,4 +1,4 @@
-# [forge-javascript-starters](https://github.com/ArcBlock/forge-javascript-starters)
+# [forge-dapp-starters](https://github.com/ArcBlock/forge-dapp-starters)
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 [![docs](https://img.shields.io/badge/powered%20by-arcblock-green.svg)](https://docs.arcblock.io)
@@ -20,7 +20,7 @@ Checkout [CONTRIBUTION.md](./CONTRIBUTION.md)
 
 ## Report a Bug?
 
-Bugs and feature requests please create new issues [here](https://github.com/ArcBlock/forge-javascript-starters/issues)
+Bugs and feature requests please create new issues [here](https://github.com/ArcBlock/forge-dapp-starters/issues)
 
 ## License
 

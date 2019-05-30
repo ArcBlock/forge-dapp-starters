@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ArcBlock/forge-javascript-starters.git"
+    "url": "git@github.com:ArcBlock/forge-dapp-starters.git"
   },
   "remarkConfig": {
     "plugins": [
@@ -37,7 +37,7 @@
       [
         "validate-links",
         {
-          "repository": "ArcBlock/forge-javascript-starters"
+          "repository": "ArcBlock/forge-dapp-starters"
         }
       ]
     ]

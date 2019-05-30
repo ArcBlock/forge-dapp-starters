@@ -10,13 +10,13 @@
     "react",
     "javascript"
   ],
-  "homepage": "https://github.com/ArcBlock/forge-javascript-starters/tree/master/packages/forge-react-starter",
+  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ArcBlock/forge-javascript-starters/tree/master/packages/forge-react-starter"
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter"
   },
   "bugs": {
-    "url": "https://github.com/ArcBlock/forge-javascript-starters/issues",
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/issues",
     "email": "shijun@arcblock.io"
   },
   "proxy": "http://0.0.0.0:8000",

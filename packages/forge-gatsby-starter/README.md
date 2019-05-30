@@ -77,8 +77,8 @@ npm start
 > **Note: You have to setup an `.env` file manually.**
 
 ```terminal
-git clone https://github.com/ArcBlock/forge-javascript-starters.git
-cd forge-javascript-starters/packages/forge-gatsby-starter
+git clone https://github.com/ArcBlock/forge-dapp-starters.git
+cd forge-dapp-starters/packages/forge-gatsby-starter
 yarn
 ```
 
