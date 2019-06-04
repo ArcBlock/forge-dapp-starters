@@ -11,10 +11,10 @@
     "react",
     "javascript"
   ],
-  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/starters/forge-next-starter",
+  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-next-starter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/starters/forge-next-starter"
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-next-starter"
   },
   "bugs": {
     "url": "https://github.com/ArcBlock/forge-dapp-starters/issues",
