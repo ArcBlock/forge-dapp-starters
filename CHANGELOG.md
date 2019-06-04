@@ -1,3 +1,8 @@
+## 0.22.3 (June 05, 2019)
+  - fix: starter spec file config section
+  - fix: forge-next-starter package.json
+  - update readme
+
 ## 0.22.2 (May 30, 2019)
 
 
