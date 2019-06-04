@@ -92,13 +92,13 @@ MONGO_URI="mongodb://localhost/forge-gatsby-starter"
 APP_TOKEN_SECRET="you_should_change_this"
 APP_TOKEN_TTL="1d"
 APP_SK="0x830985b12c7dca7b08def3aeb1a1412483948805ef93aa915cac2bc933677796bb7518ab0158039f0a2cea9ba8da3d858f9d5391c9b142d5ceddbe7500002983"
+
 # both server and browser
 GATSBY_CHAIN_ID="zinc-2019-05-17"
 GATSBY_CHAIN_HOST="https://zinc.abtnetwork.io/api"
 GATSBY_APP_ID="zNKoPxe6NbG1s621V6SHfaVNh8BDbfCKLeQW"
 GATSBY_APP_NAME="Forge Gatsby Starter"
 GATSBY_BASE_URL="http://192.168.233.224:3000"
-GATSBY_COURSE_ID="zje1MSVqhaHE4qvYVMYiZbvqr3iwVBD872u6"
 GATSBY_API_PREFIX=""
 ```
 

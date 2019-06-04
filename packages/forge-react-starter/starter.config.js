@@ -149,17 +149,21 @@ module.exports = {
 
     // Generate config
     const configPath = path.join(`${targetDir}`, '.env');
-    const configContent = `MONGO_URI="${mongoUri}"
-CHAIN_ID="${chainId}"
-CHAIN_HOST="${chainHost.replace('127.0.0.1', ipAddress).replace('localhost', ipAddress)}"
-APP_NAME="${appName}"
-APP_DESCRIPTION="${appDescription}"
-APP_PORT="${appPort}"
-APP_SK="${wallet.secretKey}"
-APP_ID="${wallet.toAddress()}"
+    const configContent = `# server only
+MONGO_URI="${mongoUri}"
 APP_TOKEN_SECRET="${wallet.publicKey.slice(16)}"
 APP_TOKEN_TTL="1d"
-BASE_URL="http://${ipAddress}:${appPort}"`;
+APP_SK="${wallet.secretKey}"
+APP_PORT="${appPort}"
+
+# both server and client
+REACT_APP_CHAIN_ID="${chainId}"
+REACT_APP_CHAIN_HOST="${chainHost.replace('127.0.0.1', ipAddress).replace('localhost', ipAddress)}"
+REACT_APP_APP_NAME="${appName}"
+REACT_APP_APP_DESCRIPTION="${appDescription}"
+REACT_APP_APP_ID="${wallet.toAddress()}"
+REACT_APP_BASE_URL="http://${ipAddress}:${appPort}"
+REACT_APP_API_PREFIX=""`;
     fs.writeFileSync(configPath, configContent);
     console.log(`${symbols.success} application config generated ${configPath}`);
   },
