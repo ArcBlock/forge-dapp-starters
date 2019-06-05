@@ -21,7 +21,7 @@ User.add({
     initial: true,
   },
   name: { type: types.Text, label: '用户名', required: false },
-  email: { type: types.Text, label: '手机号', required: false },
+  email: { type: types.Text, label: '邮箱', required: false },
 });
 
 User.defaultColumns = 'did, name, email, createdAt, updatedAt';
