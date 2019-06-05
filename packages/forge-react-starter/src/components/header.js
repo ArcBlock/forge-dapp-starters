@@ -63,7 +63,7 @@ export default function Header() {
         )}
       </div>
       <div className="nav-right">
-        <Button href="https://github.com/ArcBlock/forge-react-starter" className="github" target="_blank">
+        <Button href="https://github.com/ArcBlock/forge-dapp-starters" className="github" target="_blank">
           GitHub
         </Button>
         {session.loading && (

@@ -69,7 +69,7 @@ Other javascript project goodies:
 ### Create new project with forge-cli
 
 ```terminal
-npm install -g @arcblock/forge-cli forge-next-starter
+npm install -g @arcblock/forge-cli forge-keystone-starter
 forge init
 forge start
 forge create-project hello-forge

@@ -9,6 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
 import Layout from '../components/layout';
+import { name } from '../../package.json';
 
 const graphqlDemos = [
   {
@@ -95,7 +96,7 @@ export default function IndexPage() {
           <div className="section__body quickstart">
             <code>
               <pre>
-                npm install -g @arcblock/forge-cli
+                npm install -g @arcblock/forge-cli {name}
                 <br />
                 forge init
                 <br />
