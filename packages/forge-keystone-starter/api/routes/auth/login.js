@@ -1,7 +1,9 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable no-console */
-const { User } = require('../../models');
+const keystone = require('keystone');
 const { login } = require('../../libs/jwt');
+
+const User = keystone.list('User').model;
 
 const description = {
   en: 'Sign this transaction to receive 25 TBA for test purpose',

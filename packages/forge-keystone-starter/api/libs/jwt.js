@@ -1,7 +1,9 @@
 /* eslint-disable no-underscore-dangle */
 const jwt = require('jsonwebtoken');
+const keystone = require('keystone');
 const debug = require('debug')(require('../../package.json').name);
-const { User } = require('../models');
+
+const User = keystone.list('User').model;
 
 if (!process.env.APP_TOKEN_SECRET) {
   throw new Error('APP_TOKEN_SECRET must be set to start the application');

@@ -1,23 +1,13 @@
 /* eslint-disable no-console */
+const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
 const express = require('express');
-const serverless = require('serverless-http');
+const keystone = require('keystone');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const bearerToken = require('express-bearer-token');
-
-// ------------------------------------------------------------------------------
-// Routes: due to limitations of netlify functions, we need to import routes here
-// ------------------------------------------------------------------------------
-const { decode } = require('../libs/jwt');
-const { handlers, client, wallet } = require('../libs/auth');
-const loginAuth = require('../routes/auth/login');
-const paymentAuth = require('../routes/auth/payment');
-const checkinAuth = require('../routes/auth/checkin');
-const sessionRoutes = require('../routes/session');
-const paymentsRoutes = require('../routes/payments');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -43,9 +33,33 @@ mongoose.connection.on('reconnected', () => {
   console.log('Reconnected to MongoDB');
 });
 
+// Initialize keystone
+keystone.init({
+  name: process.env.APP_NAME,
+  brand: process.env.APP_NAME,
+  'module root': path.resolve(__dirname, '../'),
+  'auto update': true || process.env.NODE_ENV === 'production',
+  'user model': 'Admin',
+  session: true,
+  'cookie secret': process.env.COOKIE_SECRET,
+  'admin path': 'admin',
+  'signout url': '/admin/signout',
+  'signin url': '/admin/signout',
+  auth: true,
+});
+keystone.initExpressSession(keystone.mongoose);
+keystone.import('models');
+keystone.set('nav', {
+  应用: ['users'],
+  系统: ['admins'],
+});
+keystone.initDatabaseConfig();
+
 // Create and config express application
 const server = express();
-server.use(cookieParser());
+server.disable('x-powered-by');
+server.set('trust proxy', true);
+server.use(cookieParser(process.env.COOKIE_SECRET));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(cors());
@@ -71,6 +85,18 @@ server.use(
   })
 );
 
+// ------------------------------------------------------------------------------
+// Routes: due to limitations of netlify functions, we need to import routes here
+// ------------------------------------------------------------------------------
+const { decode } = require('../libs/jwt');
+const { handlers, client, wallet } = require('../libs/auth');
+const loginAuth = require('../routes/auth/login');
+const paymentAuth = require('../routes/auth/payment');
+const checkinAuth = require('../routes/auth/checkin');
+const sessionRoutes = require('../routes/session');
+const paymentsRoutes = require('../routes/payments');
+
+// Auth routes
 server.use(bearerToken());
 server.use((req, res, next) => {
   if (!req.token) {
@@ -88,15 +114,16 @@ server.use((req, res, next) => {
     });
 });
 
+// API routes
 const router = express.Router();
-
 handlers.attach(Object.assign({ app: router }, loginAuth));
 handlers.attach(Object.assign({ app: router }, checkinAuth));
 handlers.attach(Object.assign({ app: router }, paymentAuth));
 sessionRoutes.init(router);
 paymentsRoutes.init(router);
+server.use(router);
 
-// Check for application account
+// Application start requirements
 client
   .getAccountState({ address: wallet.address })
   .then(res => {
@@ -118,24 +145,11 @@ client
     process.exit(1);
   });
 
-// ------------------------------------------------------
-// This is required by netlify functions
-// ------------------------------------------------------
-if (isProduction) {
-  server.use('/.netlify/functions/app', router);
-  server.use((req, res) => {
-    res.status(404).send('404 NOT FOUND');
-  });
+// Admin routes
+server.use(express.static('api/static'));
+server.use('/admin', keystone.get('session options').cookieParser, keystone.expressSession, keystone.session.persist);
+server.use('/admin', keystone.Admin.Server.createStaticRouter(keystone));
+server.use('/admin', keystone.Admin.Server.createDynamicRouter(keystone));
 
-  // eslint-disable-next-line no-unused-vars
-  server.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-  });
-} else {
-  server.use(router);
-}
-
-// Make it serverless
-exports.handler = serverless(server);
 exports.server = server;
+exports.keystone = keystone;

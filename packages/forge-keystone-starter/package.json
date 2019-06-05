@@ -21,6 +21,8 @@
     "email": "shijun@arcblock.io"
   },
   "scripts": {
+    "postinstall": "yarn patch",
+    "patch": "node tools/patch.js",
     "lint": "eslint api src app.js",
     "build": "next build src",
     "clean": "rm -rf src/dist api/dist",

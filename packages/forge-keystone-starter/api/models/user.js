@@ -1,14 +1,28 @@
-const mongoose = require('mongoose');
+const keystone = require('keystone');
+const types = keystone.Field.Types;
 
-const UserSchema = new mongoose.Schema({
-  did: { type: String, required: true },
-  name: { type: String, required: true },
-  email: { type: String, default: '' },
-  mobile: { type: String, default: '' },
-  createdAt: { type: Date },
-  updatedAt: { type: Date },
+const User = new keystone.List('User', {
+  label: '用户',
+  plural: '用户',
+  track: true,
+  noedit: true,
+  nodelete: true,
+  map: { name: 'did' },
+  searchFields: 'did name email',
+  defaultSort: '-createdAt',
+  schema: { collection: 'users' },
 });
 
-const User = mongoose.model('User', UserSchema);
+User.add({
+  did: {
+    type: types.Text,
+    label: '用户ID',
+    required: true,
+    initial: true,
+  },
+  name: { type: types.Text, label: '用户名', required: false },
+  email: { type: types.Text, label: '手机号', required: false },
+});
 
-module.exports = User;
+User.defaultColumns = 'did, name, email, createdAt, updatedAt';
+User.register();
