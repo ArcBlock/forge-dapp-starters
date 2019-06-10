@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@arcblock/did-auth-storage-mongo@0.21.1", "@arcblock/did-auth-storage-mongo@^0.21.1":
+"@arcblock/did-auth-storage-mongo@^0.21.1":
   version "0.21.1"
   resolved "https://registry.npmjs.org/@arcblock/did-auth-storage-mongo/-/did-auth-storage-mongo-0.21.1.tgz#9dd5312f290acde57c0a741c62cd81becac49f2c"
   integrity sha512-Pz7tgnXxlC5EOmR5GOK/rvQOx9Rr1bTcFX4qdOsl265FjmYnq/F3UEWOfp7EzC7E8Zpp2tbx2Q9jyaA0Y3zWhQ==
@@ -15,42 +15,30 @@
   resolved "https://registry.npmjs.org/@arcblock/did-auth-storage/-/did-auth-storage-0.21.1.tgz#efcc0c5eeb67bee6cdb756c7bd7aae1eb6f1ddc7"
   integrity sha512-WBrkw7CKg1ZCUtgflaLc0o22OJKlfRkwRUqyi4FtowsoPBjRQ3Djh5gRH3oI6c8NDVDOq0pOQg+2uJNgEfTG5Q==
 
-"@arcblock/did-auth@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/did-auth/-/did-auth-0.28.0.tgz#ceb22a71c5c117941506a7aca3cbf0e989fdab12"
-  integrity sha512-r318I6SkfC5R3t2TfGW1dYHyGP2ZRXfgcMjG97sM0HVGxudc5hLunPYstONSy3ZC8pZq0gspsp0r6e1uN7j+hQ==
+"@arcblock/did-auth@^0.29.1":
+  version "0.29.1"
+  resolved "https://registry.npmjs.org/@arcblock/did-auth/-/did-auth-0.29.1.tgz#5b147258d5ac66d714da8c9ca149fd76e0b8cc54"
+  integrity sha512-jFkg0dhFYO1D68i4v2vAvjnpzTQMkEPEfXHxkQigvNvXlozl/3zVmF5vaAV+73Bx94k7wT/CaCQDtxIc/+RgaQ==
   dependencies:
-    "@arcblock/did" "^0.28.0"
-    "@arcblock/forge-util" "^0.28.0"
-    "@arcblock/forge-wallet" "^0.28.0"
-    "@arcblock/graphql-client" "^0.28.0"
-    "@arcblock/mcrypto" "^0.28.0"
+    "@arcblock/did" "^0.29.1"
+    "@arcblock/forge-util" "^0.29.0"
+    "@arcblock/forge-wallet" "^0.29.1"
+    "@arcblock/graphql-client" "^0.29.1"
+    "@arcblock/mcrypto" "^0.29.0"
+    base64-url "^2.2.1"
     debug "^4.1.1"
+    json-stable-stringify "^1.0.1"
     lodash.get "^4.4.2"
     multibase "^0.6.0"
 
-"@arcblock/did-util@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/did-util/-/did-util-0.28.0.tgz#3a103855adc61f13b78bee84ac5336e82fb859ee"
-  integrity sha512-yKax+kQurSquO5A+fG8zNyIqn7TsjtmAf0QpuyYeEMHaOsVbmotcJjpmGhrvKLQ7aDy5otlViER+hZVrwicMgQ==
+"@arcblock/did@^0.29.1":
+  version "0.29.1"
+  resolved "https://registry.npmjs.org/@arcblock/did/-/did-0.29.1.tgz#e6d724beecb7c06bea1e2b76ae0c401841755efa"
+  integrity sha512-LME3oVS59p51NfR/ngKePfxqTRf5YfeEmsloSSz03cLR48+Mvnx570ekFOkxnMaZvsTxdbx+/Ic3jz1p8voh5g==
   dependencies:
-    "@arcblock/did" "^0.28.0"
-    "@arcblock/forge-message" "^0.28.0"
-    "@arcblock/forge-proto" "^0.28.0"
-    "@arcblock/forge-util" "^0.28.0"
-    "@arcblock/forge-wallet" "^0.28.0"
-    "@arcblock/mcrypto" "^0.28.0"
-
-"@arcblock/did@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/did/-/did-0.28.0.tgz#489c2bb6c0e9a517305c85e98ab963e01c52c50c"
-  integrity sha512-cnT9zVaj9nf1k0cgNDQTxtm4XFMwqmwl6oYhx57L91FPQUfbrQeoc8qIzxlFpgLBzk/RtVuKTpniR2hVAL8azg==
-  dependencies:
-    "@arcblock/forge-util" "^0.28.0"
-    "@arcblock/mcrypto" "^0.28.0"
-    base64-url "^2.2.0"
+    "@arcblock/forge-util" "^0.29.0"
+    "@arcblock/mcrypto" "^0.29.0"
     debug "^4.1.1"
-    json-stable-stringify "^1.0.1"
     lodash "^4.17.11"
     multibase "^0.6.0"
 
@@ -58,43 +46,43 @@
   version "1.2.0"
   resolved "https://registry.npmjs.org/@arcblock/docblock/-/docblock-1.2.0.tgz#507a428a9276c3cd5c9b74cdda98d1479ce6ca9a"
 
-"@arcblock/forge-message@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/forge-message/-/forge-message-0.28.0.tgz#9515830fe09072717e42b132712989c4a8b7ee13"
-  integrity sha512-CO0AYE4AsG1RG9Usb4IJtFw+h+z16BFPbmu4fOgWXfLJwzLV50NtRrXanbaIXDBpOGr9RfZov90iyhDBgcMTGQ==
+"@arcblock/forge-message@^0.29.0":
+  version "0.29.0"
+  resolved "https://registry.npmjs.org/@arcblock/forge-message/-/forge-message-0.29.0.tgz#6a483f9a2cfd4dbf4d85098fccd8602f52c143a0"
+  integrity sha512-93tfNrSKRcVhZq+y1XDToqhY4A4zZKZT0+ZsXGrYZljUmSEEL+7GeaX+u2KGdorrchRXkxhQmY1af9044S7Jxw==
   dependencies:
-    "@arcblock/forge-proto" "^0.28.0"
-    "@arcblock/forge-util" "^0.28.0"
+    "@arcblock/forge-proto" "^0.29.0"
+    "@arcblock/forge-util" "^0.29.0"
     camelcase "^5.0.0"
     debug "^4.1.1"
     google-protobuf "3.7.0-rc.2"
 
-"@arcblock/forge-proto@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/forge-proto/-/forge-proto-0.28.0.tgz#d3897e6741fc0bc91afa675615c2a347ce9bb66f"
-  integrity sha512-PW9KLtTf8Ta/msUpLxrKaaJnDQ0+qB7laRGSKR28dornx+oG7US6XjZ+00qbU1Qqi7KUHmnuI51jdSq9OTafgg==
+"@arcblock/forge-proto@^0.29.0":
+  version "0.29.0"
+  resolved "https://registry.npmjs.org/@arcblock/forge-proto/-/forge-proto-0.29.0.tgz#0c516ff46c48f51a8f3114d2c43fb2224af2d743"
+  integrity sha512-7x7ObU8kbEp5oxGVIIYDmHjM7qJRBbOehp2UwhuDB+Bv9856mSJVIrDbVsrteg+JGT0sRNPaTg+qO1r7d1uRng==
   dependencies:
     camelcase "^5.3.1"
     debug "^4.1.1"
     lodash.get "^4.4.2"
 
-"@arcblock/forge-util@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/forge-util/-/forge-util-0.28.0.tgz#ac298bdd14a772a7db9fdf6b79c0add2bce593dd"
-  integrity sha512-GeBfUyxiWJG8G9CTvXmh+r8L+pP53b5YiYCFx6s6Mej+eSR4FqXoK130Jmz36/oFA/2aMUMeOJuTtClCYS55jA==
+"@arcblock/forge-util@^0.29.0":
+  version "0.29.0"
+  resolved "https://registry.npmjs.org/@arcblock/forge-util/-/forge-util-0.29.0.tgz#f4aafc8ced43c625b7c8536ff2ce517f806355fa"
+  integrity sha512-2i2OLhzfT0uUy0QfmwkJoMeCoGAtv+QRKDqlqT7UCbhsECTR58lY/QcHrjFDYI1eiCaHo9yg3yaTLMEAopLhaw==
   dependencies:
     bn.js "4.11.6"
     lodash "^4.17.11"
     number-to-bn "^1.7.0"
     utf8 "^3.0.0"
 
-"@arcblock/forge-wallet@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/forge-wallet/-/forge-wallet-0.28.0.tgz#05bd91587ed06279b03e9273fdffa68b0f0d232f"
-  integrity sha512-fWcBepgAsZl4EBdNEXsfyGarIwHPfiBD1uKUtffJMkcfyuUuSF7M06TITCBzW1ntUCh/5HAY/xk/sWP3vJd/dw==
+"@arcblock/forge-wallet@^0.29.1":
+  version "0.29.1"
+  resolved "https://registry.npmjs.org/@arcblock/forge-wallet/-/forge-wallet-0.29.1.tgz#44dffc9e4d0b961a523be9e64bf9d86910ce2916"
+  integrity sha512-nLaw5orIXZoWcE5sR1PQDtiOt3oqeKnKPHJXM6ilnFaQvJPrS2YqHXiAb/xbtXyk+Cgp8rXDea7HkoJCKoOHfQ==
   dependencies:
-    "@arcblock/did" "^0.28.0"
-    "@arcblock/mcrypto" "^0.28.0"
+    "@arcblock/did" "^0.29.1"
+    "@arcblock/mcrypto" "^0.29.0"
     lodash.upperfirst "^4.3.1"
 
 "@arcblock/gatsby-awesome-pagination@^0.3.4":
@@ -104,23 +92,23 @@
   dependencies:
     lodash "^4.17.10"
 
-"@arcblock/gatsby-config@^3.76.0":
-  version "3.76.0"
-  resolved "https://registry.npmjs.org/@arcblock/gatsby-config/-/gatsby-config-3.76.0.tgz#c0bace13143bc6b2b32fd5d6bf09748eb97b4cbd"
-  integrity sha512-mTRBx3Ot7T092/mGWZnGEyIrdhW/cMJWu62yoalDD2kPpMRPMDgB3yGWJgi2zUnKYqZ1F2MGE2sFdO8ib+EeWg==
+"@arcblock/gatsby-config@^3.83.0":
+  version "3.83.0"
+  resolved "https://registry.npmjs.org/@arcblock/gatsby-config/-/gatsby-config-3.83.0.tgz#f291feec38e96071a54835683d8b3e9ee36092c0"
+  integrity sha512-ssbo68qUpztPvVz8JlVLigv1NgxKhr7gkZHb9snsSKb0Q0hSGOvnmNnzCf/wM0wPcvh+/OjOrOlcE2gwwpxBVA==
   dependencies:
     "@arcblock/gatsby-awesome-pagination" "^0.3.4"
     "@arcblock/gatsby-remark-generic-extensions" "^3.31.0"
-    "@arcblock/gatsby-theme" "^3.75.0"
+    "@arcblock/gatsby-theme" "^3.83.0"
     "@arcblock/gatsby-transformer-remark" "^3.38.0"
     "@arcblock/remark-include" "^3.31.0"
     "@svgr/webpack" "^4.1.0"
     "@xmark/core" "^0.13.0"
-    "@xmark/theme-section-template" "^0.13.1"
+    "@xmark/theme-section-template" "^0.13.2"
     "@xmark/theme-shower-ribbon" "^0.13.0"
     "@xmark/transform-class-extension" "^0.13.0"
     "@xmark/transform-gatsby-remark" "^0.13.0"
-    "@xmark/transform-section-template" "^0.13.1"
+    "@xmark/transform-section-template" "^0.13.2"
     "@xmark/transform-shower" "^0.13.0"
     "@xmark/transform-wrap-headings" "^0.13.0"
     capitalize "^2.0.0"
@@ -155,14 +143,14 @@
     remark-attr "0.8.0"
     remark-generic-extensions "^1.4.0"
 
-"@arcblock/gatsby-theme@^3.75.0":
-  version "3.75.0"
-  resolved "https://registry.npmjs.org/@arcblock/gatsby-theme/-/gatsby-theme-3.75.0.tgz#9c03491f34ebe60735a2a49005a5f1492c883eb9"
-  integrity sha512-A2a1EZv1N0bIjJJMwLznjJkr7IHCeILGTgKONM7ATH3e/3kQO+n3owoP7VrsIf7FfHL9emRneu6tTlNoX5EoOw==
+"@arcblock/gatsby-theme@^3.83.0":
+  version "3.83.0"
+  resolved "https://registry.npmjs.org/@arcblock/gatsby-theme/-/gatsby-theme-3.83.0.tgz#6d51cc3e74d36c1f0e0fe68f8ff7125645efecf6"
+  integrity sha512-dIRKT0wTmJNkpMjBQA9OuHUAeH3Xb0/ZXx92i1UQlgidefnaB5CqrMSz8UIDGMeJ0cjpqblmPtNIIL2dl0bSZQ==
   dependencies:
     "@material-ui/core" "3.9.2"
     "@material-ui/icons" "^3.0.2"
-    axios "^0.18.0"
+    axios "^0.19.0"
     browser-lang "^0.0.1"
     github-markdown-css "^2.10.0"
     js-cookie "^2.2.0"
@@ -206,17 +194,17 @@
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-"@arcblock/graphql-client@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/graphql-client/-/graphql-client-0.28.0.tgz#2d415d265e71f9f5cbe3a4c771c1573338b67ef5"
-  integrity sha512-skNgzOsXWhvCgpHP/yFUr0RVXIqx8s3ovMltkldYKixucnHZzYC1Vg0PLhpkENctnnXASlPMJKdCb2P8LAGZ9g==
+"@arcblock/graphql-client@^0.29.1":
+  version "0.29.1"
+  resolved "https://registry.npmjs.org/@arcblock/graphql-client/-/graphql-client-0.29.1.tgz#523e1ca44fad05f331c11c528a53e7dffc876283"
+  integrity sha512-LvtgRj4AwVDF6t979vEA2aN70Nu13YWP8We0udKCaPFYl2xAkWhqL11sn3UqlAXdaDERfmXh/aF2M73mUXzNtA==
   dependencies:
-    "@arcblock/forge-message" "^0.28.0"
-    "@arcblock/forge-proto" "^0.28.0"
-    "@arcblock/forge-util" "^0.28.0"
-    "@arcblock/forge-wallet" "^0.28.0"
-    "@arcblock/mcrypto" "^0.28.0"
-    "@arcblock/sdk-util" "^0.20.0"
+    "@arcblock/forge-message" "^0.29.0"
+    "@arcblock/forge-proto" "^0.29.0"
+    "@arcblock/forge-util" "^0.29.0"
+    "@arcblock/forge-wallet" "^0.29.1"
+    "@arcblock/mcrypto" "^0.29.0"
+    "@arcblock/sdk-util" "^0.21.0"
     babel-polyfill "^6.26.0"
     base64-url "^2.2.0"
     blueimp-md5 "^2.10.0"
@@ -226,15 +214,16 @@
     phoenix-channels "^1.0.0"
     wolfy87-eventemitter "^5.2.5"
 
-"@arcblock/mcrypto@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.npmjs.org/@arcblock/mcrypto/-/mcrypto-0.28.0.tgz#99ba13523b006abcc1ee899e525c380cc5fdacc7"
-  integrity sha512-F/xj8LJXywEXPoPiJhIKLAFeSRwZv4PFzMLi2xVsR321GCFVfesbg25OD9spmk44wmFisUsm57fkpbg1LwL7AA==
+"@arcblock/mcrypto@^0.29.0":
+  version "0.29.0"
+  resolved "https://registry.npmjs.org/@arcblock/mcrypto/-/mcrypto-0.29.0.tgz#d1436d3a9983c9ac3049df3c6088a6d8a15c20c9"
+  integrity sha512-vLFVnkrVxkUKWD3PTKNKspwSpclkcaSCx22U8+XWjqD40PNPoVCgaZbVXbXiSVj4SG7UdanOS/Xc1xxUgDN4mA==
   dependencies:
-    "@arcblock/forge-util" "^0.28.0"
+    "@arcblock/forge-util" "^0.29.0"
     bn.js "4.11.8"
     crypto-js "^3.1.9-1"
     elliptic "^6.4.1"
+    hash.js "^1.1.7"
     interface "^1.2.1"
     js-sha3 "^0.8.0"
     randombytes "^2.0.6"
@@ -264,12 +253,12 @@
   dependencies:
     vfile "^2.0.0"
 
-"@arcblock/sdk-util@^0.20.0":
-  version "0.20.0"
-  resolved "https://registry.npmjs.org/@arcblock/sdk-util/-/sdk-util-0.20.0.tgz#5e98f44b00ef560fd44a919bda0a59a20b6bbdfe"
-  integrity sha512-w82gSBrbYexelTVvaJHz6iY6of4M90VplpCr9rEoiQvaBYjMK0t5b2A1gSDL97+up2uKQauqh8OPQsR5z6li6w==
+"@arcblock/sdk-util@^0.21.0":
+  version "0.21.0"
+  resolved "https://registry.npmjs.org/@arcblock/sdk-util/-/sdk-util-0.21.0.tgz#fe0965122aa3dd511d500f80690892a84bfc5025"
+  integrity sha512-rnF1hMUx1tX0ofzYBmDw3bs/4avXwxoj7b1RoLWIAvh+OBfIOW3tmD3JstQhDyJxpqkXWVCk7/vB5zMDmwufyg==
   dependencies:
-    axios "^0.18.0"
+    axios "^0.19.0"
     debug "^3.1.0"
     graphql "^14.1.1"
 
@@ -3200,10 +3189,10 @@
     remark-attr "^0.8.3"
     remark-generic-extensions "^1.4.0"
 
-"@xmark/theme-section-template@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.npmjs.org/@xmark/theme-section-template/-/theme-section-template-0.13.1.tgz#58e3c27c4d4b02bf4bae9e6c7d8b02dd54adaa33"
-  integrity sha512-2I2UnuP8y793A5gzldKEiFGgCJBY4ObtNlAio8Pm6TI/nkjaDXfNxvsF+0UYA8RE6yTnUZg+mrcEg02NsqlZNw==
+"@xmark/theme-section-template@^0.13.2":
+  version "0.13.2"
+  resolved "https://registry.npmjs.org/@xmark/theme-section-template/-/theme-section-template-0.13.2.tgz#31703326df1498b9fd1e7cae390a3131ac583fa5"
+  integrity sha512-QJqPg9THIhtDL8w7sHfZDkLo3zblm2il42UgkyAu3EWDMZluVOCaAFbQ19o1cCoqRc30Yhyfid8nkIwODYwD6Q==
 
 "@xmark/theme-shower-ribbon@^0.13.0":
   version "0.13.0"
@@ -3229,10 +3218,10 @@
     debug "^4.1.1"
     hast-util-select "^3.0.0"
 
-"@xmark/transform-section-template@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.npmjs.org/@xmark/transform-section-template/-/transform-section-template-0.13.1.tgz#c8c4a0bd3a348a0f270c40abe3a2abc4f58ffeb5"
-  integrity sha512-fc1FZJmklu7hMtOqbQXTTX0cXqvh9zq2I0OYZ2yUfd+5h+DfYJFmjx4sOr0nl6w3efBWk34J2abSMO4NSG2AVg==
+"@xmark/transform-section-template@^0.13.2":
+  version "0.13.2"
+  resolved "https://registry.npmjs.org/@xmark/transform-section-template/-/transform-section-template-0.13.2.tgz#72e591b60013139ae18cc549adcde8f232f881a4"
+  integrity sha512-pOXgCfG8XYsyI6Tuh6tlWER/Rdc7Oe/7Y/6qqwIEjBYyI1CO3ldJA2rhxlo8hsoj3WWDXpkwvXIiU4rTXFHD+A==
   dependencies:
     "@xmark/transform-gatsby-remark" "^0.13.0"
     "@xmark/util" "^0.13.0"
@@ -3906,13 +3895,13 @@ aws4@^1.8.0:
   version "1.8.0"
   resolved "https://registry.npmjs.org/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
 
-axios@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.npmjs.org/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
-  integrity sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
+axios@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
+  integrity sha512-1uvKqKQta3KBxIz14F2v06AEHZ/dIoeKfbTRkK1E5oqjDnuEerLmYTgJB5AiQZHJcljpg1TuRzdjDR06qNk0DQ==
   dependencies:
-    follow-redirects "^1.3.0"
-    is-buffer "^1.1.5"
+    follow-redirects "1.5.10"
+    is-buffer "^2.0.2"
 
 axobject-query@^2.0.2:
   version "2.0.2"
@@ -4284,7 +4273,7 @@ base64-js@^1.0.2:
   version "1.3.0"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
 
-base64-url@^2.2.0:
+base64-url@^2.2.0, base64-url@^2.2.1:
   version "2.2.1"
   resolved "https://registry.npmjs.org/base64-url/-/base64-url-2.2.1.tgz#55dc1519cf28e70b7613bb6201c890b7612ad1e6"
   integrity sha512-RWaW1M7+pLUikK1bnGyiDe1oY2BKOtbS30Ua1pSAH41st59qDxi/XiggjVhHVPIejXY1eqJ21W3uxHtZpM6KQw==
@@ -6536,7 +6525,7 @@ debug@2, debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, de
   dependencies:
     ms "2.0.0"
 
-debug@3.1.0, debug@~3.1.0:
+debug@3.1.0, debug@=3.1.0, debug@~3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -8616,7 +8605,14 @@ fn-name@^2.0.1, fn-name@~2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
 
-follow-redirects@^1.0.0, follow-redirects@^1.3.0:
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
+  dependencies:
+    debug "=3.1.0"
+
+follow-redirects@^1.0.0:
   version "1.7.0"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
   integrity sha512-m/pZQy4Gj287eNy94nivy5wchN3Kp+Q5WgUPNy5lJSZ3sgkVKSYV/ZChMAQVIgx1SqfZ2zBZtPA2YlXIWxxJOQ==
@@ -9852,7 +9848,7 @@ hash-mod@^0.0.5:
   resolved "https://registry.npmjs.org/hash-mod/-/hash-mod-0.0.5.tgz#daf1e4973a9116643467d54ee7690b43ef802ecc"
   integrity sha1-2vHklzqRFmQ0Z9VO52kLQ++ALsw=
 
-hash.js@^1.0.0, hash.js@^1.0.3:
+hash.js@^1.0.0, hash.js@^1.0.3, hash.js@^1.1.7:
   version "1.1.7"
   resolved "https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
   dependencies:
@@ -10852,7 +10848,7 @@ is-buffer@^1.0.2, is-buffer@^1.1.0, is-buffer@^1.1.4, is-buffer@^1.1.5, is-buffe
   version "1.1.6"
   resolved "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
-is-buffer@^2.0.0, is-buffer@~2.0.3:
+is-buffer@^2.0.0, is-buffer@^2.0.2, is-buffer@~2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/is-buffer/-/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
 
