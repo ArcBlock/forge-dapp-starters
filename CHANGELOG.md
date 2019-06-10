@@ -1,3 +1,8 @@
+## 0.26.0 (June 10, 2019)
+  - chore: sync code
+  - chore: sync code
+  - update readme
+
 ## 0.25.0 (June 10, 2019)
   - chore: update dependency
 
