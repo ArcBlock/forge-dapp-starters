@@ -1,3 +1,8 @@
+## 0.24.0 (June 10, 2019)
+  - chore: update dependency
+  - fix: login did-auth middleware
+  - update readme
+
 ## 0.23.0 (June 07, 2019)
   - update readme
   - update readme
