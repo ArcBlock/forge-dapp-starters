@@ -37,12 +37,12 @@
     ]
   },
   "dependencies": {
-    "@arcblock/did": "^0.29.1",
-    "@arcblock/did-auth": "^0.29.1",
+    "@arcblock/did": "^0.29.2",
+    "@arcblock/did-auth": "^0.29.2",
     "@arcblock/did-auth-storage-mongo": "^0.21.1",
     "@arcblock/forge-util": "^0.29.0",
-    "@arcblock/forge-wallet": "^0.29.1",
-    "@arcblock/graphql-client": "^0.29.1",
+    "@arcblock/forge-wallet": "^0.29.2",
+    "@arcblock/graphql-client": "^0.29.2",
     "@arcblock/mcrypto": "^0.29.0",
     "@arcblock/react-forge": "^0.5.13",
     "@arcblock/react-hooks": "^0.5.0",

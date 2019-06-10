@@ -15,15 +15,15 @@
   resolved "https://registry.npmjs.org/@arcblock/did-auth-storage/-/did-auth-storage-0.21.1.tgz#efcc0c5eeb67bee6cdb756c7bd7aae1eb6f1ddc7"
   integrity sha512-WBrkw7CKg1ZCUtgflaLc0o22OJKlfRkwRUqyi4FtowsoPBjRQ3Djh5gRH3oI6c8NDVDOq0pOQg+2uJNgEfTG5Q==
 
-"@arcblock/did-auth@^0.29.1":
-  version "0.29.1"
-  resolved "https://registry.npmjs.org/@arcblock/did-auth/-/did-auth-0.29.1.tgz#5b147258d5ac66d714da8c9ca149fd76e0b8cc54"
-  integrity sha512-jFkg0dhFYO1D68i4v2vAvjnpzTQMkEPEfXHxkQigvNvXlozl/3zVmF5vaAV+73Bx94k7wT/CaCQDtxIc/+RgaQ==
+"@arcblock/did-auth@^0.29.2":
+  version "0.29.2"
+  resolved "https://registry.npmjs.org/@arcblock/did-auth/-/did-auth-0.29.2.tgz#82686e4f864811d3dbaa107e4cc4071c36e0defe"
+  integrity sha512-Xdj28wGZNMv3jXoaG11CgIV3alB0294O1XK3rDWTffv4iii6m3IxPhvk2Ro7jfMhUBzZMsm8GFZ6rhkb00DOaQ==
   dependencies:
-    "@arcblock/did" "^0.29.1"
+    "@arcblock/did" "^0.29.2"
     "@arcblock/forge-util" "^0.29.0"
-    "@arcblock/forge-wallet" "^0.29.1"
-    "@arcblock/graphql-client" "^0.29.1"
+    "@arcblock/forge-wallet" "^0.29.2"
+    "@arcblock/graphql-client" "^0.29.2"
     "@arcblock/mcrypto" "^0.29.0"
     base64-url "^2.2.1"
     debug "^4.1.1"
@@ -31,10 +31,10 @@
     lodash.get "^4.4.2"
     multibase "^0.6.0"
 
-"@arcblock/did@^0.29.1":
-  version "0.29.1"
-  resolved "https://registry.npmjs.org/@arcblock/did/-/did-0.29.1.tgz#e6d724beecb7c06bea1e2b76ae0c401841755efa"
-  integrity sha512-LME3oVS59p51NfR/ngKePfxqTRf5YfeEmsloSSz03cLR48+Mvnx570ekFOkxnMaZvsTxdbx+/Ic3jz1p8voh5g==
+"@arcblock/did@^0.29.2":
+  version "0.29.2"
+  resolved "https://registry.npmjs.org/@arcblock/did/-/did-0.29.2.tgz#9639535fb7051ff85462dbf33041e8974a821226"
+  integrity sha512-NpDNK7v4Jz0PhRrIeGaHMgGL5AKssxB0ds/xnIXVvSO+HFbuWkKClSANbpMUF2T6RPLXZ/o6FY1cyoBNJWNq4g==
   dependencies:
     "@arcblock/forge-util" "^0.29.0"
     "@arcblock/mcrypto" "^0.29.0"
@@ -76,12 +76,12 @@
     number-to-bn "^1.7.0"
     utf8 "^3.0.0"
 
-"@arcblock/forge-wallet@^0.29.1":
-  version "0.29.1"
-  resolved "https://registry.npmjs.org/@arcblock/forge-wallet/-/forge-wallet-0.29.1.tgz#44dffc9e4d0b961a523be9e64bf9d86910ce2916"
-  integrity sha512-nLaw5orIXZoWcE5sR1PQDtiOt3oqeKnKPHJXM6ilnFaQvJPrS2YqHXiAb/xbtXyk+Cgp8rXDea7HkoJCKoOHfQ==
+"@arcblock/forge-wallet@^0.29.2":
+  version "0.29.2"
+  resolved "https://registry.npmjs.org/@arcblock/forge-wallet/-/forge-wallet-0.29.2.tgz#02ffe431d7553411ba808fea30109934211fb426"
+  integrity sha512-8ZI1njVtBNdo+9YF5XYoGqx5BFLR06UDt9wkTDU7Q9TMQ5AxZM2l681HjU1x6dryfIbpc/FWjZfv47tKT5631A==
   dependencies:
-    "@arcblock/did" "^0.29.1"
+    "@arcblock/did" "^0.29.2"
     "@arcblock/mcrypto" "^0.29.0"
     lodash.upperfirst "^4.3.1"
 
@@ -194,15 +194,15 @@
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-"@arcblock/graphql-client@^0.29.1":
-  version "0.29.1"
-  resolved "https://registry.npmjs.org/@arcblock/graphql-client/-/graphql-client-0.29.1.tgz#523e1ca44fad05f331c11c528a53e7dffc876283"
-  integrity sha512-LvtgRj4AwVDF6t979vEA2aN70Nu13YWP8We0udKCaPFYl2xAkWhqL11sn3UqlAXdaDERfmXh/aF2M73mUXzNtA==
+"@arcblock/graphql-client@^0.29.2":
+  version "0.29.2"
+  resolved "https://registry.npmjs.org/@arcblock/graphql-client/-/graphql-client-0.29.2.tgz#238959198b567c7b29536b5cd113a41d1fe7f346"
+  integrity sha512-IH7sbjes8i/OCqAkeSoQyJfIfEPpQrF+N9KBcwOTW8pHPfW+gsPgo1cVVZEqPZCrSemytXR2J7B2W2bKXU8oEQ==
   dependencies:
     "@arcblock/forge-message" "^0.29.0"
     "@arcblock/forge-proto" "^0.29.0"
     "@arcblock/forge-util" "^0.29.0"
-    "@arcblock/forge-wallet" "^0.29.1"
+    "@arcblock/forge-wallet" "^0.29.2"
     "@arcblock/mcrypto" "^0.29.0"
     "@arcblock/sdk-util" "^0.21.0"
     babel-polyfill "^6.26.0"
