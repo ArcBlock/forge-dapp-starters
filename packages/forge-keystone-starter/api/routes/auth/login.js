@@ -1,13 +1,12 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable no-console */
-const keystone = require('keystone');
+const env = require('../../libs/env');
+const { User } = require('../../models');
 const { login } = require('../../libs/jwt');
 
-const User = keystone.list('User').model;
-
 const description = {
-  en: 'Sign this transaction to receive 25 TBA for test purpose',
-  zh: '签名该交易，你将获得 25 个测试用的 TBA',
+  en: `Login ${env.appName} with your ABT Wallet`,
+  zh: `用 ABT 钱包登录 ${env.appName}`,
 };
 
 module.exports = {
@@ -23,18 +22,16 @@ module.exports = {
       const profile = claims.find(x => x.type === 'profile');
       const exist = await User.findOne({ did });
       if (exist) {
-        console.log('new user', did, JSON.stringify(profile));
+        console.log('update user', did, JSON.stringify(profile));
         exist.name = profile.fullName;
         exist.email = profile.email;
-        exist.mobile = profile.mobile;
         await exist.save();
       } else {
-        console.log('exist user', did, JSON.stringify(profile));
+        console.log('create user', did, JSON.stringify(profile));
         const user = new User({
           did,
           name: profile.fullName,
           email: profile.email,
-          mobile: profile.phone,
         });
         await user.save();
       }
