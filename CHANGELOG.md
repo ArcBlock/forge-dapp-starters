@@ -1,3 +1,7 @@
+## 0.26.1 (June 10, 2019)
+  - fix: keystone starter .gitignore
+  - update readme
+
 ## 0.26.0 (June 10, 2019)
   - chore: sync code
   - chore: sync code
