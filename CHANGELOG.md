@@ -1,3 +1,7 @@
+## 0.27.1 (June 17, 2019)
+  - fix: make forge-gatsby-starter public
+  - update readme
+
 ## 0.27.0 (June 16, 2019)
   - chore: update keystone starter
   - chore: update gatsby starter
