@@ -112,7 +112,7 @@ export default function PaymentPage() {
           onSuccess={() => window.location.reload()}
           messages={{
             title: 'Payment Required',
-            scan: 'Pay 5 TBA to view secret documented',
+            scan: 'Pay 2 TBA to view secret documented',
             confirm: 'Confirm payment on your ABT Wallet',
             success: 'You have successfully paid!',
           }}
@@ -164,7 +164,7 @@ const Main = styled.main`
       color: #dd2233;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
         'Helvetica Neue', sans-serif;
-      content: 'Pay 5 TBA to view this document';
+      content: 'Pay 2 TBA to view this document';
       font-size: 30px;
       line-height: 45px;
       border-radius: 15px;
