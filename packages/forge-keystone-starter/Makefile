@@ -52,7 +52,7 @@ run:
 	@echo "Running the software..."
 	@yarn start
 
-copy: copy-starter-frontend copy-starter-backend copy-starter-tools
+copy: copy-starter-frontend copy-starter-tools
 
 copy-starter-frontend:
 	@echo "Copy starter frontend code here..."
