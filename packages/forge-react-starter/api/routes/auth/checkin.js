@@ -26,17 +26,17 @@ module.exports = {
       description: description[locale] || description.en,
     }),
   },
-  onAuth: async ({ claims, did, extraParams: { locale } }) => {
+  onAuth: async ({ claims, userDid, extraParams: { locale } }) => {
     try {
       const claim = claims.find(x => x.type === 'signature');
       const tx = client.decodeTx(multibase.decode(claim.origin));
-      const wallet = fromAddress(did);
+      const wallet = fromAddress(userDid);
       console.log('poke.onAuth.payload', { tx, claim });
 
       const hash = await client.sendPokeTx({
         tx,
         wallet,
-        signature: claim.sigHex,
+        signature: claim.sig,
       });
       console.log('poke.onAuth', hash);
       return { hash, tx: claim.origin };

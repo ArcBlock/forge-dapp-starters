@@ -59,7 +59,7 @@ export default function PaymentPage() {
               My Profile
             </Button>
           </Grid>
-          <Grid item xs={12} md={8} className="meta">
+          <Grid item xs={12} md={9} className="meta">
             <Typography component="h3" variant="h4">
               Secret Document
             </Typography>
