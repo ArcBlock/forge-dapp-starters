@@ -1,3 +1,8 @@
+## 0.27.2 (June 17, 2019)
+  - Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters
+  - chore: bump @arcblock/react-forge version
+  - update readme
+
 ## 0.27.1 (June 17, 2019)
   - fix: make forge-gatsby-starter public
   - update readme
