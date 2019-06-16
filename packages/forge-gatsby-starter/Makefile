@@ -41,6 +41,7 @@ copy-starter-frontend:
 	@cp -r ../forge-react-starter/src/hooks src
 	@cp -r ../forge-react-starter/src/libs src
 	@cp -r ../forge-react-starter/src/pages src
+	@rm src/pages/index.js
 
 copy-starter-backend:
 	@echo "Copy starter backend code here..."
