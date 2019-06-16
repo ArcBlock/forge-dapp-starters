@@ -1,3 +1,12 @@
+## 0.27.0 (June 16, 2019)
+  - chore: update keystone starter
+  - chore: update gatsby starter
+  - chore: update next starter
+  - fix: payment page
+  - fix: react starter api proxy in development env
+  - chore: bump forge sdk version
+  - update readme
+
 ## 0.26.1 (June 10, 2019)
   - fix: keystone starter .gitignore
   - update readme
