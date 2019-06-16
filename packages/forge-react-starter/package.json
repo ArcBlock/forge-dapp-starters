@@ -19,7 +19,6 @@
     "url": "https://github.com/ArcBlock/forge-dapp-starters/issues",
     "email": "shijun@arcblock.io"
   },
-  "proxy": "http://0.0.0.0:8000",
   "dependencies": {
     "@arcblock/did": "^0.30.0",
     "@arcblock/did-auth": "^0.30.2",
@@ -41,6 +40,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-bearer-token": "^2.4.0",
+    "http-proxy-middleware": "^0.19.1",
     "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
     "jss": "^9.8.7",
