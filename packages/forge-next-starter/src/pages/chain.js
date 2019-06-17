@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Layout from '../components/layout';
-import forge from '../libs/forge';
+import forge from '../libs/sdk';
 import env from '../libs/env';
 
 function fetchChainInfo() {

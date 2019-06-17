@@ -40,7 +40,7 @@ Other javascript project goodies:
 ├── Makefile
 ├── README.md
 ├── app.js                    // application entry file
-├── client                    // code for client side pages
+├── src                       // code for client side pages
 │   ├── babel.config.js       // custom babel configuration
 │   ├── components            // shared react components/layouts across all pages
 │   ├── hooks                 // shared react hooks
@@ -49,7 +49,7 @@ Other javascript project goodies:
 │   ├── pages                 // pages
 │   └── static                // static assets that can be loaded by browser
 ├── package.json
-├── server                    // backend code
+├── api                       // backend code
 │   ├── libs                  // shared server libs
 │   ├── models                // mongoose db models
 │   └── routes                // express routes and handlers

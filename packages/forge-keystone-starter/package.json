@@ -42,6 +42,7 @@
     "@arcblock/did": "^0.30.0",
     "@arcblock/did-auth": "^0.30.2",
     "@arcblock/did-auth-storage-mongo": "^0.21.1",
+    "@arcblock/forge-sdk": "^0.30.3",
     "@arcblock/forge-util": "^0.30.0",
     "@arcblock/forge-wallet": "^0.30.0",
     "@arcblock/graphql-client": "^0.30.0",
