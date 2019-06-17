@@ -1,8 +1,9 @@
 const Mcrypto = require('@arcblock/mcrypto');
+const ForgeSDK = require('@arcblock/forge-sdk');
 const MongoStorage = require('@arcblock/did-auth-storage-mongo');
-const GraphQLClient = require('@arcblock/graphql-client');
 const { fromSecretKey, WalletType } = require('@arcblock/forge-wallet');
-const { Authenticator, Handlers } = require('@arcblock/did-auth');
+// eslint-disable-next-line object-curly-newline
+const { WalletAuthenticator, AppAuthenticator, AppHandlers, WalletHandlers } = require('@arcblock/did-auth');
 const env = require('./env');
 
 const type = WalletType({
@@ -11,38 +12,48 @@ const type = WalletType({
   hash: Mcrypto.types.HashType.SHA3,
 });
 
-const wallet = fromSecretKey(process.env.APP_SK, type).toJSON();
-const client = new GraphQLClient({ endpoint: env.chainHost, chainId: env.chainId });
+if (env.chainHost) {
+  ForgeSDK.connect(env.chainHost, { chainId: env.chainId, name: env.chainId, default: true });
+  if (env.assetChainHost) {
+    ForgeSDK.connect(env.assetChainHost, { chainId: env.assetChainId, name: env.assetChainId });
+  }
+}
 
-const authenticator = new Authenticator({
-  client,
+const wallet = fromSecretKey(process.env.APP_SK, type).toJSON();
+
+const walletAuth = new WalletAuthenticator({
   wallet,
   baseUrl: env.baseUrl,
   appInfo: {
-    chainHost: env.chainHost,
-    chainId: env.chainId,
-    chainToken: 'TBA',
-    copyright: 'https://abtwallet.io',
-    decimals: 16,
-    name: env.appName,
-    description: env.appDescription || 'Demo application to show the potential of ABT Wallet',
+    name: process.env.APP_NAME,
+    description: process.env.APP_DESCRIPTION,
     icon: 'https://arcblock.oss-cn-beijing.aliyuncs.com/images/wallet-round.png',
     path: 'https://abtwallet.io/i/',
     publisher: `did:abt:${wallet.address}`,
   },
+  chainInfo: {
+    chainHost: env.chainHost,
+    chainId: env.chainId,
+    chainToken: 'TBA',
+    decimals: 16,
+  },
 });
 
-const handlers = new Handlers({
-  authenticator,
+const walletHandlers = new WalletHandlers({
+  authenticator: walletAuth,
   tokenGenerator: () => Date.now().toString(),
   tokenStorage: new MongoStorage({
     url: process.env.MONGO_URI,
   }),
 });
 
+const appAuth = new AppAuthenticator(wallet);
+const appHandlers = new AppHandlers(appAuth);
+
 module.exports = {
-  authenticator,
-  handlers,
-  client,
+  authenticator: walletAuth,
+  handlers: walletHandlers,
+  appAuth,
+  appHandlers,
   wallet,
 };

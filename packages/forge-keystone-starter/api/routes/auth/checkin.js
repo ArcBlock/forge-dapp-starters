@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 const multibase = require('multibase');
 const moment = require('moment');
+const ForgeSDK = require('@arcblock/forge-sdk');
 const { fromAddress } = require('@arcblock/forge-wallet');
-const { client } = require('../../libs/auth');
 
 const description = {
   en: 'Sign this transaction to receive 25 TBA for test purpose',
@@ -29,11 +29,11 @@ module.exports = {
   onAuth: async ({ claims, userDid, extraParams: { locale } }) => {
     try {
       const claim = claims.find(x => x.type === 'signature');
-      const tx = client.decodeTx(multibase.decode(claim.origin));
+      const tx = ForgeSDK.decodeTx(multibase.decode(claim.origin));
       const wallet = fromAddress(userDid);
       console.log('poke.onAuth.payload', { tx, claim });
 
-      const hash = await client.sendPokeTx({
+      const hash = await ForgeSDK.sendPokeTx({
         tx,
         wallet,
         signature: claim.sig,

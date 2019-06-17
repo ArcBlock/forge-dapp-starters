@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const bearerToken = require('express-bearer-token');
+const ForgeSDK = require('@arcblock/forge-sdk');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -89,7 +90,7 @@ server.use(
 // Routes: due to limitations of netlify functions, we need to import routes here
 // ------------------------------------------------------------------------------
 const { decode } = require('../libs/jwt');
-const { handlers, client, wallet } = require('../libs/auth');
+const { handlers, wallet } = require('../libs/auth');
 const loginAuth = require('../routes/auth/login');
 const paymentAuth = require('../routes/auth/payment');
 const checkinAuth = require('../routes/auth/checkin');
@@ -124,8 +125,7 @@ paymentsRoutes.init(router);
 server.use(router);
 
 // Application start requirements
-client
-  .getAccountState({ address: wallet.address })
+ForgeSDK.getAccountState({ address: wallet.address })
   .then(res => {
     if (!res.state) {
       console.log('\n----------');

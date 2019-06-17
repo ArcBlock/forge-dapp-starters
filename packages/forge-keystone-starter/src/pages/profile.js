@@ -16,7 +16,7 @@ import Avatar from '@arcblock/react-forge/lib/Avatar';
 
 import Layout from '../components/layout';
 import useSession from '../hooks/session';
-import forge from '../libs/forge';
+import forge from '../libs/sdk';
 import api from '../libs/api';
 import { removeToken, onAuthError } from '../libs/auth';
 
