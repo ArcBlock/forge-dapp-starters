@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 const multibase = require('multibase');
+const ForgeSDK = require('@arcblock/forge-sdk');
 const { fromTokenToUnit } = require('@arcblock/forge-util');
 const { fromAddress } = require('@arcblock/forge-wallet');
-const { client, wallet } = require('../../libs/auth');
+const { wallet } = require('../../libs/auth');
 
 const description = {
   en: 'Please pay 2 TBA to unlock the secret document',
@@ -30,10 +31,10 @@ module.exports = {
     console.log('pay.onAuth', { claims, userDid });
     try {
       const claim = claims.find(x => x.type === 'signature');
-      const tx = client.decodeTx(multibase.decode(claim.origin));
+      const tx = ForgeSDK.decodeTx(multibase.decode(claim.origin));
       const user = fromAddress(userDid);
 
-      const hash = await client.sendTransferTx({
+      const hash = await ForgeSDK.sendTransferTx({
         tx,
         wallet: user,
         signature: claim.sig,
