@@ -1,3 +1,9 @@
+## 0.28.0 (June 17, 2019)
+
+- chore: update yarn.lock
+- chore: update did-util version
+- chore: use forge-sdk to replace graphql-client
+
 ## 0.27.2 (June 17, 2019)
   - Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters
   - chore: bump @arcblock/react-forge version
