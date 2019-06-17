@@ -15,21 +15,6 @@
   resolved "https://registry.npmjs.org/@arcblock/did-auth-storage/-/did-auth-storage-0.21.1.tgz#efcc0c5eeb67bee6cdb756c7bd7aae1eb6f1ddc7"
   integrity sha512-WBrkw7CKg1ZCUtgflaLc0o22OJKlfRkwRUqyi4FtowsoPBjRQ3Djh5gRH3oI6c8NDVDOq0pOQg+2uJNgEfTG5Q==
 
-"@arcblock/did-auth@^0.30.2":
-  version "0.30.2"
-  resolved "https://registry.npmjs.org/@arcblock/did-auth/-/did-auth-0.30.2.tgz#88d038e464032fcfe4f9753b6815c7a0c7ae7984"
-  integrity sha512-YGo6W6WaOBezr1avqdK7UN6aGiUEAPkBhlEHAfzzbooLr3+eMyejPQMKJ3mxhQATBBB2uznE5Zvw/DQf/f455w==
-  dependencies:
-    "@arcblock/did" "^0.30.0"
-    "@arcblock/forge-util" "^0.30.0"
-    "@arcblock/forge-wallet" "^0.30.0"
-    "@arcblock/graphql-client" "^0.30.0"
-    "@arcblock/mcrypto" "^0.30.0"
-    base64-url "^2.2.1"
-    debug "^4.1.1"
-    json-stable-stringify "^1.0.1"
-    lodash.get "^4.4.2"
-
 "@arcblock/did-auth@^0.30.4":
   version "0.30.4"
   resolved "https://registry.npmjs.org/@arcblock/did-auth/-/did-auth-0.30.4.tgz#4de185d671963f48537d5b91b18c3df1d0496ea3"
