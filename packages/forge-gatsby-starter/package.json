@@ -1,6 +1,6 @@
 {
   "name": "forge-gatsby-starter",
-  "version": "0.27.2",
+  "version": "0.28.0",
   "description": "dApp starter build with gatsby and xmark that can run on forge powered blockchain",
   "scripts": {
     "lint": "eslint api src",
