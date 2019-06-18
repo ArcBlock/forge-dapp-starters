@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
 export default function Footer() {
@@ -70,29 +71,32 @@ export default function Footer() {
   ];
 
   return (
-    <Grid
-      container
-      spacing={32}
-      justify="space-evenly"
-      style={{ marginTop: '40px', paddingTop: '40px', borderTop: '1px solid #cccccc' }}>
-      {footers.map(x => (
-        <Grid item xs key={x.title}>
-          <Typography variant="h6" color="textPrimary" gutterBottom>
-            {x.title}
-          </Typography>
-          {x.items.map(item => (
-            <Typography
-              key={item.title}
-              component="a"
-              href={item.link}
-              variant="subtitle1"
-              color="textSecondary"
-              target="_blank">
-              {item.title}
-            </Typography>
+    <div style={{ marginTop: '40px', paddingTop: '40px', borderTop: '1px solid #DEDEDE' }}>
+      <Container>
+        <Grid container spacing={4}>
+          {footers.map(x => (
+            <Grid item xs={12} sm={6} md={3} key={x.title}>
+              <Typography variant="h6" color="textPrimary" gutterBottom>
+                {x.title}
+              </Typography>
+              <ul style={{ padding: '0 0 0 16px' }}>
+                {x.items.map(item => (
+                  <li key={item.title}>
+                    <Typography
+                      component="a"
+                      href={item.link}
+                      variant="subtitle1"
+                      color="textSecondary"
+                      target="_blank">
+                      {item.title}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
+            </Grid>
           ))}
         </Grid>
-      ))}
-    </Grid>
+      </Container>
+    </div>
   );
 }

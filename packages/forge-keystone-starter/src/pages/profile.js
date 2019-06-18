@@ -79,7 +79,7 @@ export default function ProfilePage() {
   return (
     <Layout title="Profile">
       <Main>
-        <Grid container spacing={40}>
+        <Grid container spacing={6}>
           <Grid item xs={12} md={3} className="avatar">
             <Avatar size={240} did={state.value.user.did} />
             <Button color="secondary" variant="outlined" onClick={onLogout}>
