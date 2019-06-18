@@ -7,6 +7,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 import Layout from '../components/layout';
 
@@ -54,24 +55,26 @@ const walletDemos = [
 ];
 
 const renderExampleCard = x => (
-  <Card key={x.title} className="demo">
-    <CardContent>
-      <Typography color="textSecondary" gutterBottom>
-        {x.subtitle}
-      </Typography>
-      <Typography component="h2" variant="h5" gutterBottom>
-        {x.title}
-      </Typography>
-      <Typography component="p" variant="subtitle1" gutterBottom>
-        {x.description}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button component="a" href={x.link} size="small" color="primary">
-        Try Now
-      </Button>
-    </CardActions>
-  </Card>
+  <Grid key={x.title} item xs={12} sm={6} md={4}>
+    <Card className="demo">
+      <CardContent>
+        <Typography color="textSecondary" gutterBottom>
+          {x.subtitle}
+        </Typography>
+        <Typography component="h2" variant="h5" gutterBottom>
+          {x.title}
+        </Typography>
+        <Typography component="p" variant="subtitle1" gutterBottom>
+          {x.description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button component="a" href={x.link} size="small" color="primary">
+          Try Now
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
 );
 
 export default function IndexPage() {
@@ -114,13 +117,17 @@ export default function IndexPage() {
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             Chain Data Reading/Displaying Examples
           </Typography>
-          <div className="section__body demos">{graphqlDemos.map(x => renderExampleCard(x))}</div>
+          <Grid container spacing={6} className="section__body demos">
+            {graphqlDemos.map(x => renderExampleCard(x))}
+          </Grid>
         </section>
         <section className="section">
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             ABT Wallet Examples
           </Typography>
-          <div className="section__body demos">{walletDemos.map(x => renderExampleCard(x))}</div>
+          <Grid container spacing={6} className="section__body demos">
+            {walletDemos.map(x => renderExampleCard(x))}
+          </Grid>
         </section>
       </Main>
     </Layout>
@@ -151,12 +158,7 @@ const Main = styled.main`
   }
 
   .demos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     .demo {
-      width: 30%;
       height: 240px;
     }
   }

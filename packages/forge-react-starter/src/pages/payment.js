@@ -49,7 +49,7 @@ export default function PaymentPage() {
   return (
     <Layout title="Payment">
       <Main>
-        <Grid container spacing={40}>
+        <Grid container spacing={6}>
           <Grid item xs={12} md={3} className="avatar">
             <Avatar size={240} did={state.value.session.user.did} />
             <Button color="secondary" disabled={state.value.payment} variant="contained" onClick={() => toggle()}>

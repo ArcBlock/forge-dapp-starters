@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
 const pageContext = getPageContext();
 
 export const App = () => (
-  <MuiThemeProvider theme={pageContext.theme} sheetsManager={pageContext.sheetsManager}>
+  <MuiThemeProvider theme={pageContext.theme}>
     <ThemeProvider theme={pageContext.theme}>
       <React.Fragment>
         <CssBaseline />
