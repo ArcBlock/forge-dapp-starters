@@ -6,7 +6,6 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { ServerStyleSheets } from '@material-ui/styles';
 import Helmet from 'react-helmet';
-import JssProvider from 'react-jss/lib/JssProvider';
 
 export default class StyledDocument extends Document {
   static async getInitialProps(ctx) {
@@ -29,19 +28,15 @@ export default class StyledDocument extends Document {
 
     const sheet = new ServerStyleSheet();
     const sheets = new ServerStyleSheets();
-    const initialProps = await Document.getInitialProps(ctx);
-
     const originalRenderPage = ctx.renderPage;
 
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: App => props =>
-          sheets.collect(
-            <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
-              <App {...props} />
-            </JssProvider>
-          ),
+        enhanceApp: App => props => sheets.collect(<App {...props} />),
       });
+
+    // Get the context to collected side effects.
+    const initialProps = await Document.getInitialProps(ctx);
 
     return {
       ...initialProps,

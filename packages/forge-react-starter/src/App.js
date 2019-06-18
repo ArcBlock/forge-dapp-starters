@@ -11,7 +11,7 @@ import AppPage from './pages/application';
 import BlockPage from './pages/blocks';
 import ChainPage from './pages/chain';
 
-import getPageContext from './libs/context';
+import theme from './libs/theme';
 
 const GlobalStyle = createGlobalStyle`
   a {
@@ -34,11 +34,9 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const pageContext = getPageContext();
-
 export const App = () => (
-  <MuiThemeProvider theme={pageContext.theme}>
-    <ThemeProvider theme={pageContext.theme}>
+  <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <React.Fragment>
         <CssBaseline />
         <GlobalStyle />

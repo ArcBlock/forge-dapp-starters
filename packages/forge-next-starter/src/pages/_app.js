@@ -1,12 +1,11 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import JssProvider from 'react-jss/lib/JssProvider';
 import Helmet from 'react-helmet';
 
-import getPageContext from '../libs/context';
+import theme from '../libs/theme';
 
 const GlobalStyle = createGlobalStyle`
   a {
@@ -30,19 +29,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class MyApp extends App {
-  constructor() {
-    super();
-    this.pageContext = getPageContext();
-  }
-
-  componentDidMount() {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) {
-      jssStyles.parentNode.removeChild(jssStyles);
-    }
-  }
-
   render() {
     const { Component, pageProps } = this.props;
     return (
@@ -58,17 +44,15 @@ class MyApp extends App {
           ]}>
           <link rel="shortcut icon" href="/static/favicon.ico" />
         </Helmet>
-        <JssProvider registry={this.pageContext.sheetsRegistry}>
-          <MuiThemeProvider theme={this.pageContext.theme}>
-            <ThemeProvider theme={this.pageContext.theme}>
-              <React.Fragment>
-                <CssBaseline />
-                <GlobalStyle />
-                <Component pageContext={this.pageContext} {...pageProps} />
-              </React.Fragment>
-            </ThemeProvider>
-          </MuiThemeProvider>
-        </JssProvider>
+        <MuiThemeProvider theme={theme}>
+          <ThemeProvider theme={theme}>
+            <React.Fragment>
+              <CssBaseline />
+              <GlobalStyle />
+              <Component pageContext={this.pageContext} {...pageProps} />
+            </React.Fragment>
+          </ThemeProvider>
+        </MuiThemeProvider>
       </Container>
     );
   }

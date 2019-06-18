@@ -43,7 +43,6 @@
     "http-proxy-middleware": "^0.19.1",
     "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
-    "jss": "^9.8.7",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "mongoose": "^5.5.11",
@@ -53,13 +52,12 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-jss": "^8.6.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "react-use": "^9.1.2",
     "serverless-http": "^2.0.2",
     "store": "^2.0.12",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.3.1"
   },
   "scripts": {
     "lint": "eslint src api",
