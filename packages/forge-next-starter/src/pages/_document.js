@@ -4,13 +4,12 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import JssProvider from 'react-jss/lib/JssProvider';
+import { ServerStyleSheets } from '@material-ui/styles';
 import Helmet from 'react-helmet';
-
-import getContext from '../libs/context';
+import JssProvider from 'react-jss/lib/JssProvider';
 
 export default class StyledDocument extends Document {
-  static getInitialProps(ctx) {
+  static async getInitialProps(ctx) {
     // Resolution order
     //
     // On the server:
@@ -29,28 +28,30 @@ export default class StyledDocument extends Document {
     // 3. page.render
 
     const sheet = new ServerStyleSheet();
+    const sheets = new ServerStyleSheets();
+    const initialProps = await Document.getInitialProps(ctx);
 
-    // Get the context to collected side effects.
-    const context = getContext();
-    const page = ctx.renderPage(App => props =>
-      sheet.collectStyles(
-        <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
-          <App {...props} />
-        </JssProvider>
-      )
-    );
+    const originalRenderPage = ctx.renderPage;
+
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: App => props =>
+          sheets.collect(
+            <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
+              <App {...props} />
+            </JssProvider>
+          ),
+      });
 
     return {
-      ...page,
+      ...initialProps,
       helmet: Helmet.renderStatic(),
       styleTags: sheet.getStyleElement(),
-      stylesContext: context,
       styles: (
-        <style
-          id="jss-server-side"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: context.sheetsRegistry.toString() }}
-        />
+        <React.Fragment>
+          {initialProps.styles}
+          {sheets.getStyleElement()}
+        </React.Fragment>
       ),
     };
   }

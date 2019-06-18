@@ -1,6 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
@@ -58,8 +58,8 @@ class MyApp extends App {
           ]}>
           <link rel="shortcut icon" href="/static/favicon.ico" />
         </Helmet>
-        <JssProvider registry={this.pageContext.sheetsRegistry} generateClassName={this.pageContext.generateClassName}>
-          <MuiThemeProvider theme={this.pageContext.theme} sheetsManager={this.pageContext.sheetsManager}>
+        <JssProvider registry={this.pageContext.sheetsRegistry}>
+          <MuiThemeProvider theme={this.pageContext.theme}>
             <ThemeProvider theme={this.pageContext.theme}>
               <React.Fragment>
                 <CssBaseline />
