@@ -1,3 +1,11 @@
+## 0.29.0 (June 18, 2019)
+  - fix: ssr and cleanup dependency
+  - chore: upgrade material-ui to v4 for keystone-starter
+  - chore: upgrade material-ui to v4 for next-starter
+  - chore: upgrade material-ui to v4 for react starter
+  - chore: add bundle analyzer
+  - update readme
+
 ## 0.28.0 (June 17, 2019)
 
 - chore: update yarn.lock
