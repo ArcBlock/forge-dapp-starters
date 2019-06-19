@@ -111,7 +111,8 @@ server.use((req, res, next) => {
       next();
     })
     .catch(err => {
-      res.status(400).send({ error: err.message });
+      console.error('session.deserialize.error', err.message);
+      next();
     });
 });
 
