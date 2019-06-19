@@ -16,3 +16,4 @@ tmp
 ./docs/
 package-lock.json
 .compiled
+yarn-error.log

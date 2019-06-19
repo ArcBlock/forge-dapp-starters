@@ -1,3 +1,7 @@
+## 0.29.3 (June 19, 2019)
+  - fix forge-react-starter dependency error
+  - update readme
+
 ## 0.29.2 (June 19, 2019)
 
 - fix: invalid jwt session token should not cause api failure
