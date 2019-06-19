@@ -10,10 +10,10 @@
 
 ## Packages Included
 
-- [forge-gatsby-starter v0.28.0](./packages/forge-gatsby-starter)
-- [forge-keystone-starter v0.28.0](./packages/forge-keystone-starter)
-- [forge-next-starter v0.28.0](./packages/forge-next-starter)
-- [forge-react-starter v0.28.0](./packages/forge-react-starter)
+- [forge-gatsby-starter v0.29.0](./packages/forge-gatsby-starter)
+- [forge-keystone-starter v0.29.0](./packages/forge-keystone-starter)
+- [forge-next-starter v0.29.0](./packages/forge-next-starter)
+- [forge-react-starter v0.29.0](./packages/forge-react-starter)
 
 ## Contribution
 
