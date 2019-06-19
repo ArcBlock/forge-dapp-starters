@@ -1,3 +1,6 @@
+## 0.29.1 (June 19, 2019)
+
+
 ## 0.29.0 (June 18, 2019)
   - fix: ssr and cleanup dependency
   - chore: upgrade material-ui to v4 for keystone-starter
