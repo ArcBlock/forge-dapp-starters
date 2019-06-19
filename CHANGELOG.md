@@ -1,3 +1,8 @@
+## 0.29.2 (June 19, 2019)
+
+- fix: invalid jwt session token should not cause api failure
+
+
 ## 0.29.1 (June 19, 2019)
 
 
