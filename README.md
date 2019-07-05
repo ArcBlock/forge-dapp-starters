@@ -1,19 +1,24 @@
-# [forge-dapp-starters](https://github.com/ArcBlock/forge-dapp-starters)
+![dApp Starters](https://www.arcblock.io/.netlify/functions/badge/?text=dApp%20Starters)
+
+## Introduction
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 [![docs](https://img.shields.io/badge/powered%20by-arcblock-green.svg)](https://docs.arcblock.io)
 
-> A collection of starters that can be used as boilerplates when building forge powered javascript dApps
+A collection of starters that can be used as boilerplates when building forge powered javascript dApps
 
+> Last updated at 7/5/2019, 15:07:47
 
-> Last updated at 6/19/2019, 11:27:39 AM
-
-## Packages Included
+## Packages
 
 - [forge-gatsby-starter v0.29.3](./packages/forge-gatsby-starter)
 - [forge-keystone-starter v0.29.3](./packages/forge-keystone-starter)
 - [forge-next-starter v0.29.3](./packages/forge-next-starter)
 - [forge-react-starter v0.29.3](./packages/forge-react-starter)
+
+## Usage
+
+Checkout each sub package for usage instructions.
 
 ## Contribution
 

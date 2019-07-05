@@ -1,4 +1,4 @@
-# Forge Gatsby Starter
+![forge-gatsby-starter](https://www.arcblock.io/.netlify/functions/badge/?text=forge-gatsby-starter)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e0c63e91-97b5-45df-95d1-1bad86153559/deploy-status)](https://app.netlify.com/sites/forge-gatsby-starter/deploys)
 
