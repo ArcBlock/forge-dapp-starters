@@ -15,19 +15,24 @@ const packageList = packages.map(x => {
 });
 
 const readmeFile = path.join(__dirname, '../README.md');
-const readmeContent = `# [forge-dapp-starters](https://github.com/ArcBlock/forge-dapp-starters)
+const readmeContent = `![dApp Starters](https://www.arcblock.io/.netlify/functions/badge/?text=dApp%20Starters)
+
+## Introduction
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 [![docs](https://img.shields.io/badge/powered%20by-arcblock-green.svg)](https://docs.arcblock.io)
 
-> A collection of starters that can be used as boilerplates when building forge powered javascript dApps
-
+A collection of starters that can be used as boilerplates when building forge powered javascript dApps
 
 > Last updated at ${new Date().toLocaleString()}
 
-## Packages Included
+## Packages
 
 ${packageList.join('\n')}
+
+## Usage
+
+Checkout each sub package for usage instructions.
 
 ## Contribution
 
