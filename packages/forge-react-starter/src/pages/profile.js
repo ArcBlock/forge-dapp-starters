@@ -11,8 +11,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Auth from '@arcblock/react-forge/lib/Auth';
-import Avatar from '@arcblock/react-forge/lib/Avatar';
+import Auth from '@arcblock/did-react/lib/Auth';
+import Avatar from '@arcblock/did-react/lib/Avatar';
 
 import Layout from '../components/layout';
 import useSession from '../hooks/session';

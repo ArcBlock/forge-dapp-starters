@@ -9,8 +9,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Dialog from '@material-ui/core/Dialog';
-import Auth from '@arcblock/react-forge/lib/Auth';
-import UserAvatar from '@arcblock/react-forge/lib/Avatar';
+import Auth from '@arcblock/did-react/lib/Auth';
+import UserAvatar from '@arcblock/did-react/lib/Avatar';
 
 import useSession from '../hooks/session';
 import api from '../libs/api';
