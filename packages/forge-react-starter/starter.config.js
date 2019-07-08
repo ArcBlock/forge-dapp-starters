@@ -149,7 +149,9 @@ module.exports = {
 
     // Generate config
     const configPath = path.join(`${targetDir}`, '.env');
-    const configContent = `# server only
+    const configContent = `SKIP_PREFLIGHT_CHECK=true
+
+# server only
 MONGO_URI="${mongoUri}"
 APP_TOKEN_SECRET="${wallet.publicKey.slice(16)}"
 APP_TOKEN_TTL="1d"
