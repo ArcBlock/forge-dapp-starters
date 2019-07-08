@@ -1,3 +1,7 @@
+## 0.31.0 (July 08, 2019)
+
+- chore: use latest sdk and did-react package
+
 ## 0.30.0 (July 05, 2019)
 
 - chore: update readme with new badge
