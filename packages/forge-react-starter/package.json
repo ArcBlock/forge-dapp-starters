@@ -1,6 +1,6 @@
 {
   "name": "forge-react-starter",
-  "version": "0.29.3",
+  "version": "0.31.0",
   "main": "starter.config.js",
   "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
   "keywords": [
@@ -23,11 +23,11 @@
     "@arcblock/did": "^0.32.0",
     "@arcblock/did-auth": "^0.32.0",
     "@arcblock/did-auth-storage-mongo": "^0.21.1",
+    "@arcblock/did-react": "^0.12.0",
     "@arcblock/forge-sdk": "^0.32.0",
     "@arcblock/forge-util": "^0.32.0",
     "@arcblock/forge-wallet": "^0.32.0",
     "@arcblock/mcrypto": "^0.32.0",
-    "@arcblock/did-react": "^0.12.0",
     "@material-ui/core": "^4.1.1",
     "@material-ui/icons": "^3.0.2",
     "axios": "^0.19.0",
@@ -56,9 +56,9 @@
     "react-scripts": "3.0.1",
     "react-use": "^9.1.2",
     "serverless-http": "^2.0.2",
+    "shelljs": "^0.8.3",
     "store": "^2.0.12",
-    "styled-components": "^4.3.1",
-    "shelljs": "^0.8.3"
+    "styled-components": "^4.3.1"
   },
   "scripts": {
     "lint": "eslint src api",
