@@ -1,3 +1,8 @@
+## 0.32.0 (July 10, 2019)
+  - Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters
+  - fix: app name and description for auth lib
+  - update readme
+
 ## 0.31.0 (July 08, 2019)
 
 - chore: use latest sdk and did-react package
