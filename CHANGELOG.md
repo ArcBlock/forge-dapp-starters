@@ -1,7 +1,13 @@
+## 0.33.0 (July 15, 2019)
+
+- chore: trigger cnpm sync on npm publish
+- update readme
+
 ## 0.32.0 (July 10, 2019)
-  - Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters
-  - fix: app name and description for auth lib
-  - update readme
+
+- Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters
+- fix: app name and description for auth lib
+- update readme
 
 ## 0.31.0 (July 08, 2019)
 
