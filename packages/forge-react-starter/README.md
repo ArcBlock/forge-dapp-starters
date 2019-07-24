@@ -65,7 +65,7 @@ Other javascript project goodies:
 
 ```terminal
 npm install -g @arcblock/forge-cli forge-react-starter
-forge init
+forge install
 forge start
 forge create-project hello-forge
 cd hello-forge
