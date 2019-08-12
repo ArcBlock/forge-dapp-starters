@@ -1,0 +1,18 @@
+---
+gitRepo: "ArcBlock/forge-dapp-starters"
+srcPath: "docs"
+categories:
+  starters:
+    basePath: "/starters"
+    title: "Starters"
+    link: "/"
+    priority: 99
+    sidebar:
+      'null':
+      - "/"
+      - "/getting-started"
+      Starters:
+      - "/react-starter"
+      - "/next-starter"
+      - "/keystone-starter"
+      - "/gatsby-starter"
