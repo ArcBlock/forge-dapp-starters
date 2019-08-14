@@ -1,3 +1,7 @@
+## 0.35.0 (August 15, 2019)
+  - chore: update netlify deploy hook
+  - chore: fix travis build
+
 ## 0.34.0 (August 12, 2019)
   - chore: add baisc doc skeleton for dapp starters
   - Update README.md
