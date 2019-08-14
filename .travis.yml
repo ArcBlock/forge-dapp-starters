@@ -9,7 +9,7 @@ branches:
 script: make travis
 deploy:
 - provider: script
-  script: curl -X POST -d {} https://api.netlify.com/build_hooks/5d53b7e5c624e4e570256c69
+  script: curl -X POST -d {} https://api.netlify.com/build_hooks/5d547f070504cc4a52c2a9b2
   on:
     branch: master
 - provider: script
