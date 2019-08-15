@@ -46,6 +46,7 @@ travis: init coverage
 
 travis-deploy:
 	@echo "Deploy the software by travis"
+	@.makefiles/trigger_main_build.sh
 
 clean:
 	@echo "Cleaning the build..."

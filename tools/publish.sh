@@ -32,4 +32,5 @@ fi
 
 if [ "$changed" = "" ]; then
   make release
+  make travis-deploy
 fi
