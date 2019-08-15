@@ -46,6 +46,7 @@ travis: init coverage
 
 travis-deploy:
 	@echo "Deploy the software by travis"
+	@gem install travis -v 1.8.9
 	@.makefiles/trigger_main_build.sh
 
 clean:
