@@ -1,3 +1,6 @@
+## 0.36.0 (August 15, 2019)
+  - chore: use travis ci to trigger www-docs build
+
 ## 0.35.0 (August 15, 2019)
   - chore: update netlify deploy hook
   - chore: fix travis build
