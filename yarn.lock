@@ -73,10 +73,6 @@
     debug "^4.1.1"
     lodash "^4.17.11"
 
-"@arcblock/docblock@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/@arcblock/docblock/-/docblock-1.2.0.tgz#507a428a9276c3cd5c9b74cdda98d1479ce6ca9a"
-
 "@arcblock/forge-config@^0.32.0":
   version "0.32.0"
   resolved "https://registry.npmjs.org/@arcblock/forge-config/-/forge-config-0.32.0.tgz#1ef794faf56ead0933e588c752b0b2f78d3a5fdc"
