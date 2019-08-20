@@ -1,3 +1,7 @@
+## 0.36.1 (August 20, 2019)
+
+- fix: change forge-react-starter/api/libs/env.js filetype to normal file
+
 ## 0.36.0 (August 15, 2019)
   - chore: use travis ci to trigger www-docs build
 
