@@ -5,6 +5,7 @@ import useAsync from 'react-use/lib/useAsync';
 
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import CodeBlock from '@arcblock/ux/lib/CodeBlock';
 
 import Layout from '../components/layout';
 import forge from '../libs/sdk';
@@ -35,19 +36,14 @@ export default function AppPage() {
             Code
           </Typography>
           <div className="section__body code">
-            <code>
-              <pre>
-                const GraphQLClient = require('@arcblock/graphql-client');
-                <br />
-                const client = new GraphQLClient({endpointStr});
-                <br />
-                const res = await client.getBlocks({paramStr});
-                <br />
-                const [{heightStr}] = res.blocks;
-                <br />
-                const res = await client.getBlock({heightStr});
-              </pre>
-            </code>
+            <CodeBlock
+              language="javascript"
+              code={`const GraphQLClient = require('@arcblock/graphql-client');
+const client = new GraphQLClient(${endpointStr});
+const res = await client.getBlocks(${paramStr});
+const [${heightStr}] = res.blocks;
+const res = await client.getBlock(${heightStr});`}
+            />
           </div>
         </section>
         <section className="section">
@@ -55,11 +51,7 @@ export default function AppPage() {
             Data
           </Typography>
           <div className="section__body data">
-            {state.value && (
-              <pre>
-                <code>{JSON.stringify(state.value.block, true, '  ')}</code>
-              </pre>
-            )}
+            {state.value && <CodeBlock code={JSON.stringify(state.value.block, true, '  ')} language="json" />}
             {state.loading && <CircularProgress />}
             {state.error && <p>Error: {state.error.message}</p>}
           </div>

@@ -4,28 +4,36 @@ const moment = require('moment');
 const ForgeSDK = require('@arcblock/forge-sdk');
 const { fromAddress } = require('@arcblock/forge-wallet');
 
-const description = {
-  en: 'Sign this transaction to receive 25 TBA for test purpose',
-  zh: '签名该交易，你将获得 25 个测试用的 TBA',
-};
-
 module.exports = {
   action: 'checkin',
   claims: {
-    signature: ({ extraParams: { locale } }) => ({
-      txType: 'PokeTx',
-      txData: {
-        nonce: 0,
-        itx: {
-          date: moment(new Date().toISOString())
-            .utc()
-            .format('YYYY-MM-DD'),
-          address: 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz',
+    signature: async ({ extraParams: { locale } }) => {
+      const { state } = await ForgeSDK.getForgeState(
+        {},
+        { ignoreFields: ['state.protocols', /\.txConfig$/, /\.gas$/] }
+      );
+
+      const description = {
+        en: `Sign this transaction to receive 25 ${state.token.symbol} for test purpose`,
+        zh: `签名该交易，你将获得 25 个测试用的 ${state.token.symbol}`,
+      };
+
+      return {
+        txType: 'PokeTx',
+        txData: {
+          nonce: 0,
+          itx: {
+            date: moment(new Date().toISOString())
+              .utc()
+              .format('YYYY-MM-DD'),
+            address: 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz',
+          },
         },
-      },
-      description: description[locale] || description.en,
-    }),
+        description: description[locale] || description.en,
+      };
+    },
   },
+
   onAuth: async ({ claims, userDid, extraParams: { locale } }) => {
     try {
       const claim = claims.find(x => x.type === 'signature');

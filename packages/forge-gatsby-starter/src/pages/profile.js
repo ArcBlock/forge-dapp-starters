@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import styled from 'styled-components';
 import useAsyncFn from 'react-use/lib/useAsyncFn';
@@ -21,32 +22,25 @@ import api from '../libs/api';
 import { removeToken, onAuthError } from '../libs/auth';
 
 export default function ProfilePage() {
-  const state = useSession();
+  const session = useSession();
   const [isFetched, setFetched] = useToggle(false);
   const [isOpen, setOpen] = useToggle(false);
   const [balance, fetchBalance] = useAsyncFn(async () => {
-    if (state.value && state.value.user) {
-      const address = state.value.user.did.replace(/^did:abt:/, '');
-      const [{ state: account }, { state: chain }] = await Promise.all([
-        forge.getAccountState({ address }),
-        forge.getForgeState({}, { ignoreFields: ['state.protocols'] }),
-      ]);
-
-      return {
-        account,
-        token: chain.token,
-      };
+    if (session.value && session.value.user) {
+      const address = session.value.user.did.replace(/^did:abt:/, '');
+      const { state: account } = await forge.getAccountState({ address }, { ignoreFields: [] });
+      return account;
     }
 
     return null;
-  }, [state.value]);
+  }, [session.value]);
 
   const onLogout = () => {
     removeToken();
     window.location.href = '/';
   };
 
-  if (state.loading || !state.value) {
+  if (session.loading || !session.value) {
     return (
       <Layout title="Payment">
         <Main>
@@ -56,15 +50,15 @@ export default function ProfilePage() {
     );
   }
 
-  if (state.error) {
+  if (session.error) {
     return (
       <Layout title="Payment">
-        <Main>{state.error.message}</Main>
+        <Main>{session.error.message}</Main>
       </Layout>
     );
   }
 
-  if (!state.value.user) {
+  if (!session.value.user) {
     window.location.href = '/?openLogin=true';
     return null;
   }
@@ -76,21 +70,23 @@ export default function ProfilePage() {
     }, 100);
   }
 
+  const { user, token } = session.value;
+
   return (
     <Layout title="Profile">
       <Main>
-        <Grid container spacing={40}>
+        <Grid container spacing={6}>
           <Grid item xs={12} md={3} className="avatar">
-            <Avatar size={240} did={state.value.user.did} />
+            <Avatar size={240} did={user.did} />
             <Button color="secondary" variant="outlined" onClick={onLogout}>
               Logout
             </Button>
             <Button color="primary" variant="outlined" href="/payment" style={{ marginTop: '30px' }}>
               My Purchase
             </Button>
-            {balance.value && balance.value.account && (
+            {balance.value && (
               <Button color="primary" variant="contained" onClick={() => setOpen()} style={{ marginTop: '30px' }}>
-                Get 25 TBA
+                Get 25 {token.symbol}
               </Button>
             )}
           </Grid>
@@ -100,24 +96,22 @@ export default function ProfilePage() {
             </Typography>
             <List>
               <ListItem className="meta-item">
-                <ListItemText primary={state.value.user.did} secondary="DID" />
+                <ListItemText primary={user.did} secondary="DID" />
               </ListItem>
               <ListItem className="meta-item">
-                <ListItemText primary={state.value.user.name || '-'} secondary="Name" />
+                <ListItemText primary={user.name || '-'} secondary="Name" />
               </ListItem>
               <ListItem className="meta-item">
-                <ListItemText primary={state.value.user.email || '-'} secondary="Email" />
+                <ListItemText primary={user.email || '-'} secondary="Email" />
               </ListItem>
               <ListItem className="meta-item">
-                <ListItemText primary={state.value.user.mobile || '-'} secondary="Phone" />
+                <ListItemText primary={user.mobile || '-'} secondary="Phone" />
               </ListItem>
               <ListItem className="meta-item">
                 <ListItemText
                   primary={
-                    balance.value && balance.value.account && balance.value.token ? (
-                      `${fromUnitToToken(balance.value.account.balance, balance.value.token.decimal)} ${
-                        balance.value.token.symbol
-                      }`
+                    balance.value ? (
+                      `${fromUnitToToken(balance.value.balance, token.decimal)} ${token.symbol}`
                     ) : (
                       <CircularProgress size={18} />
                     )
@@ -138,10 +132,10 @@ export default function ProfilePage() {
           onClose={() => setOpen()}
           onSuccess={() => window.location.reload()}
           messages={{
-            title: 'Get 25 TBA for FREE',
-            scan: 'Scan qrcode to get 25 TBA for FREE',
+            title: `Get 25 ${token.symbol} for FREE`,
+            scan: `Scan qrcode to get 25 ${token.symbol} for FREE`,
             confirm: 'Confirm on your ABT Wallet',
-            success: '25 TBA sent to your account',
+            success: `25 ${token.symbol} sent to your account`,
           }}
         />
       )}
