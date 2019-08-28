@@ -24,10 +24,7 @@ module.exports = {
         txData: {
           itx: {
             to: wallet.address,
-            value: {
-              value: fromTokenToUnit(2).toBuffer(),
-              minus: false,
-            },
+            value: fromTokenToUnit(2, state.token.decimal),
           },
         },
         description: description[locale] || description.en,
