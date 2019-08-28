@@ -8,6 +8,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import CodeBlock from '@arcblock/ux/lib/CodeBlock';
 
 import Layout from '../components/layout';
 
@@ -96,21 +97,15 @@ export default function IndexPage() {
             Quick Start
           </Typography>
           <div className="section__body quickstart">
-            <code>
-              <pre>
-                npm install -g @arcblock/forge-cli
-                <br />
-                forge install
-                <br />
-                forge start
-                <br />
-                forge project:create hello-forge
-                <br />
-                cd hello-forge
-                <br />
-                yarn start
-              </pre>
-            </code>
+            <CodeBlock
+              language="shell"
+              code={`npm install -g @arcblock/forge-cli
+forge install
+forge start
+forge project:create hello-forge
+cd hello-forge
+yarn start`}
+            />
           </div>
         </section>
         <section className="section">

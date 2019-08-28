@@ -28,8 +28,8 @@ export default function ProfilePage() {
     if (state.value && state.value.user) {
       const address = state.value.user.did.replace(/^did:abt:/, '');
       const [{ state: account }, { state: chain }] = await Promise.all([
-        forge.getAccountState({ address }),
-        forge.getForgeState({}, { ignoreFields: ['state.protocols'] }),
+        forge.getAccountState({ address }, { ignoreFields: [] }),
+        forge.getForgeState({}, { ignoreFields: ['state.protocols', /\.txConfig$/, /\.gas$/] }),
       ]);
 
       return {
