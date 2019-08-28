@@ -5,27 +5,31 @@ const { fromTokenToUnit } = require('@arcblock/forge-util');
 const { fromAddress } = require('@arcblock/forge-wallet');
 const { wallet } = require('../../libs/auth');
 
-const description = {
-  en: 'Please pay 2 TBA to unlock the secret document',
-  zh: '请支付 2 TAB 以解锁加密的文档',
-};
-
 module.exports = {
   action: 'payment',
   claims: {
-    signature: ({ extraParams: { locale } }) => ({
-      txType: 'TransferTx',
-      txData: {
-        itx: {
-          to: wallet.address,
-          value: {
-            value: fromTokenToUnit(2).toBuffer(),
-            minus: false,
+    signature: async ({ extraParams: { locale } }) => {
+      const { state } = await ForgeSDK.getForgeState(
+        {},
+        { ignoreFields: ['state.protocols', /\.txConfig$/, /\.gas$/] }
+      );
+
+      const description = {
+        en: `Please pay 2 ${state.token.symbol} to unlock the secret document`,
+        zh: `请支付 2 ${state.token.symbol} 以解锁加密的文档`,
+      };
+
+      return {
+        txType: 'TransferTx',
+        txData: {
+          itx: {
+            to: wallet.address,
+            value: fromTokenToUnit(2, state.token.decimal),
           },
         },
-      },
-      description: description[locale] || description.en,
-    }),
+        description: description[locale] || description.en,
+      };
+    },
   },
   onAuth: async ({ claims, userDid, extraParams: { locale } }) => {
     console.log('pay.onAuth', { claims, userDid });

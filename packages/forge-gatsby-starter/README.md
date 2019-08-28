@@ -65,9 +65,9 @@ Other javascript project goodies:
 
 ```terminal
 npm install -g @arcblock/forge-cli forge-gatsby-starter
-forge init
+forge install
 forge start
-forge create-project hello-forge
+forge project:create hello-forge
 cd hello-forge
 npm start
 ```

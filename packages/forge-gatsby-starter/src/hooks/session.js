@@ -4,11 +4,13 @@ import { removeToken } from '../libs/auth';
 
 async function fetchSession() {
   try {
-    const res = await api.get('/api/session');
-    if (res.status === 400) {
+    const { status, data } = await api.get('/api/session');
+
+    if (status === 400) {
       removeToken();
     }
-    return res.data;
+
+    return data;
   } catch (err) {
     removeToken();
   }
