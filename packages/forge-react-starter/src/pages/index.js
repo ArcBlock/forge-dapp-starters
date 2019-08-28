@@ -100,11 +100,11 @@ export default function IndexPage() {
               <pre>
                 npm install -g @arcblock/forge-cli
                 <br />
-                forge init
+                forge install
                 <br />
                 forge start
                 <br />
-                forge create-project hello-forge
+                forge project:create hello-forge
                 <br />
                 cd hello-forge
                 <br />
