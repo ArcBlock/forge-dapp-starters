@@ -34,8 +34,6 @@ const walletAuth = new WalletAuthenticator({
   chainInfo: {
     chainHost: env.chainHost,
     chainId: env.chainId,
-    chainToken: 'TBA',
-    decimals: 16,
   },
 });
 
