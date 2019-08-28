@@ -48,7 +48,12 @@ export default function Header() {
           <img className="logo" src="/static/images/logo.png" alt="arcblock" />
           {env.appName}
         </Typography>
-        <Typography component="a" href={env.chainHost.replace('/api', '')} target="_blank" variant="h6" color="inherit">
+        <Typography
+          component="a"
+          href={env.chainHost.replace('/api', '/node/explorer/txs')}
+          target="_blank"
+          variant="h6"
+          color="inherit">
           Block Explorer
         </Typography>
         {session.value && session.value.user && (

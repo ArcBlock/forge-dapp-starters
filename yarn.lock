@@ -20374,7 +20374,7 @@ remark-heading-gap@^3.0.0:
   resolved "https://registry.npm.taobao.org/remark-heading-gap/download/remark-heading-gap-3.1.1.tgz#0f7d4463e17135814be962b437c481121c81f136"
   integrity sha1-D31EY+FxNYFL6WK0N8SBEhyB8TY=
 
-"remark-license@github:niftylettuce/remark-license":
+remark-license@niftylettuce/remark-license:
   version "4.0.1"
   resolved "https://codeload.github.com/niftylettuce/remark-license/tar.gz/17ecb8f64f8f6082414d14f9267a12764e6ddbfb"
   dependencies:
