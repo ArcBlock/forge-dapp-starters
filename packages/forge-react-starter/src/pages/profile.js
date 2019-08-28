@@ -70,7 +70,6 @@ export default function ProfilePage() {
     }, 100);
   }
 
-  console.log({ session, balance });
   const { user, token } = session.value;
 
   return (
