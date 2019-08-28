@@ -1,17 +1,34 @@
+## 0.37.0 (August 28, 2019)
+
+- chore: sync files across starters
+- chore: cleanup console.log
+- fix: payment tip
+- fix: token symbol and decimal should be consistent with online version
+- chore: move token info to session
+- chore: sync starter frontend code
+- chore: polish react starters
+- fix: update forge subcommand
+- chore: improve header and cleanup dependency
+- chore: bump forge js sdk version
+- update readme
+
 ## 0.36.1 (August 20, 2019)
 
 - fix: change forge-react-starter/api/libs/env.js filetype to normal file
 
 ## 0.36.0 (August 15, 2019)
-  - chore: use travis ci to trigger www-docs build
+
+- chore: use travis ci to trigger www-docs build
 
 ## 0.35.0 (August 15, 2019)
-  - chore: update netlify deploy hook
-  - chore: fix travis build
+
+- chore: update netlify deploy hook
+- chore: fix travis build
 
 ## 0.34.0 (August 12, 2019)
-  - chore: add baisc doc skeleton for dapp starters
-  - Update README.md
+
+- chore: add baisc doc skeleton for dapp starters
+- Update README.md
 
 ## 0.33.0 (July 15, 2019)
 
