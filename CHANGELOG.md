@@ -1,3 +1,7 @@
+## 0.38.0 (September 04, 2019)
+  - chore: add `.blocklet` folder
+  - update readme
+
 ## 0.37.0 (August 28, 2019)
 
 - chore: sync files across starters
