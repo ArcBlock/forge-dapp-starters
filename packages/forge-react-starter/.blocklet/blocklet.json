@@ -1,0 +1,20 @@
+{
+  "name": "forge-react-starter",
+  "version": "0.37.0",
+  "description": "A dApp starter that integrates forge-javascript-sdk and create-react-app",
+  "documentation": "README.md",
+  "logo": "logo.svg",
+  "group": "starter",
+  "provider": "official",
+  "script": "starter.config.js",
+  "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
+  "keywords": ["arcblock", "forge", "starter", "react", "javascript"],
+  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter"
+  },
+  "hooks": {
+    "post-install": ""
+  }
+}
