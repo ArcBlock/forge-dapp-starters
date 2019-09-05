@@ -3,6 +3,7 @@
   "documentation": "README.md",
   "logo": "logo.svg",
   "group": "starter",
+  "color": "error",
   "provider": "official",
   "hooks": {
     "post-install": ""

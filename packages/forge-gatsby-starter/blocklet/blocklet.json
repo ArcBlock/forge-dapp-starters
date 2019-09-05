@@ -3,7 +3,8 @@
   "documentation": "README.md",
   "logo": "logo.svg",
   "group": "starter",
-  "provider": "official",
+  "color": "secondary",
+  "provider": "arcblock",
   "hooks": {
     "post-install": ""
   }
