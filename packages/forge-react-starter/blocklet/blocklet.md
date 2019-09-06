@@ -39,19 +39,19 @@ Besides, to make the dApp works along with the [ABT Wallet](https://abtwallet.io
 
 ### Application Home
 
-![](./screenshot/home.png)
+![](./screenshots/home.png)
 
 ### Login Screen
 
-![](./screenshot/login.png)
+![](./screenshots/login.png)
 
 ### Profile Page
 
-![](./screenshot/profile.png)
+![](./screenshots/profile.png)
 
 ### Payment Page
 
-![](./screenshot/payment.png)
+![](./screenshots/payment.png)
 
 ## Requirements to use this blocklet?
 
