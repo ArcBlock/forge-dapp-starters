@@ -1,124 +1,78 @@
-![forge-react-starter](https://www.arcblock.io/.netlify/functions/badge/?text=forge-react-starter)
+# Forge React Starter
 
-> Brings tons of thousands react libraries/components to dApps that run on [forge](https://www.arcblock.io/en/forge-sdk) powered blockchain.
+## Why this blocklet?
 
-[Live preview](https://forge-react-starter.netlify.com/)
+Admit it or not, putting together dozens of libraries and frameworks and making them working together to build an application is hard and tedious, not to mention getting your application deployed for public access.
 
-![](./docs/starter-home.png)
+On the other hand, having these libraries and frameworks makes our life easier by not reinventing the wheel, that's why [create-react-app]() was born and get more and more popular.
 
-A starter project that integrates [forge](https://docs.arcblock.io/forge/latest/) [javascript sdk](https://docs.arcblock.io/forge/latest/sdk/javascript.html) with mainstream javascript application batteries:
+You can get your own blockchain up and running within minutes with [forge-cli](https://github.com/ArcBlock/forge-cli), but how to connect your application with forge-powered chains through [forge-sdk](https://github.com/ArcBlock/forge-js)? How to get your application communication to ABT Wallet users?
 
-- [React.js](https://reactjs.org/) this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-- [Material-UI](https://material-ui.com/) for resuable react components
-- [Express.js](http://expressjs.com/) as custom web server that can serve custom api
-- [Mongoose](https://mongoosejs.com/) as database ORM layer
+`forge-react-starter` is here to help! **`forge-react-starter` is the go to solution if you want to build applications with [react]() that runs on forge powered chains.**
 
-Forge SDK libraries included in the starter project:
+## How this blocklet helps?
 
-- [@arcblock/forge-sdk](https://www.npmjs.com/package/@arcblock/forge-sdk) as communication layer between application and forge powered blockchain
-- [@arcblock/did-auth](https://www.npmjs.com/package/@arcblock/did-auth) help application do jwt based auth with ABT wallet
-- [@arcblock/did-auth-storage-mongo](https://www.npmjs.com/package/@arcblock/did-auth-storage-mongo) storage engines that powers the magic behind ABT Wallet qrcode scanning
-- [@arcblock/did-react](https://www.npmjs.com/package/@arcblock/did-react) react components that can implements basic UI elements to connect your application with ABT Wallet, such as avatar and auth dialog
+`forge-react-starter` is a typical full-stack javascript dApp template that have [forge-sdk]() integrated, it consists of 2 core parts:
 
-Other javascript project goodies:
+### Frontend Part
 
-- `jwt`: token based authentication
-- `eslint`: for consistent coding style
-- `prettier`: for consistent code formatting
-- `husky`: and `lint-staged` for prepush and precommit hooks
-- `nodemon`: for auto restart server on node.js code change
-- `next.js`: supports hot reload on client code change
-- `dotenv`: to load configurations from `.env` files
+Built upon the application skeleton we got after running `create-react-app`, dApps bootstrapped with this starter have several widely used react libraries integrated to make page composing easier:
 
-## Folder Structure
+- [styled-components]() as styling solution
+- [@material-ui]() as component library
+- [react-router-dom]() for client side routing
+- [@arcblock/forge-sdk]() for read and write onchain data
 
-```terminal
-.
-├── LICENSE
-├── Makefile
-├── README.md
-├── src                       // code for client side pages
-│   ├── components            // shared react components/layouts across all pages
-│   ├── hooks                 // shared react hooks
-│   ├── libs                  // shared utility code
-│   ├── pages                 // pages
-├── package.json
-├── api                       // backend code
-│   ├── libs                  // shared server libs
-│   ├── models                // mongoose db models
-│   └── routes                // express routes and handlers
-├── version
-└── yarn.lock
-```
+### Backend part
 
-## Runtime Requirements
+Besides, to make the dApp works along with the [ABT Wallet](https://abtwallet.io), some APIs are required, a minimal API server built upon [express]() is also included.
 
-- Mongodb v3+
-- Node.js v10+
-- That's all
+## Use case of this blocklet?
 
-## Usage
+`forge-react-starter` can be start point for any forge powered dapp, you can built many blockchain powered apps, such as:
 
-### Create new project with forge-cli
+- Online store that sells digital assets and accept ABT as payments
+- Online community application that authentication users through ABT Wallet
+- Admin console for internal use that are protected by ABT Wallet
 
-```terminal
-npm install -g @arcblock/forge-cli forge-react-starter
-forge install
-forge start
-forge create-project hello-forge
-cd hello-forge
-npm start
-```
+## What's the dapp look like?
 
-### Just use this starter repo
+### Application Home
 
-> **Note: You have to setup an `.env` file manually.**
+![](./screenshot/home.png)
 
-```terminal
-git clone https://github.com/ArcBlock/forge-dapp-starters.git
-cd forge-dapp-starters/packages/forge-react-starter
-yarn
-yarn start
-```
+### Login Screen
 
-## Configuration
+![](./screenshot/login.png)
 
-dApp configuration file is auto generated and stored in `.env`, example configure as:
+### Profile Page
 
-```text
-# server only
-MONGO_URI="mongodb://localhost/forge-react-starter"
-APP_TOKEN_SECRET="you_should_change_this"
-APP_TOKEN_TTL="1d"
-APP_SK="0x12433d2ffae0e304c04504c45c19d8b7d7825ef017c48811a784b35bf7ba26cfecf4ec97e4cf2d5a62a93bf16eb841b0faa1980c86a24cc2db6f218d410aee32"
-APP_PORT=8000
+![](./screenshot/profile.png)
 
-# both server and client
-REACT_APP_CHAIN_ID="zinc-2019-05-17"
-REACT_APP_CHAIN_HOST="https://zinc.abtnetwork.io/api"
-REACT_APP_APP_ID="zNKdL4LTzmiMDenTBtCixngRqGBk6YtZLseM"
-REACT_APP_APP_NAME="Forge React Starter"
-REACT_APP_BASE_URL="http://10.113.10.82:8000"
-REACT_APP_API_PREFIX=""
-```
+### Payment Page
 
-> Caution: `.env` contains very sensitive info such as Application wallet secret key, PLEASE DO NOT COMMIT `.env` FILE
+![](./screenshot/payment.png)
 
-## FAQ
+## Requirements to use this blocklet?
 
-### How to upgrade `@arcblock/*` dependencies?
+Here are the knowledge requirements to get you up to speed when using this starter blocklet:
 
-Simple, just update `package.json`, then `yarn`, be sure to test the starter after upgrading.
+- Basic javascript coding experience
+- Basic react coding experience
+- Basic knowledge of mongodb
 
-### How to deploy my application?
+And to get the starter blocklet up and running on first try, you should:
 
-Checkout [Deployment.md](./docs/deployment.md)
+- A handy command line terminal
+- Install latest version of forge-cli: `npm install -g @arcblock/forge-cli`
+- Spin up a forge-powered chain with forge-cli
+- Have a running [mongodb](https://mongodb.org) instance that the dApp can connects to
 
-### What APIs are supported by `GraphQLClient`?
+Besides, you need to have ABT Wallet installed to try out the application after bootstrapping.
 
-Checkout the following screenshot or just run the starter and open browser console.
+## How to use this blocklet?
 
-![](./docs/api-list.png)
+Run `forge blocklet:use forge-react-starter`, you are ready to roll!
 
 ## LICENSE
 
