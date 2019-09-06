@@ -1,6 +1,5 @@
 {
   "description": "A dApp starter that integrates forge-javascript-sdk and keystone.js",
-  "documentation": "README.md",
   "logo": "logo.svg",
   "group": "starter",
   "provider": "official",

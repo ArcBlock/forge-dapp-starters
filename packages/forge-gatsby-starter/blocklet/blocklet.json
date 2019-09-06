@@ -1,6 +1,5 @@
 {
   "description": "A dApp starter that integrates forge-javascript-sdk and gatsby.js",
-  "documentation": "README.md",
   "logo": "logo.svg",
   "group": "starter",
   "color": "secondary",

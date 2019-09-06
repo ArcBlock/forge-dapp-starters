@@ -1,11 +1,7 @@
 {
   "description": "A dApp starter that integrates forge-javascript-sdk and next.js",
-  "documentation": "README.md",
   "logo": "logo.svg",
   "group": "starter",
-  "color": "error",
   "provider": "official",
-  "hooks": {
-    "post-install": ""
-  }
+  "color": "error"
 }
