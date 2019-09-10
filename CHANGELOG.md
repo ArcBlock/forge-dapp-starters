@@ -1,11 +1,8 @@
 ## 0.38.4 (September 10, 2019)
 
-- blocklet: change blocklet project structure
-- blocklet: change forge-react-starter on-complete
-- blocklet: remove useless dependencies in forge-react-starter
+- make forge-react-starter fit forge blocklet
 - chore: remove unrelated keywords
-- blocklet: make forge-react-starter fit forge:blocklet
-- update readme
+- remove useless dependencies in forge-react-starter
 
 ## 0.38.3 (September 06, 2019)
 
