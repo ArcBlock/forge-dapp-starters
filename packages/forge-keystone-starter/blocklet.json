@@ -3,6 +3,9 @@
   "logo": "logo.svg",
   "group": "starter",
   "provider": "official",
+  "documentation": "https://docs.arcblock.io",
+  "support": "support@arcblock.io",
+  "community": "https://gitter.im/ArcBlock/community",
   "hooks": {
     "post-install": ""
   }

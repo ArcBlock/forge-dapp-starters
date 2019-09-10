@@ -3,5 +3,8 @@
   "logo": "logo.png",
   "group": "starter",
   "provider": "official",
-  "color": "error"
+  "color": "error",
+  "documentation": "https://docs.arcblock.io",
+  "support": "support@arcblock.io",
+  "community": "https://gitter.im/ArcBlock/community"
 }
