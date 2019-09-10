@@ -1,0 +1,21 @@
+{
+  "name": "forge-react-starter",
+  "description": "A dApp starter that integrates forge-javascript-sdk and create-react-app, Brings tons of thousands react libraries/components to dApps that run on forge powered blockchain.",
+  "logo": "logo.svg",
+  "group": "starter",
+  "provider": "official",
+  "color": "primary",
+  "type": "starter",
+  "version": "0.3.2",
+  "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
+  "keywords": ["arcblock", "forge", "starter", "react", "javascript"],
+  "templates": "templates",
+  "install-scripts": {
+    "install-dependencies": "yarn install"
+  },
+  "hooks": {
+    "post-copy": "git init && yarn install",
+    "configure": "node scripts/configure.js",
+    "on-complete": "node scripts/on-complete.js"
+  }
+}

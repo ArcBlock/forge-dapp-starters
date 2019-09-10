@@ -1,3 +1,12 @@
+## 0.38.4 (September 10, 2019)
+
+- blocklet: change blocklet project structure
+- blocklet: change forge-react-starter on-complete
+- blocklet: remove useless dependencies in forge-react-starter
+- chore: remove unrelated keywords
+- blocklet: make forge-react-starter fit forge:blocklet
+- update readme
+
 ## 0.38.3 (September 06, 2019)
 
 - Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters

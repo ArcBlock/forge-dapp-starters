@@ -1,7 +1,0 @@
-{
-  "description": "A dApp starter that integrates forge-javascript-sdk and create-react-app, Brings tons of thousands react libraries/components to dApps that run on forge powered blockchain.",
-  "logo": "logo.svg",
-  "group": "starter",
-  "provider": "official",
-  "color": "primary"
-}
