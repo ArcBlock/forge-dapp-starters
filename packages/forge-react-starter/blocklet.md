@@ -1,6 +1,4 @@
-# Forge React Starter
-
-## Why this blocklet?
+## What is This For?
 
 Admit it or not, putting together dozens of libraries and frameworks and making them working together to build an application is hard and tedious, not to mention getting your application deployed for public access.
 
@@ -10,7 +8,7 @@ You can get your own blockchain up and running within minutes with [forge-cli](h
 
 `forge-react-starter` is here to help! **`forge-react-starter` is the go to solution if you want to build applications with [react](https://reactjs.org) that runs on forge powered chains.**
 
-## How this blocklet helps?
+## What's Included?
 
 `forge-react-starter` is a typical full-stack javascript dApp template that have [forge-sdk](https://npmjs.org/package/@arcblock/forge-sdk) integrated, it consists of 2 core parts:
 
@@ -27,7 +25,7 @@ Built upon the application skeleton we got after running `create-react-app`, dAp
 
 Besides, to make the dApp works along with the [ABT Wallet](https://abtwallet.io), some APIs are required, a minimal API server built upon [express](http://expressjs.com/) is also included.
 
-## Use case of this blocklet?
+## Use cases?
 
 `forge-react-starter` can be start point for any forge powered dapp, you can built many blockchain powered apps, such as:
 
@@ -35,25 +33,7 @@ Besides, to make the dApp works along with the [ABT Wallet](https://abtwallet.io
 - Online community application that authentication users through ABT Wallet
 - Admin console for internal use that are protected by ABT Wallet
 
-## What's the dapp look like?
-
-### Application Home
-
-![](./screenshots/home.png)
-
-### Login Screen
-
-![](./screenshots/login.png)
-
-### Profile Page
-
-![](./screenshots/profile.png)
-
-### Payment Page
-
-![](./screenshots/payment.png)
-
-## Requirements to use this blocklet?
+## Requirements?
 
 Here are the knowledge requirements to get you up to speed when using this starter blocklet:
 
@@ -69,10 +49,6 @@ And to get the starter blocklet up and running on first try, you should:
 - Have a running [mongodb](https://mongodb.org) instance that the dApp can connects to
 
 Besides, you need to have ABT Wallet installed to try out the application after bootstrapping.
-
-## How to use this blocklet?
-
-Run `forge blocklet:use forge-react-starter`, you are ready to roll!
 
 ## LICENSE
 
