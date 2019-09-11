@@ -7,11 +7,11 @@
 /* eslint-disable import/order */
 /* eslint-disable no-console */
 /* eslint-disable object-curly-newline */
-const inquirer = require('inquirer');
 const fs = require('fs');
 const ip = require('ip');
-const path = require('path');
 const camelCase = require('lodash/camelCase');
+const path = require('path');
+const inquirer = require('inquirer');
 const GraphQLClient = require('@arcblock/graphql-client');
 const { types } = require('@arcblock/mcrypto');
 const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
@@ -22,16 +22,23 @@ const debug = require('debug')(name);
  * On project folder created and files synced
  * You can create new files/modifying existing files in the project folder
  *
+ * @param {object} config - project creating config
+ * @param {string} config.targetDir - the project folder
+ * @param {string} config.chainHost - the graphql endpoint the application running on
+ * @param {string} config.chainId - the chainId of the application running on
+ * @param {GraphQLClient} config.client - GraphQLClient instance that can be used to send request to the chain
+ * @param {object} config.symbols - ui elements that can be used to print logs
+ * @param {string} config.__starter__ - checkout `answers` for other collected parameters
  * @function
  * @public
  */
 const getConfigs = async () => {
   const defaults = {
-    appName: 'Forge Keystone.js Starter',
-    appDescription: 'Starter dApp built on keystone.js that runs on forge powered blockchain',
+    appName: 'Forge Next.js Starter',
+    appDescription: 'Starter dApp built on next.js that runs on forge powered blockchain',
     appPort: 3030,
     chainHost: 'http://localhost:8210/api',
-    mongoUri: 'mongodb://127.0.0.1:27017/forge-keystone-starter',
+    mongoUri: 'mongodb://127.0.0.1:27017/forge-next-starter',
   };
 
   const questions = [
@@ -88,10 +95,6 @@ const getConfigs = async () => {
   ];
 
   const { chainHost, appName, appDescription, appPort, mongoUri } = await inquirer.prompt(questions);
-  const client = new GraphQLClient({ endpoint: chainHost });
-  const {
-    info: { chainId },
-  } = await client.getChainInfo();
   const ipAddress = ip.address();
 
   // Declare application on chain
@@ -103,6 +106,10 @@ const getConfigs = async () => {
     })
   );
   debug('application wallet', wallet.toJSON());
+  const client = new GraphQLClient({ endpoint: chainHost });
+  const {
+    info: { chainId },
+  } = await client.getChainInfo();
   const hash = await client.sendDeclareTx({
     tx: {
       chainId,
@@ -112,14 +119,12 @@ const getConfigs = async () => {
     },
     wallet,
   });
-
   debug('application declare tx', hash);
   console.log(`Application account declared on chain: ${wallet.toAddress()}`);
 
   // Generate config
   const configContent = `# server only
 MONGO_URI="${mongoUri}"
-COOKIE_SECRET="${wallet.publicKey.slice(16)}"
 APP_TOKEN_SECRET="${wallet.publicKey.slice(16)}"
 APP_TOKEN_TTL="1d"
 APP_SK="${wallet.secretKey}"
@@ -136,13 +141,12 @@ BASE_URL="http://${ipAddress}:${appPort}"`;
   return configContent;
 };
 
-const configure = async () => {
-  const targetDir = process.env.FORGE_BLOCKLET_TARGET_DIR;
+const run = async () => {
+  const configPath = path.join(`${process.env.FORGE_BLOCKLET_TARGET_DIR}`, '.env');
   const configs = await getConfigs();
-  const configPath = path.join(`${targetDir}`, '.env');
-  fs.writeFileSync(configPath, configs);
 
+  fs.writeFileSync(configPath, configs);
   console.log(`Application config generated ${configPath}`);
 };
 
-configure();
+run();

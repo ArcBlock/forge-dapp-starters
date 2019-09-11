@@ -68,11 +68,10 @@ Other javascript project goodies:
 ### Create new project with forge-cli
 
 ```terminal
-npm install -g @arcblock/forge-cli forge-next-starter
+npm install -g @arcblock/forge-cli
 forge install
 forge start
-forge project:create hello-forge
-cd hello-forge
+forge blocklet:use forge-next-starter
 npm start
 ```
 
@@ -83,8 +82,8 @@ npm start
 ```terminal
 git clone https://github.com/ArcBlock/forge-dapp-starters.git
 cd forge-dapp-starters/packages/forge-next-starter
-yarn
-yarn start
+npm install
+npm start
 ```
 
 ## Configuration

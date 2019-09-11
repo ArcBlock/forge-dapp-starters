@@ -23,6 +23,7 @@ const getConfigs = async () => {
     appName: 'Forge Gatsby Starter',
     appDescription: 'Starter dApp built on gatsby.js and runs on forge powered blockchain',
     appPort: 3030,
+    chainHost: 'http://localhost:8210/api',
     mongoUri: 'mongodb://127.0.0.1:27017/forge-gatsby-starter',
   };
 
@@ -31,6 +32,7 @@ const getConfigs = async () => {
       type: 'text',
       name: 'chainHost',
       message: 'Running chain node graphql endpoint:',
+      default: defaults.chainHost,
       validate: input => {
         if (!input) return 'Chain node endpoint should not be empty';
         return true;

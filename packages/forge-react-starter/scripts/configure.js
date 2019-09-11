@@ -3,16 +3,19 @@ const fs = require('fs');
 const ip = require('ip');
 const camelCase = require('lodash/camelCase');
 const path = require('path');
+const inquirer = require('inquirer');
 const GraphQLClient = require('@arcblock/graphql-client');
 const { types } = require('@arcblock/mcrypto');
-const inquirer = require('inquirer');
 const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
+const { name } = require('../package.json');
+const debug = require('debug')(name);
 
-const getConfig = async () => {
+const getConfigs = async () => {
   const defaults = {
     appName: 'Forge React Starter',
     appDescription: 'Starter dApp built on react that runs on forge powered blockchain',
     appPort: 3030,
+    chainHost: 'http://localhost:8210/api',
     mongoUri: 'mongodb://127.0.0.1:27017/forge-react-starter',
   };
 
@@ -21,6 +24,7 @@ const getConfig = async () => {
       type: 'text',
       name: 'chainHost',
       message: 'Running chain node graphql endpoint:',
+      default: defaults.chainHost,
       validate: input => {
         if (!input) return 'Chain node endpoint should not be empty';
         return true;
@@ -83,7 +87,7 @@ const getConfig = async () => {
       hash: types.HashType.SHA3,
     })
   );
-  console.log('Application wallet', wallet.toJSON());
+  debug('Application wallet', wallet.toJSON());
   const hash = await client.sendDeclareTx({
     tx: {
       chainId,
@@ -119,9 +123,10 @@ REACT_APP_API_PREFIX=""`;
 
 const run = async () => {
   const configPath = path.join(`${process.env.FORGE_BLOCKLET_TARGET_DIR}`, '.env');
-  const config = await getConfig();
+  const configs = await getConfigs();
 
-  fs.writeFileSync(configPath, config);
+  fs.writeFileSync(configPath, configs);
   console.log(`Application config generated ${configPath}`);
 };
+
 run();
