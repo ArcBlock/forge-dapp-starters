@@ -4,8 +4,8 @@ const types = keystone.Field.Types;
 const storage = require('../libs/storage');
 
 const Prize = new keystone.List('Prize', {
-  label: '抽奖',
-  plural: '抽奖',
+  label: '奖品',
+  plural: '奖品',
   track: true,
   noedit: true,
   nodelete: true,

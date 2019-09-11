@@ -2,8 +2,8 @@ const keystone = require('keystone');
 const types = keystone.Field.Types;
 
 const Winner = new keystone.List('Winner', {
-  label: '抽奖',
-  plural: '抽奖',
+  label: '中奖记录',
+  plural: '中奖记录',
   track: true,
   noedit: true,
   nodelete: true,
