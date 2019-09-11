@@ -4,7 +4,7 @@ require('dotenv').config();
 const path = require('path');
 const withCSS = require('@zeit/next-css');
 const withPlugins = require('next-compose-plugins');
-const withTranspile = require('next-transpile-modules');
+// const withTranspile = require('next-transpile-modules');
 const withCustomBabelConfigFile = require('next-plugin-custom-babel-config');
 
 if (typeof require !== 'undefined') {
@@ -50,12 +50,6 @@ module.exports = withPlugins(
 
           return config;
         },
-      },
-    ],
-    [
-      withTranspile,
-      {
-        transpileModules: ['@arcblock/ux'],
       },
     ],
     [
