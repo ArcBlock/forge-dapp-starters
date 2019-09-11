@@ -30,13 +30,13 @@
     json-stable-stringify "^1.0.1"
     lodash.get "^4.4.2"
 
-"@arcblock/did-react@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.npm.taobao.org/@arcblock/did-react/download/@arcblock/did-react-0.19.0.tgz#2bad2bab42c47f66c9f7da4a4451a521f1d1a230"
-  integrity sha1-K60rq0LEf2bJ99pKRFGlIfHRojA=
+"@arcblock/did-react@^0.24.0":
+  version "0.24.0"
+  resolved "https://registry.npmjs.org/@arcblock/did-react/-/did-react-0.24.0.tgz#b88f1335741522525e75e030d8d3140385ae3c51"
+  integrity sha512-bP0IAAq8z5JXgPfuXQNkkDunFkAw9p4PYiSYFJ9FUgiQPbZcUEg33nIlMofg+D0+5eXwZ7S5GcQztc8Ogt/EZw==
   dependencies:
-    "@arcblock/react-hooks" "^0.19.0"
-    "@arcblock/ux" "^0.19.0"
+    "@arcblock/react-hooks" "^0.24.0"
+    "@arcblock/ux" "^0.24.0"
     ismobilejs "^0.5.2"
     qrcode.react "^0.9.3"
     react-load-script "^0.0.6"
@@ -269,11 +269,12 @@
     qrcode.react "^0.9.3"
     react-load-script "^0.0.6"
 
-"@arcblock/react-hooks@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.npm.taobao.org/@arcblock/react-hooks/download/@arcblock/react-hooks-0.8.0.tgz#2efb0b306bd29ae1410dacd121bb6632061f3463"
-  integrity sha1-LvsLMGvSmuFBDazRIbtmMgYfNGM=
+"@arcblock/react-hooks@^0.24.0":
+  version "0.24.0"
+  resolved "https://registry.npmjs.org/@arcblock/react-hooks/-/react-hooks-0.24.0.tgz#1381d9fc348124ca54799fa6a8a1cf29414016e6"
+  integrity sha512-33lduQrppL2BUt1mqCJ5Zc+Ll3pxW+5X5CDxz8S5mqQYzbobf8yqqj3+xUPI1FyWdY0W2pE3sxCoRhCGtNPWFg==
   dependencies:
+    event-target-shim "^5.0.1"
     qrcode.react "^0.9.3"
     react-load-script "^0.0.6"
 
@@ -313,10 +314,10 @@
     topojson-client "^3.0.0"
     versor "^0.0.4"
 
-"@arcblock/ux@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.npm.taobao.org/@arcblock/ux/download/@arcblock/ux-0.19.0.tgz#a88fcacf9518ab994aa3eaaa3520100226f79a46"
-  integrity sha1-qI/Kz5UYq5lKo+qqNSAQAib3mkY=
+"@arcblock/ux@^0.24.0":
+  version "0.24.0"
+  resolved "https://registry.npmjs.org/@arcblock/ux/-/ux-0.24.0.tgz#10409e017646ee13e2ec80a6c4acf45ef9205164"
+  integrity sha512-L0KyO+oQDpbysb+5ieMNqVnBRZwChiTDxrie5fqIupOSNwJ0o4dHj55oB/nBKFtOm25VY/7ZPyq5O+BwUCeOVA==
   dependencies:
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     copy-to-clipboard "^3.2.0"
@@ -329,6 +330,7 @@
     js-cookie "^2.2.0"
     react-helmet "^5.2.1"
     react-load-script "^0.0.6"
+    react-player "^1.12.0"
     rebound "^0.1.0"
     topojson-client "^3.0.0"
     versor "^0.0.4"
@@ -13429,6 +13431,11 @@ load-plugin@^2.0.0:
     npm-prefix "^1.2.0"
     resolve-from "^5.0.0"
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+  integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
+
 loader-fs-cache@^1.0.0:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/loader-fs-cache/download/loader-fs-cache-1.0.2.tgz#54cedf6b727e1779fd8f01205f05f6e88706f086"
@@ -17604,6 +17611,15 @@ react-markdown@^2.5.0:
     commonmark "^0.24.0"
     commonmark-react-renderer "^4.3.4"
     prop-types "^15.5.1"
+
+react-player@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.npmjs.org/react-player/-/react-player-1.12.0.tgz#01ce8d1b018b9eef10e5cbf8a46bc35ef5bd508e"
+  integrity sha512-KF4rshm9329X9UyR70bI8LsI738gnvbSzxayD/CKz7pMZTDeMhJXgsDgpurCAkb7tDCGxbVqNjG+CP/OLVGcqw==
+  dependencies:
+    deepmerge "^4.0.0"
+    load-script "^1.0.0"
+    prop-types "^15.5.6"
 
 react-prop-toggle@^1.0.2:
   version "1.0.2"
