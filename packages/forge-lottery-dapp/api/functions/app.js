@@ -39,7 +39,7 @@ keystone.init({
   name: process.env.APP_NAME,
   brand: process.env.APP_NAME,
   'module root': path.resolve(__dirname, '../'),
-  'auto update': true || process.env.NODE_ENV === 'production',
+  'auto update': process.env.NODE_ENV === 'production',
   'user model': 'Admin',
   session: true,
   'cookie secret': process.env.COOKIE_SECRET,
@@ -51,7 +51,7 @@ keystone.init({
 keystone.initExpressSession(keystone.mongoose);
 keystone.import('models');
 keystone.set('nav', {
-  应用: ['users'],
+  应用: ['winners', 'lotteries', 'prizes', 'users'],
   系统: ['admins'],
 });
 keystone.initDatabaseConfig();
