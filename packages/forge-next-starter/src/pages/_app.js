@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,27 +12,13 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.green};
     text-decoration: none;
   }
-
-  pre,code {
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
-      Courier New, monospace, serif;
-  }
-
-  pre {
-    margin-bottom: 10px;
-    border-radius: 10px;
-    line-height: 1.5rem;
-    padding: 25px;
-    color: #ffffff;
-    background-color: #222222;
-  }
 `;
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
+      <React.Fragment>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           title={process.env.appName}
@@ -53,7 +39,7 @@ class MyApp extends App {
             </React.Fragment>
           </ThemeProvider>
         </MuiThemeProvider>
-      </Container>
+      </React.Fragment>
     );
   }
 }
