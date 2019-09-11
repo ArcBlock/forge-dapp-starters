@@ -1,3 +1,12 @@
+## 0.38.5 (September 11, 2019)
+
+- fix: external css loading for forge-next-starter
+- fix: cleanup useless plugin #35
+- fix: keystone starter not loading css from node_modules correctly #35
+- chore: upgrade next.js to latest
+- fix: starter dependencies
+- update readme
+
 ## 0.38.4 (September 10, 2019)
 
 - make forge-react-starter fit forge blocklet
