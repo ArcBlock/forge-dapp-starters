@@ -28,9 +28,11 @@ Besides, to make the dApp works along with the [ABT Wallet](https://abtwallet.io
 
 ## Use cases?
 
-`forge-keystone-starter` can be start point for any forge powered dapp, you can built many blockchain powered apps, such as:
+`forge-keystone-starter` can be start point for any forge powered dApp, you can built many blockchain powered apps, such as:
 
-?
+- Online store that sells digital assets and accept ABT as payments
+- Online community application that authentication users through ABT Wallet
+- Admin console for internal use that are protected by ABT Wallet
 
 ## Requirements?
 

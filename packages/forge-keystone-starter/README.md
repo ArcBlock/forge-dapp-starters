@@ -69,10 +69,13 @@ Other javascript project goodies:
 ### Create new project with forge-cli
 
 ```terminal
+# [Optional] setup a chain node by forge
 npm install -g @arcblock/forge-cli forge-keystone-starter
 forge install
 forge start
-forge project:create hello-forge
+
+# create a dApp
+forge blocklet:use forge-keystone-starter --target hello-forge
 cd hello-forge
 npm start
 ```
@@ -83,9 +86,9 @@ npm start
 
 ```terminal
 git clone https://github.com/ArcBlock/forge-dapp-starters.git
-cd forge-dapp-starters/packages/forge-keystone-starter
-yarn
-yarn start
+cd forge-dapp-starters/packages/forge-keystone-starter/templates
+npm install
+npm start
 ```
 
 ## Configuration
