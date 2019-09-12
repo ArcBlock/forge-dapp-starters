@@ -71,7 +71,8 @@ Other javascript project goodies:
 npm install -g @arcblock/forge-cli
 forge install
 forge start
-forge blocklet:use forge-next-starter
+forge blocklet:use forge-next-starter --target hello-forge
+cd hello-forge
 npm start
 ```
 
@@ -81,7 +82,7 @@ npm start
 
 ```terminal
 git clone https://github.com/ArcBlock/forge-dapp-starters.git
-cd forge-dapp-starters/packages/forge-next-starter
+cd forge-dapp-starters/packages/forge-next-starter/templates
 npm install
 npm start
 ```
