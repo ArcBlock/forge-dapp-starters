@@ -1,3 +1,7 @@
+## 0.38.6 (September 12, 2019)
+
+- blocklet: make all starters fit to forge blocklet:use
+
 ## 0.38.5 (September 11, 2019)
 
 - fix: external css loading for forge-next-starter
