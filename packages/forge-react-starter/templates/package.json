@@ -41,7 +41,6 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-bearer-token": "^2.4.0",
-    "gatsby": "2.15.14",
     "http-proxy-middleware": "^0.19.1",
     "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
@@ -92,7 +91,6 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "^2.14.0",

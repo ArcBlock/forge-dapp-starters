@@ -8,10 +8,10 @@
   "community": "https://gitter.im/ArcBlock/community",
   "templates": "templates",
   "install-scripts": {
-    "install-dependencies": "yarn install"
+    "install-dependencies": "npm install"
   },
   "hooks": {
-    "post-copy": "git init && yarn install",
+    "post-copy": "git init && npm install",
     "configure": "node scripts/configure.js",
     "on-complete": "node scripts/on-complete.js"
   }

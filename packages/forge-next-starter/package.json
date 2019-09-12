@@ -37,7 +37,6 @@
     "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "chai": "^4.2.0",
     "eslint": "5.3.0",

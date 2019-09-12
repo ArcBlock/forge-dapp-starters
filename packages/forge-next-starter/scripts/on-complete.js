@@ -11,7 +11,8 @@ const shell = require('shelljs');
 const onComplete = () => {
   const pm = shell.which('yarn') ? 'yarn' : 'npm';
   shell.echo('');
-  shell.echo(chalk.cyan(`${pm} start`));
+  shell.echo('Run script to start:');
+  shell.echo(chalk.cyan(`cd ${process.env.FORGE_BLOCKLET_TARGET_DIR} && ${pm} start`));
   shell.echo('');
 };
 
