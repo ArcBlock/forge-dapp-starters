@@ -64,9 +64,12 @@ Other javascript project goodies:
 ### Create new dApp with forge-cli
 
 ```terminal
+# [Optional] setup a chain node by forge
 npm install -g @arcblock/forge-cli forge-react-starter
 forge install
 forge start
+
+# create a dApp
 forge blocklet:use forge-react-starter --target hello-forge
 cd hello-forge
 npm start
