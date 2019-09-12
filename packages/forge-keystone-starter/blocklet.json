@@ -6,7 +6,13 @@
   "documentation": "https://docs.arcblock.io",
   "support": "support@arcblock.io",
   "community": "https://gitter.im/ArcBlock/community",
+  "templates": "templates",
+  "install-scripts": {
+    "install-dependencies": "npm install"
+  },
   "hooks": {
-    "post-install": ""
+    "post-copy": "git init && npm install",
+    "configure": "node scripts/configure.js",
+    "on-complete": "node scripts/on-complete.js"
   }
 }

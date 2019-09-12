@@ -61,13 +61,16 @@ Other javascript project goodies:
 
 ## Usage
 
-### Create new project with forge-cli
+### Create new dApp with forge-cli
 
 ```terminal
+# [Optional] setup a chain node by forge
 npm install -g @arcblock/forge-cli forge-react-starter
 forge install
 forge start
-forge create-project hello-forge
+
+# create a dApp
+forge blocklet:use forge-react-starter --target hello-forge
 cd hello-forge
 npm start
 ```
@@ -78,9 +81,9 @@ npm start
 
 ```terminal
 git clone https://github.com/ArcBlock/forge-dapp-starters.git
-cd forge-dapp-starters/packages/forge-react-starter
-yarn
-yarn start
+cd forge-dapp-starters/packages/forge-react-starter/templates
+npm install
+npm start
 ```
 
 ## Configuration

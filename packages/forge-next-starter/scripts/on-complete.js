@@ -1,5 +1,5 @@
-const shell = require('shelljs');
 const chalk = require('chalk');
+const shell = require('shelljs');
 
 /**
  * On project ready to run

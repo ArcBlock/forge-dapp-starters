@@ -1,4 +1,12 @@
+/**
+ * @fileOverview Spec for forge-next-starter, can be used as a template to setup a new starter
+ *
+ * @requires @arcblock/forge-wallet
+ */
+
+/* eslint-disable import/order */
 /* eslint-disable no-console */
+/* eslint-disable object-curly-newline */
 const fs = require('fs');
 const ip = require('ip');
 const camelCase = require('lodash/camelCase');
@@ -10,13 +18,27 @@ const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
 const { name } = require('../package.json');
 const debug = require('debug')(name);
 
+/**
+ * On project folder created and files synced
+ * You can create new files/modifying existing files in the project folder
+ *
+ * @param {object} config - project creating config
+ * @param {string} config.targetDir - the project folder
+ * @param {string} config.chainHost - the graphql endpoint the application running on
+ * @param {string} config.chainId - the chainId of the application running on
+ * @param {GraphQLClient} config.client - GraphQLClient instance that can be used to send request to the chain
+ * @param {object} config.symbols - ui elements that can be used to print logs
+ * @param {string} config.__starter__ - checkout `answers` for other collected parameters
+ * @function
+ * @public
+ */
 const getConfigs = async () => {
   const defaults = {
-    appName: 'Forge React Starter',
-    appDescription: 'Starter dApp built on react that runs on forge powered blockchain',
+    appName: 'Forge Next.js Starter',
+    appDescription: 'Starter dApp built on next.js that runs on forge powered blockchain',
     appPort: 3030,
     chainHost: 'http://localhost:8210/api',
-    mongoUri: 'mongodb://127.0.0.1:27017/forge-react-starter',
+    mongoUri: 'mongodb://127.0.0.1:27017/forge-next-starter',
   };
 
   const questions = [
@@ -73,10 +95,6 @@ const getConfigs = async () => {
   ];
 
   const { chainHost, appName, appDescription, appPort, mongoUri } = await inquirer.prompt(questions);
-  const client = new GraphQLClient({ endpoint: chainHost });
-  const {
-    info: { chainId },
-  } = await client.getChainInfo();
   const ipAddress = ip.address();
 
   // Declare application on chain
@@ -87,7 +105,11 @@ const getConfigs = async () => {
       hash: types.HashType.SHA3,
     })
   );
-  debug('Application wallet', wallet.toJSON());
+  debug('application wallet', wallet.toJSON());
+  const client = new GraphQLClient({ endpoint: chainHost });
+  const {
+    info: { chainId },
+  } = await client.getChainInfo();
   const hash = await client.sendDeclareTx({
     tx: {
       chainId,
@@ -97,27 +119,25 @@ const getConfigs = async () => {
     },
     wallet,
   });
-  console.log('application declare tx', hash);
+  debug('application declare tx', hash);
   console.log(`Application account declared on chain: ${wallet.toAddress()}`);
 
   // Generate config
-  const configContent = `SKIP_PREFLIGHT_CHECK=true
-
-# server only
+  const configContent = `# server only
 MONGO_URI="${mongoUri}"
 APP_TOKEN_SECRET="${wallet.publicKey.slice(16)}"
 APP_TOKEN_TTL="1d"
 APP_SK="${wallet.secretKey}"
 APP_PORT="${appPort}"
 
-# both server and client
-REACT_APP_CHAIN_ID="${chainId}"
-REACT_APP_CHAIN_HOST="${chainHost.replace('127.0.0.1', ipAddress).replace('localhost', ipAddress)}"
-REACT_APP_APP_NAME="${appName}"
-REACT_APP_APP_DESCRIPTION="${appDescription}"
-REACT_APP_APP_ID="${wallet.toAddress()}"
-REACT_APP_BASE_URL="http://${ipAddress}:${appPort}"
-REACT_APP_API_PREFIX=""`;
+# both client and server
+CHAIN_ID="${chainId}"
+CHAIN_HOST="${chainHost.replace('127.0.0.1', ipAddress).replace('localhost', ipAddress)}"
+APP_NAME="${appName}"
+APP_DESCRIPTION="${appDescription}"
+APP_ID="${wallet.toAddress()}"
+BASE_URL="http://${ipAddress}:${appPort}"`;
+
   return configContent;
 };
 

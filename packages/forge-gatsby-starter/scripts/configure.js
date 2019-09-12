@@ -1,22 +1,30 @@
+/**
+ * @fileOverview Spec for forge-next-starter, can be used as a template to setup a new starter
+ *
+ * @requires @arcblock/forge-wallet
+ */
+
+/* eslint-disable import/order */
 /* eslint-disable no-console */
-const fs = require('fs');
+/* eslint-disable object-curly-newline */
 const ip = require('ip');
-const camelCase = require('lodash/camelCase');
-const path = require('path');
+const fs = require('fs');
 const inquirer = require('inquirer');
-const GraphQLClient = require('@arcblock/graphql-client');
+const path = require('path');
+const camelCase = require('lodash/camelCase');
 const { types } = require('@arcblock/mcrypto');
+const GraphQLClient = require('@arcblock/graphql-client');
 const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
 const { name } = require('../package.json');
 const debug = require('debug')(name);
 
 const getConfigs = async () => {
   const defaults = {
-    appName: 'Forge React Starter',
-    appDescription: 'Starter dApp built on react that runs on forge powered blockchain',
+    appName: 'Forge Gatsby Starter',
+    appDescription: 'Starter dApp built on gatsby.js and runs on forge powered blockchain',
     appPort: 3030,
     chainHost: 'http://localhost:8210/api',
-    mongoUri: 'mongodb://127.0.0.1:27017/forge-react-starter',
+    mongoUri: 'mongodb://127.0.0.1:27017/forge-gatsby-starter',
   };
 
   const questions = [
@@ -73,11 +81,11 @@ const getConfigs = async () => {
   ];
 
   const { chainHost, appName, appDescription, appPort, mongoUri } = await inquirer.prompt(questions);
+  const ipAddress = ip.address();
   const client = new GraphQLClient({ endpoint: chainHost });
   const {
     info: { chainId },
   } = await client.getChainInfo();
-  const ipAddress = ip.address();
 
   // Declare application on chain
   const wallet = fromRandom(
@@ -87,7 +95,7 @@ const getConfigs = async () => {
       hash: types.HashType.SHA3,
     })
   );
-  debug('Application wallet', wallet.toJSON());
+  debug('application wallet', wallet.toJSON());
   const hash = await client.sendDeclareTx({
     tx: {
       chainId,
@@ -97,36 +105,36 @@ const getConfigs = async () => {
     },
     wallet,
   });
-  console.log('application declare tx', hash);
+  debug('application declare tx', hash);
   console.log(`Application account declared on chain: ${wallet.toAddress()}`);
 
   // Generate config
-  const configContent = `SKIP_PREFLIGHT_CHECK=true
-
-# server only
+  const configs = `# server only
 MONGO_URI="${mongoUri}"
 APP_TOKEN_SECRET="${wallet.publicKey.slice(16)}"
 APP_TOKEN_TTL="1d"
 APP_SK="${wallet.secretKey}"
 APP_PORT="${appPort}"
 
-# both server and client
-REACT_APP_CHAIN_ID="${chainId}"
-REACT_APP_CHAIN_HOST="${chainHost.replace('127.0.0.1', ipAddress).replace('localhost', ipAddress)}"
-REACT_APP_APP_NAME="${appName}"
-REACT_APP_APP_DESCRIPTION="${appDescription}"
-REACT_APP_APP_ID="${wallet.toAddress()}"
-REACT_APP_BASE_URL="http://${ipAddress}:${appPort}"
-REACT_APP_API_PREFIX=""`;
-  return configContent;
+# both client and server
+GATSBY_CHAIN_ID="${chainId}"
+GATSBY_CHAIN_HOST="${chainHost.replace('127.0.0.1', ipAddress).replace('localhost', ipAddress)}"
+GATSBY_APP_NAME="${appName}"
+GATSBY_APP_DESCRIPTION="${appDescription}"
+GATSBY_APP_ID="${wallet.toAddress()}"
+GATSBY_BASE_URL="http://${ipAddress}:${appPort}"
+GATSBY_API_PREFIX=""`;
+
+  return configs;
 };
 
-const run = async () => {
-  const configPath = path.join(`${process.env.FORGE_BLOCKLET_TARGET_DIR}`, '.env');
+const configure = async () => {
+  const targetDir = process.env.FORGE_BLOCKLET_TARGET_DIR;
+  const configPath = path.join(`${targetDir}`, '.env');
   const configs = await getConfigs();
 
   fs.writeFileSync(configPath, configs);
   console.log(`Application config generated ${configPath}`);
 };
 
-run();
+configure();

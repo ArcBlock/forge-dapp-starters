@@ -1,16 +1,15 @@
-![forge-keystone-starter](https://www.arcblock.io/.netlify/functions/badge/?text=forge-keystone-starter)
+![forge-next-starter](https://www.arcblock.io/.netlify/functions/badge/?text=forge-next-starter)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e0c63e91-97b5-45df-95d1-1bad86153559/deploy-status)](https://app.netlify.com/sites/forge-next-starter/deploys)
 
 > Brings tons of thousands react libraries/components to dApps that run on [forge](https://www.arcblock.io/en/forge-sdk) powered blockchain.
 
-[Live preview](https://forge-keystone-starter.netlify.com/)
+[Live preview](https://forge-next-starter.netlify.com/)
 
 ![](./docs/starter-home.png)
 
 A starter project that integrates [forge](https://docs.arcblock.io/forge/latest/) [javascript sdk](https://docs.arcblock.io/forge/latest/sdk/javascript.html) with mainstream javascript application batteries:
 
-- [Keystone.js](https://keystonejs.org/) for serving admin ui
 - [Next.js](https://nextjs.org/) for crafting pages and SSR
 - [Material-UI](https://material-ui.com/) for resuable react components
 - [Express.js](http://expressjs.com/) as custom web server that can serve custom api
@@ -18,7 +17,7 @@ A starter project that integrates [forge](https://docs.arcblock.io/forge/latest/
 
 Forge SDK libraries included in the starter project:
 
-- [@arcblock/graphql-client](https://www.npmjs.com/package/@arcblock/graphql-client) as communication layer between application and forge powered blockchain
+- [@arcblock/forge-sdk](https://www.npmjs.com/package/@arcblock/forge-sdk) as communication layer between application and forge powered blockchain
 - [@arcblock/did-auth](https://www.npmjs.com/package/@arcblock/did-auth) help application do jwt based auth with ABT wallet
 - [@arcblock/did-auth-storage-mongo](https://www.npmjs.com/package/@arcblock/did-auth-storage-mongo) storage engines that powers the magic behind ABT Wallet qrcode scanning
 - [@arcblock/did-react](https://www.npmjs.com/package/@arcblock/did-react) react components that can implements basic UI elements to connect your application with ABT Wallet, such as avatar and auth dialog
@@ -41,7 +40,7 @@ Other javascript project goodies:
 ├── Makefile
 ├── README.md
 ├── app.js                    // application entry file
-├── client                    // code for client side pages
+├── src                       // code for client side pages
 │   ├── babel.config.js       // custom babel configuration
 │   ├── components            // shared react components/layouts across all pages
 │   ├── hooks                 // shared react hooks
@@ -50,7 +49,7 @@ Other javascript project goodies:
 │   ├── pages                 // pages
 │   └── static                // static assets that can be loaded by browser
 ├── package.json
-├── server                    // backend code
+├── api                       // backend code
 │   ├── libs                  // shared server libs
 │   ├── models                // mongoose db models
 │   └── routes                // express routes and handlers
@@ -69,13 +68,10 @@ Other javascript project goodies:
 ### Create new project with forge-cli
 
 ```terminal
-# [Optional] setup a chain node by forge
-npm install -g @arcblock/forge-cli forge-keystone-starter
+npm install -g @arcblock/forge-cli forge-next-starter
 forge install
 forge start
-
-# create a dApp
-forge blocklet:use forge-keystone-starter --target hello-forge
+forge project:create hello-forge
 cd hello-forge
 npm start
 ```
@@ -86,9 +82,9 @@ npm start
 
 ```terminal
 git clone https://github.com/ArcBlock/forge-dapp-starters.git
-cd forge-dapp-starters/packages/forge-keystone-starter/templates
-npm install
-npm start
+cd forge-dapp-starters/packages/forge-next-starter
+yarn
+yarn start
 ```
 
 ## Configuration
@@ -98,7 +94,6 @@ dApp configuration file is auto generated and stored in `.env`, example configur
 ```text
 # server only
 MONGO_URI="mongodb://localhost/forge-next-starter"
-COOKIE_SECRET="you_should_change_this"
 APP_TOKEN_SECRET="you_should_change_this"
 APP_TOKEN_TTL="1d"
 APP_SK="0x95d4ef0af090e1cf21b9fd0ccefe768a7bff660375b0bfdb95a34a4106a68bf7f7995a7066cd1171b4e963f2b36de17eb642c4145d58733cfa9b03a11bb5f11e"
