@@ -34,3 +34,5 @@ client/.next
 .cache
 dist
 .vscode
+
+!templates/.gitignore

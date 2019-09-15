@@ -2,7 +2,7 @@
   "description": "A dApp starter that integrates forge-javascript-sdk and gatsby.js",
   "logo": "logo.svg",
   "group": "starter",
-  "color": "secondary",
+  "color": "primary",
   "provider": "arcblock",
   "documentation": "https://docs.arcblock.io",
   "support": "support@arcblock.io",

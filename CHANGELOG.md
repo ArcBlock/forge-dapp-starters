@@ -1,3 +1,8 @@
+## 0.38.7 (September 15, 2019)
+
+- fix chainid gen failed
+- update readme
+
 ## 0.38.6 (September 12, 2019)
 
 - blocklet: make all starters fit to forge blocklet:use

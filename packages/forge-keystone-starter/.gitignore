@@ -34,3 +34,5 @@ node_modules
 .next
 dist
 .vscode
+
+!templates/.gitignore
