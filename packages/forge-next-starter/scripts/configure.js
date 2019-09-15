@@ -108,7 +108,7 @@ const getConfigs = async () => {
   debug('application wallet', wallet.toJSON());
   const client = new GraphQLClient({ endpoint: chainHost });
   const {
-    info: { chainId },
+    info: { network: chainId },
   } = await client.getChainInfo();
   const hash = await client.sendDeclareTx({
     tx: {

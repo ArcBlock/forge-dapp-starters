@@ -90,7 +90,7 @@ const getConfigs = async () => {
   const { chainHost, appName, appDescription, appPort, mongoUri } = await inquirer.prompt(questions);
   const client = new GraphQLClient({ endpoint: chainHost });
   const {
-    info: { chainId },
+    info: { network: chainId },
   } = await client.getChainInfo();
   const ipAddress = ip.address();
 
