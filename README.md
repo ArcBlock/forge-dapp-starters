@@ -7,7 +7,7 @@
 
 A collection of starters that can be used as boilerplates when building forge powered javascript dApps
 
-> Last updated at 9/16/2019, 3:04:44 AM
+> Last updated at 9/16/2019, 3:09:33 AM
 
 ## Packages
 
