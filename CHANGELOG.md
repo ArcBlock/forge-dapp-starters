@@ -1,3 +1,18 @@
+## 0.38.13 (September 16, 2019)
+
+- chore: compress all screenshots
+- chore: remove 'project:create' from docs
+- chore: merge master
+- chore: update screenshots of keystone.js starter
+- chore: update screenshots of react starter
+- update makefile of gatsby and next starter
+- chore: update screenshots of next.js starter
+- chore: remove starter.config.js file from all starters
+- update keystone starter screenshots
+- chore: update screenshots of gatsby starter
+- update readme
+- chore: remove starter.config.js file in react starter
+
 ## 0.38.12 (September 16, 2019)
 
 - chore: fix react starter
