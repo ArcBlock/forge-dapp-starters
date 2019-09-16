@@ -1,5 +1,5 @@
 {
-  "description": "A dApp starter that integrates forge-javascript-sdk and keystone.js",
+  "description": "A dApp starter that integrates forge-javascript-sdk and keystone.js, which supports a simple admin dashboard without any code",
   "logo": "logo.svg",
   "group": "starter",
   "provider": "official",

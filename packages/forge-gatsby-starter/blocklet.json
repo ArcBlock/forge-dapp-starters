@@ -1,5 +1,5 @@
 {
-  "description": "A dApp starter that integrates forge-javascript-sdk and gatsby.js",
+  "description": "A dApp starter that integrates forge-javascript-sdk and gatsby.js, this starter also have our awesome markdown content tool xmark included.",
   "logo": "logo.svg",
   "group": "starter",
   "color": "primary",

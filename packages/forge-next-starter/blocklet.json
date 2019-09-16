@@ -1,5 +1,5 @@
 {
-  "description": "A dApp starter that integrates forge-javascript-sdk and next.js",
+  "description": "A dApp starter that integrates forge-javascript-sdk and next.js, which supports SSR(server side rendering), a goto solution for experienced react dApp developers",
   "logo": "logo.png",
   "group": "starter",
   "provider": "official",

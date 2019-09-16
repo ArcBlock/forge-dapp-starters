@@ -7,8 +7,8 @@ const inquirer = require('inquirer');
 const GraphQLClient = require('@arcblock/graphql-client');
 const { types } = require('@arcblock/mcrypto');
 const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
-const { name } = require('../package.json');
 const debug = require('debug')(name);
+const { name } = require('../package.json');
 
 const getConfigs = async () => {
   const defaults = {
