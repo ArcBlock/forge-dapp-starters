@@ -1,3 +1,14 @@
+## 0.38.12 (September 16, 2019)
+
+- chore: fix react starter
+- update readme
+- update readme
+- update readme
+- update readme
+- Merge branch 'master' of github.com:ArcBlock/forge-dapp-starters
+- chore: update code snapshot
+- update readme
+
 ## 0.38.10 (September 16, 2019)
 
 
