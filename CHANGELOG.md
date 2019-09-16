@@ -1,3 +1,8 @@
+## 0.38.8 (September 16, 2019)
+
+- chore: update blocklet description
+- update readme
+
 ## 0.38.7 (September 15, 2019)
 
 - fix chainid gen failed
