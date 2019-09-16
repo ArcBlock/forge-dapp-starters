@@ -37,11 +37,11 @@ copy: copy-starter-frontend copy-starter-backend copy-starter-tools
 
 copy-starter-frontend:
 	@echo "Copy starter frontend code here..."
-	@cp -r ../forge-react-starter/src/components src
-	@cp -r ../forge-react-starter/src/hooks src
-	@cp -r ../forge-react-starter/src/libs src
-	@cp -r ../forge-react-starter/src/pages src
-	@rm src/pages/index.js
+	@cp -r ../forge-react-starter/templates/src/components templates/src
+	@cp -r ../forge-react-starter/templates/src/hooks templates/src
+	@cp -r ../forge-react-starter/templates/src/libs templates/src
+	@cp -r ../forge-react-starter/templates/src/pages templates/src
+	@rm templates/src/pages/index.js
 
 copy-starter-backend:
 	@echo "Copy starter backend code here..."
