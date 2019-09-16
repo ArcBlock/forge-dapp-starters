@@ -68,10 +68,13 @@ Other javascript project goodies:
 ### Create new project with forge-cli
 
 ```terminal
-npm install -g @arcblock/forge-cli forge-next-starter
+# [Optional] setup a chain node by forge
+npm install -g @arcblock/forge-cli
 forge install
 forge start
-forge project:create hello-forge
+
+# create a dApp
+forge blocklet:use forge-next-starter --target hello-forge
 cd hello-forge
 npm start
 ```
