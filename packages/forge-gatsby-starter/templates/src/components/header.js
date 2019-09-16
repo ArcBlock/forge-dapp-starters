@@ -111,6 +111,10 @@ const Nav = styled(Toolbar)`
   align-items: center;
   justify-content: space-between;
 
+  a {
+    text-decoration: none;
+  }
+
   && {
     padding-left: 0;
     padding-right: 0;

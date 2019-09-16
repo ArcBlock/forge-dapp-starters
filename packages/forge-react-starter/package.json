@@ -1,7 +1,6 @@
 {
   "name": "forge-react-starter",
-  "version": "0.38.12",
-  "main": "starter.config.js",
+  "version": "0.38.10",
   "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
   "keywords": [
     "arcblock",

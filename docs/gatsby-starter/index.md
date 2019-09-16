@@ -66,10 +66,13 @@ Other javascript project goodies:
 ### Create new project with forge-cli
 
 ```terminal
+# [Optional] setup a chain node by forge
 npm install -g @arcblock/forge-cli forge-gatsby-starter
 forge install
 forge start
-forge project:create hello-forge
+
+# create a dApp
+forge blocklet:use forge-gatsby-starter --target hello-forge
 cd hello-forge
 npm start
 ```
