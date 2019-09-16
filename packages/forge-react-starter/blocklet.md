@@ -17,7 +17,7 @@ You can get your own blockchain up and running within minutes with [forge-cli](h
 Built upon the application skeleton we got after running `create-react-app`, dApps bootstrapped with this starter have several widely used react libraries integrated to make page composing easier:
 
 - [styled-components](https://www.styled-components.com) as styling solution
-- [@material-ui](https://material-ui.com) as component library
+- [@material-ui/core](https://material-ui.com) as component library
 - [react-router-dom](https://reacttraining.com/react-router/) for client side routing
 - [@arcblock/forge-sdk](https://www.npmjs.com/package/@arcblock/forge-sdk) for read and write onchain data
 

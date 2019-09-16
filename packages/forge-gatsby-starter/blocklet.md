@@ -1,12 +1,10 @@
 ## What is This For?
 
-Admit it or not, putting together dozens of libraries and frameworks and making them working together to build an application is hard and tedious, not to mention getting your application deployed for public access.
-
-On the other hand, having these libraries and frameworks makes our life easier by not reinventing the wheel, that's why [create-react-app](https://github.com/facebook/create-react-app) was born and get more and more popular.
-
-You can get your own blockchain up and running within minutes with [forge-cli](https://github.com/ArcBlock/forge-cli), but how to connect your application with forge-powered chains through [forge-sdk](https://github.com/ArcBlock/forge-js)? How to get your application communication to ABT Wallet users?
+What can I do when I need to leverage gatsby to building web dApps?
 
 `forge-gatsby-starter` is here to help! **`forge-gatsby-starter` is the go to solution if you want to build applications with [gatsby](https://www.gatsbyjs.org/) that runs on forge powered chains.**
+
+`forge-next-starter` is based on the awesome `forge-react-starter`.
 
 ## What's Included?
 
@@ -18,7 +16,7 @@ Built upon the application skeleton we got after running `create-react-app`, dAp
 
 - [gatsby.js](https://reactjs.org/) this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - [styled-components](https://www.styled-components.com) as styling solution
-- [@material-ui](https://material-ui.com) as component library
+- [@material-ui/core](https://material-ui.com) as component library
 - [react-router-dom](https://reacttraining.com/react-router/) for client side routing
 - [@arcblock/forge-sdk](https://www.npmjs.com/package/@arcblock/forge-sdk) for read and write onchain data
 
