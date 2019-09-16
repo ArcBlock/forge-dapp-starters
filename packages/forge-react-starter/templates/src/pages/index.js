@@ -94,22 +94,6 @@ export default function IndexPage() {
         </Typography>
         <section className="section">
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
-            Quick Start
-          </Typography>
-          <div className="section__body quickstart">
-            <CodeBlock
-              language="shell"
-              code={`npm install -g @arcblock/forge-cli
-forge install
-forge start
-forge project:create hello-forge
-cd hello-forge
-yarn start`}
-            />
-          </div>
-        </section>
-        <section className="section">
-          <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             Chain Data Reading/Displaying Examples
           </Typography>
           <Grid container spacing={6} className="section__body demos">

@@ -90,28 +90,6 @@ export default function IndexPage() {
         </Typography>
         <section className="section">
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
-            Quick Start
-          </Typography>
-          <div className="section__body quickstart">
-            <code>
-              <pre>
-                npm install -g @arcblock/forge-cli
-                <br />
-                forge install
-                <br />
-                forge start
-                <br />
-                forge project:create hello-forge
-                <br />
-                cd hello-forge
-                <br />
-                yarn start
-              </pre>
-            </code>
-          </div>
-        </section>
-        <section className="section">
-          <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             Chain Data Reading/Displaying Examples
           </Typography>
           <div className="section__body demos">{graphqlDemos.map(x => renderExampleCard(x))}</div>
