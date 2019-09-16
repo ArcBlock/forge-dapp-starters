@@ -7,14 +7,14 @@
 
 A collection of starters that can be used as boilerplates when building forge powered javascript dApps
 
-> Last updated at 9/16/2019, 3:14:00 AM
+> Last updated at 9/16/2019, 3:20:55 AM
 
 ## Packages
 
-- [forge-gatsby-starter v0.38.10](./packages/forge-gatsby-starter)
-- [forge-keystone-starter v0.38.10](./packages/forge-keystone-starter)
-- [forge-next-starter v0.38.10](./packages/forge-next-starter)
-- [forge-react-starter v0.38.10](./packages/forge-react-starter)
+- [forge-gatsby-starter v0.38.12](./packages/forge-gatsby-starter)
+- [forge-keystone-starter v0.38.12](./packages/forge-keystone-starter)
+- [forge-next-starter v0.38.12](./packages/forge-next-starter)
+- [forge-react-starter v0.38.12](./packages/forge-react-starter)
 
 ## Usage
 
