@@ -39,6 +39,7 @@
     "extends": "react-app-starter"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "^2.14.0",
