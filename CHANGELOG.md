@@ -1,3 +1,9 @@
+## 0.39.0 (September 18, 2019)
+
+- fix: starter blocklet eslint config
+- fix: shell.js should exist in blocklet dependency and not in template dependency
+- update readme
+
 ## 0.38.13 (September 16, 2019)
 
 - chore: compress all screenshots
