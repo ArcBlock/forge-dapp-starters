@@ -1,3 +1,8 @@
+## 0.39.1 (September 18, 2019)
+
+- fix: missing theme.js in forge-next-starter
+- update readme
+
 ## 0.39.0 (September 18, 2019)
 
 - fix: starter blocklet eslint config
