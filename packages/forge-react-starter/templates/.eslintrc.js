@@ -1,34 +1,34 @@
 module.exports = {
-  env: {
-    browser: true,
-    commonjs: true,
-    es6: true,
-    jest: true,
-    node: true,
-  },
   parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 2017,
+  plugins: ['import'],
+  extends: 'airbnb',
+  env: {
+    es6: true,
+    browser: true,
+    node: true,
+    mocha: true,
   },
-  extends: ['airbnb'],
   rules: {
-    indent: ['error', 2],
-    'operator-linebreak': ['error', 'after'],
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
-    'arrow-parens': 'off',
-    'no-plusplus': 'off',
-    'no-use-before-define': 'off',
-    'object-curly-newline': 'off',
-    'implicit-arrow-linebreak': 'off',
-    'class-methods-use-this': 'off',
     'react/jsx-filename-extension': 'off',
-    'react/no-unescaped-entities': 'off',
     'react/jsx-closing-bracket-location': 'off',
-    'import/no-named-as-default': 'off',
-    'import/no-unresolved': ['error', { caseSensitive: true, ignore: ['core/'] }],
-    'max-len': ['error', { code: 120, ignoreStrings: true, ignoreComments: true }],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/sort-comp': 'off',
+    'class-methods-use-this': 'off',
+    'max-len': [
+      'error',
+      {
+        code: 120,
+        ignoreComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
+    'arrow-parens': ['error', 'as-needed'],
     'comma-dangle': [
       'error',
       {
@@ -45,5 +45,8 @@ module.exports = {
         props: false,
       },
     ],
+  },
+  globals: {
+    logger: true,
   },
 };

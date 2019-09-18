@@ -27,6 +27,11 @@
       "git add"
     ]
   },
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "precommit": "yarn lint",
+    "prepush": "yarn lint"
+  },
   "dependencies": {
     "@arcblock/forge-wallet": "^0.37.0",
     "@arcblock/graphql-client": "^0.37.2",

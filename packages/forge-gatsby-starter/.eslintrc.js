@@ -14,8 +14,20 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react/forbid-prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
     'react/sort-comp': 'off',
     'class-methods-use-this': 'off',
+    'max-len': [
+      'error',
+      {
+        code: 120,
+        ignoreComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
     'arrow-parens': ['error', 'as-needed'],
     'comma-dangle': [
       'error',

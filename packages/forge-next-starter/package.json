@@ -26,15 +26,21 @@
       "git add"
     ]
   },
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "precommit": "yarn lint",
+    "prepush": "yarn lint"
+  },
   "dependencies": {
     "@arcblock/forge-wallet": "^0.37.0",
     "@arcblock/graphql-client": "^0.37.2",
     "@arcblock/mcrypto": "^0.37.0",
+    "chalk": "^2.4.2",
     "debug": "^4.1.1",
     "inquirer": "^7.0.0",
     "ip": "^1.1.5",
-    "shelljs": "^0.8.3",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

@@ -71,6 +71,7 @@ const getConfigs = async () => {
     },
   ];
 
+  // eslint-disable-next-line object-curly-newline
   const { chainHost, appName, appDescription, appPort, mongoUri } = await inquirer.prompt(questions);
   const client = new GraphQLClient({ endpoint: chainHost });
   const {
