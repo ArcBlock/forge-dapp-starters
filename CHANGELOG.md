@@ -1,3 +1,8 @@
+## 0.39.2 (October 07, 2019)
+
+- chore: bump forge sdk and ux lib version
+- update readme
+
 ## 0.39.1 (September 18, 2019)
 
 - fix: missing theme.js in forge-next-starter
