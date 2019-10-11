@@ -1,3 +1,8 @@
+## 0.39.3 (October 11, 2019)
+
+- chore: use latest forge sdk and ux lib
+- update readme
+
 ## 0.39.2 (October 07, 2019)
 
 - chore: bump forge sdk and ux lib version
