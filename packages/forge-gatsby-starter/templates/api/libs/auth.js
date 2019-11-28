@@ -32,8 +32,8 @@ const walletAuth = new WalletAuthenticator({
     publisher: `did:abt:${wallet.address}`,
   },
   chainInfo: {
-    chainHost: env.chainHost,
-    chainId: env.chainId,
+    host: env.chainHost,
+    id: env.chainId,
   },
 });
 

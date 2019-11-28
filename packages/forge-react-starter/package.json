@@ -19,9 +19,15 @@
     "email": "shijun@arcblock.io"
   },
   "dependencies": {
-    "@arcblock/forge-wallet": "^0.37.0",
-    "@arcblock/graphql-client": "^0.37.2",
-    "@arcblock/mcrypto": "^0.37.0",
+    "@arcblock/did": "^1.0.4",
+    "@arcblock/did-auth": "^1.0.6",
+    "@arcblock/did-auth-storage-mongo": "^1.0.0",
+    "@arcblock/did-react": "^0.48.0",
+    "@arcblock/forge-sdk": "^1.0.4",
+    "@arcblock/forge-util": "^1.0.4",
+    "@arcblock/forge-wallet": "^1.0.4",
+    "@arcblock/mcrypto": "^1.0.4",
+    "@arcblock/ux": "^0.48.0",
     "chalk": "^2.4.2",
     "debug": "^4.1.1",
     "dotenv": "^8.0.0",
