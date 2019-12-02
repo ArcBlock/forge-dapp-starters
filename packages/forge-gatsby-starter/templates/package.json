@@ -12,17 +12,7 @@
     "start:gatsby": "gatsby develop --host 0.0.0.0",
     "start:server": "nodemon api/index.js -w api"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ArcBlock/forge-dapp-starters.git"
-  },
-  "keywords": [],
-  "author": "wangshijun <shijun@arcblock.io> (http://github.com/wangshijun)",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/ArcBlock/forge-dapp-starters/issues"
-  },
-  "homepage": "https://github.com/ArcBlock/forge-dapp-starters#readme",
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx,css,less,scss,json,graphql}": [
       "prettier --write",
