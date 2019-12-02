@@ -30,6 +30,7 @@
     "@arcblock/did-auth": "^1.0.7",
     "@arcblock/did-auth-storage-mongo": "^1.0.0",
     "@arcblock/did-react": "^0.50.0",
+    "@arcblock/forge-message": "^1.0.7",
     "@arcblock/forge-sdk": "^1.0.7",
     "@arcblock/forge-util": "^1.0.4",
     "@arcblock/forge-wallet": "^1.0.4",
