@@ -19,8 +19,8 @@ module.exports = {
       };
 
       return {
-        txType: 'PokeTx',
-        txData: {
+        type: 'PokeTx',
+        data: {
           nonce: 0,
           itx: {
             date: moment(new Date().toISOString())

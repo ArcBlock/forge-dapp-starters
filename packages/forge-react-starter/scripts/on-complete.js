@@ -12,7 +12,8 @@ const onComplete = () => {
   const pm = shell.which('yarn') ? 'yarn' : 'npm';
   shell.echo('');
   shell.echo('Run script to start:');
-  shell.echo(chalk.cyan(`cd ${process.env.FORGE_BLOCKLET_TARGET_DIR} && ${pm} start`));
+  shell.echo(`1. Start server: ${chalk.cyan(`cd ${process.env.FORGE_BLOCKLET_TARGET_DIR} && ${pm} start:server`)}`);
+  shell.echo(`2. Start client in another terminal: ${chalk.cyan(`${pm} start:client`)}`);
   shell.echo('');
 };
 

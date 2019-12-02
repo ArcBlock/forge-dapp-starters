@@ -1,3 +1,8 @@
+## 0.39.4 (November 29, 2019)
+
+- upgrade forge js sdk to 1.0.*  and did-auth-protocol #44
+- update readme
+
 ## 0.39.3 (October 11, 2019)
 
 - chore: use latest forge sdk and ux lib

@@ -110,7 +110,7 @@ APP_PORT=3030
 CHAIN_ID="zinc-2019-05-17"
 CHAIN_HOST="https://zinc.abtnetwork.io/api"
 APP_ID="zNKrVwYxwgsYAUX3mGjK42oNuePLVT3Me6ga"
-APP_NAME="Forge Next.js Starter"
+APP_NAME="Forge Keystone.js Starter"
 BASE_URL="http://10.113.10.82:3030"
 API_PREFIX=""
 ```
