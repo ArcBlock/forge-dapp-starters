@@ -3,10 +3,7 @@ require('dotenv').config();
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 const ForgeSDK = require('@arcblock/forge-sdk');
-const { fromJSON } = require('@arcblock/forge-wallet');
 const { wallet } = require('../api/libs/auth');
-
-const appWallet = fromJSON(wallet);
 
 (async () => {
   try {
@@ -16,7 +13,7 @@ const appWallet = fromJSON(wallet);
           moniker: 'Arcblock',
         },
       },
-      wallet: appWallet,
+      wallet,
     });
 
     console.log('Application wallet declared', wallet);

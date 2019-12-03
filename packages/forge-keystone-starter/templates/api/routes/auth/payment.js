@@ -26,7 +26,7 @@ module.exports = {
         type: 'TransferTx',
         data: {
           itx: {
-            to: wallet.address,
+            to: wallet.toAddress(),
             value: fromTokenToUnit(PAYMENT_AMOUNT, state.token.decimal),
           },
         },

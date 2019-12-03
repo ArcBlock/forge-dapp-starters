@@ -11,7 +11,7 @@ module.exports = {
       try {
         if (req.user) {
           const { transactions = [] } = await ForgeSDK.listTransactions({
-            addressFilter: { sender: toAddress(req.user.did), receiver: wallet.address },
+            addressFilter: { sender: toAddress(req.user.did), receiver: wallet.toAddress() },
             typeFilter: { types: ['transfer'] },
           });
 
