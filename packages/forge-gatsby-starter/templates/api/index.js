@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 const env = require('./libs/env');
-const { name, version } = require('../package.json');
+const { name, version } = require('./package.json');
 const { server } = require('./functions/app');
 
 const port = parseInt(process.env.PORT, 10) || parseInt(process.env.APP_PORT, 10) || 3000;

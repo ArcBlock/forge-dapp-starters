@@ -18,7 +18,6 @@ package-lock.json
 .compiled
 yarn-error.log
 
-packages/forge-*-starter/.gitmodules
 packages/forge-*-starter/templates/api/
 packages/forge-*-starter/templates/yarn.lock
 packages/forge-*-starter/templates/package-lock.json
