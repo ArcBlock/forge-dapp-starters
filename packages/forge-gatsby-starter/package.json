@@ -1,6 +1,6 @@
 {
   "name": "forge-gatsby-starter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "dApp starter build with gatsby and xmark that can run on forge powered blockchain",
   "repository": {
     "type": "git",
