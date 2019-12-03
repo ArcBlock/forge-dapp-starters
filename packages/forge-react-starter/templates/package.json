@@ -1,7 +1,6 @@
 {
   "name": "forge-react-starter",
   "version": "0.38.3",
-  "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
   "keywords": [
     "arcblock",
     "forge",
@@ -9,15 +8,6 @@
     "react",
     "javascript"
   ],
-  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter"
-  },
-  "bugs": {
-    "url": "https://github.com/ArcBlock/forge-dapp-starters/issues",
-    "email": "shijun@arcblock.io"
-  },
   "dependencies": {
     "@arcblock/did": "^1.0.4",
     "@arcblock/did-auth": "^1.0.7",

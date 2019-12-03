@@ -27,6 +27,27 @@ Besides, to make the dApp works along with the [ABT Wallet](https://abtwallet.io
 
 Please note that both keystone.js and next.js is embedded in an express server instance.
 
+## Configuration
+
+This starter needs some environment variables to work, which are stored in the .env file in the project root directory:
+
+### server only
+
+- `MONGO_URI`: MongoDB connection string
+- `APP_TOKEN_SECRET`: JWT token secret
+- `APP_TOKEN_TTL`: APP_TOKEN_SECRET token's TTL
+- `APP_SK`: dAPP's secret key
+- `APP_PORT`: Server port
+
+### Both client and server
+
+- `CHAIN_ID`: Chain ID of the chain
+- `CHAIN_HOST`: The graphQL API server host of the chain
+- `APP_NAME`: dAPP's name
+- `APP_DESCRIPTION`: dAPP's description
+- `APP_ID`:  dAPP's ID
+- `BASE_URL`: Base url of server
+
 ## Use cases?
 
 `forge-keystone-starter` can be start point for any forge powered dApp, you can built many blockchain powered apps, such as:

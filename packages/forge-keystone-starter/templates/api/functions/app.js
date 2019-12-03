@@ -126,7 +126,7 @@ paymentsRoutes.init(router);
 server.use(router);
 
 // Application start requirements
-ForgeSDK.getAccountState({ address: wallet.address })
+ForgeSDK.getAccountState({ address: wallet.toAddress() })
   .then(res => {
     if (!res.state) {
       console.log('\n----------');

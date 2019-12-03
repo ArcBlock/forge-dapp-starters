@@ -1,24 +1,14 @@
 {
   "name": "forge-keystone-starter",
   "version": "0.38.5",
-  "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
   "license": "Apache-2.0",
   "keywords": [
     "arcblock",
     "forge",
     "starter",
-    "react",
+    "keystone",
     "javascript"
   ],
-  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-keystone-starter",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-keystone-starter"
-  },
-  "bugs": {
-    "url": "https://github.com/ArcBlock/forge-dapp-starters/issues",
-    "email": "shijun@arcblock.io"
-  },
   "scripts": {
     "postinstall": "yarn patch",
     "patch": "node tools/patch.js",
@@ -42,6 +32,7 @@
     "@arcblock/did-auth": "^1.0.7",
     "@arcblock/did-auth-storage-mongo": "^1.0.0",
     "@arcblock/did-react": "^0.50.0",
+    "@arcblock/forge-message": "^1.0.7",
     "@arcblock/forge-sdk": "^1.0.7",
     "@arcblock/forge-util": "^1.0.4",
     "@arcblock/forge-wallet": "^1.0.4",

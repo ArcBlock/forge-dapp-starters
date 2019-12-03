@@ -128,9 +128,17 @@ GATSBY_API_PREFIX=""`;
   return configs;
 };
 
+const printRequirements = () => {
+  console.log('\nRequirements of the starter:');
+  console.log('1. Forge chain: https://docs.arcblockio.cn/zh/docs/intro/quickstart');
+  console.log('2. MongoDB service: https://www.mongodb.com/\n');
+};
+
 const configure = async () => {
   const targetDir = process.env.FORGE_BLOCKLET_TARGET_DIR;
   const configPath = path.join(`${targetDir}`, '.env');
+
+  printRequirements();
   const configs = await getConfigs();
 
   fs.writeFileSync(configPath, configs);

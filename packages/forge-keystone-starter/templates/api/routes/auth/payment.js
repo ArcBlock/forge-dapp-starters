@@ -1,9 +1,12 @@
 /* eslint-disable no-console */
 const multibase = require('multibase');
 const ForgeSDK = require('@arcblock/forge-sdk');
-const { fromTokenToUnit } = require('@arcblock/forge-util');
+const { fromTokenToUnit, toHex, toBN } = require('@arcblock/forge-util');
 const { fromAddress } = require('@arcblock/forge-wallet');
+const { decodeAny } = require('@arcblock/forge-message');
+
 const { wallet } = require('../../libs/auth');
+const { PAYMENT_AMOUNT } = require('../../libs/constant');
 
 module.exports = {
   action: 'payment',
@@ -23,19 +26,37 @@ module.exports = {
         type: 'TransferTx',
         data: {
           itx: {
-            to: wallet.address,
-            value: fromTokenToUnit(2, state.token.decimal),
+            to: wallet.toAddress(),
+            value: fromTokenToUnit(PAYMENT_AMOUNT, state.token.decimal),
           },
         },
         description: description[locale] || description.en,
       };
     },
   },
-  onAuth: async ({ claims, userDid, extraParams: { locale } }) => {
+  onAuth: async ({ claims, userDid, extraParams: { locale = 'en' } }) => {
     console.log('pay.onAuth', { claims, userDid });
     try {
       const claim = claims.find(x => x.type === 'signature');
       const tx = ForgeSDK.decodeTx(multibase.decode(claim.origin));
+
+      const { state } = await ForgeSDK.getForgeState(
+        {},
+        { ignoreFields: ['state.protocols', /\.txConfig$/, /\.gas$/] }
+      );
+
+      const paymentAmount = fromTokenToUnit(PAYMENT_AMOUNT, state.token.decimal);
+      const amount = toBN(toHex(decodeAny(tx.itx).value.value.value));
+      if (!paymentAmount.eq(amount)) {
+        const errors = {
+          en: 'Payment failed: Incorrect pay amount!',
+          zh: '支付失败: 支付金额不正确',
+        };
+
+        console.error('pay.onAuth.error', errors[locale]);
+        throw new Error(errors[locale]);
+      }
+
       const user = fromAddress(userDid);
 
       const hash = await ForgeSDK.sendTransferTx({
