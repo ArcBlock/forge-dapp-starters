@@ -1,3 +1,9 @@
+## 1.0.2 (December 03, 2019)
+
+- fix: @arcblock/graphql-client and chalk dependencies error in react starter
+- fix: @arcblock/graphql-client dependency error in react starter
+- update readme
+
 ## 1.0.1 (December 03, 2019)
 
 - fix: add @arcblock/graphql-client to react starter
