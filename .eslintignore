@@ -1,2 +1,3 @@
 packages/forge-proto/lib/*.js
 packages/forge-sdk/docs/gen/*.js
+packages/forge-*-starter/templates/*.js
