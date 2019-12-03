@@ -1,3 +1,8 @@
+## 1.0.1 (December 03, 2019)
+
+- fix: add @arcblock/graphql-client to react starter
+- update readme
+
 ## 1.0.0 (December 03, 2019)
 
 - feat: add environment variables configration to blocklet.md #40
