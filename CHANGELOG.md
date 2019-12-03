@@ -1,3 +1,8 @@
+## 1.0.3 (December 03, 2019)
+
+- chore: bump @arcblock/gatsby-theme-www of gatsby starter
+- update readme
+
 ## 1.0.2 (December 03, 2019)
 
 - fix: @arcblock/graphql-client and chalk dependencies error in react starter
