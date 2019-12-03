@@ -25,6 +25,27 @@ Built upon the application skeleton we got after running `create-react-app`, dAp
 
 Besides, to make the dApp works along with the [ABT Wallet](https://abtwallet.io), some APIs are required, a minimal API server built upon [express](http://expressjs.com/) is also included.
 
+## Configuration
+
+This starter needs some environment variables to work, which are stored in the .env file in the project root directory:
+
+### Server only
+
+- `MONGO_URI`: MongoDB connection string
+- `APP_TOKEN_SECRET`: JWT token secret
+- `APP_TOKEN_TTL`: APP_TOKEN_SECRET token's TTL
+- `APP_SK`: dAPP's secret key
+- `APP_PORT`: Server port
+
+### Both server and client
+
+- `REACT_APP_CHAIN_ID`: Chain ID of the chain
+- `REACT_APP_CHAIN_HOST`: The graphQL API server host of the chain
+- `REACT_APP_APP_NAME`: dAPP's name
+- `REACT_APP_APP_DESCRIPTION`: dAPP's description
+- `REACT_APP_APP_ID`:  dAPP's ID
+- `REACT_APP_BASE_URL`: Base url of server
+
 ## Use cases?
 
 `forge-react-starter` can be start point for any forge powered dapp, you can built many blockchain powered apps, such as:
