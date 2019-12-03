@@ -1,3 +1,13 @@
+## 1.0.0 (December 03, 2019)
+
+- feat: add environment variables configration to blocklet.md #40
+- feat: add requirements instruction to every starter #13
+- feat: split common api server as git submodule
+- change api/ to a submodule dependency in next/gatsby/react starter
+- add payment verify #21
+- cleanup: remove inappropriate information in template's pacakge.json #18
+- update readme
+
 ## 0.39.4 (November 29, 2019)
 
 - upgrade forge js sdk to 1.0.*  and did-auth-protocol #44
