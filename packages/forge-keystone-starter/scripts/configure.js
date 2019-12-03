@@ -136,10 +136,19 @@ BASE_URL="http://${ipAddress}:${appPort}"`;
   return configContent;
 };
 
+const printRequirements = () => {
+  console.log('\nRequirements of the starter:');
+  console.log('1. Forge chain: https://docs.arcblockio.cn/zh/docs/intro/quickstart');
+  console.log('2. MongoDB service: https://www.mongodb.com/\n');
+};
+
 const configure = async () => {
+  printRequirements();
+
   const targetDir = process.env.FORGE_BLOCKLET_TARGET_DIR;
   const configs = await getConfigs();
   const configPath = path.join(`${targetDir}`, '.env');
+
   fs.writeFileSync(configPath, configs);
 
   console.log(`Application config generated ${configPath}`);

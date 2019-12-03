@@ -121,7 +121,15 @@ REACT_APP_API_PREFIX=""`;
   return configContent;
 };
 
+const printRequirements = () => {
+  console.log('\nRequirements of the starter:');
+  console.log('1. Forge chain: https://docs.arcblockio.cn/zh/docs/intro/quickstart');
+  console.log('2. MongoDB service: https://www.mongodb.com/\n');
+};
+
 const run = async () => {
+  printRequirements();
+
   const configPath = path.join(`${process.env.FORGE_BLOCKLET_TARGET_DIR}`, '.env');
   const configs = await getConfigs();
 
