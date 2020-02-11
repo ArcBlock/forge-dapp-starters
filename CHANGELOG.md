@@ -1,3 +1,7 @@
+## 1.0.5 (February 11, 2020)
+
+
+
 ## 1.0.4 (February 11, 2020)
 
 - chore: bump gatsby theme and forge sdk version
