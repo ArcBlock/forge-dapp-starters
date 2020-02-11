@@ -25,9 +25,9 @@
     "prepush": "yarn lint"
   },
   "dependencies": {
-    "@arcblock/forge-wallet": "^1.0.4",
-    "@arcblock/graphql-client": "^1.0.7",
-    "@arcblock/mcrypto": "^1.0.4",
+    "@arcblock/forge-wallet": "^1.0.33",
+    "@arcblock/graphql-client": "^1.0.33",
+    "@arcblock/mcrypto": "^1.0.33",
     "chalk": "^2.4.2",
     "debug": "^4.1.1",
     "inquirer": "^7.0.0",
