@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import useAsyncFn from 'react-use/lib/useAsyncFn';
 import useToggle from 'react-use/lib/useToggle';
 import { fromUnitToToken } from '@arcblock/forge-util';
-import { SessionContext } from '../did-playground';
+import { SessionContext } from '@arcblock/did-playground';
 
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';

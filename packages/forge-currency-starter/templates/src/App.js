@@ -7,7 +7,7 @@ import {
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { SessionProvider } from './did-playground';
+import { SessionProvider } from '@arcblock/did-playground';
 
 import ProfilePage from './pages/profile';
 import OrdersPage from './pages/orders';
