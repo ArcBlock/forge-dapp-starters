@@ -1,5 +1,5 @@
 {
-  "description": "A dApp starter that integrates forge-javascript-sdk and create-react-app, brings tons of thousands react libraries/components to dApps that run on forge powered blockchain, go to dapp solution if you are an experienced react developer.",
+  "description": "A DApp starter that show one of the great use cases for decentralized identity and blockchain is around currency.",
   "logo": "logo.svg",
   "group": "starter",
   "provider": "official",
