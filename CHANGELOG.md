@@ -1,3 +1,14 @@
+## 1.0.7 (二月 28, 2020)
+
+- Merge branch 'master' into add-currency-starter
+- update currency starter screenshots
+- update currency starter api
+- update currency starter playground dep
+- rename to api
+- rename api
+- update readme
+- init currency starter
+
 ## 1.0.6 (二月 28, 2020)
 
 - update libs version
