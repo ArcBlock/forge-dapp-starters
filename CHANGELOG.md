@@ -1,3 +1,8 @@
+## 1.0.6 (二月 28, 2020)
+
+- update libs version
+- update readme
+
 ## 1.0.5 (February 11, 2020)
 
 
