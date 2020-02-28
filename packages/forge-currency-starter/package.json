@@ -1,0 +1,50 @@
+{
+  "name": "forge-currency-starter",
+  "version": "1.0.5",
+  "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
+  "keywords": [
+    "arcblock",
+    "forge",
+    "starter",
+    "react",
+    "javascript"
+  ],
+  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-currency-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-currency-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/issues",
+    "email": "shijun@arcblock.io"
+  },
+  "dependencies": {
+    "@arcblock/forge-wallet": "^1.0.4",
+    "@arcblock/graphql-client": "^1.0.7",
+    "@arcblock/mcrypto": "^1.0.4",
+    "chalk": "^3.0.0",
+    "debug": "^4.1.1",
+    "inquirer": "^7.0.0",
+    "ip": "^1.1.5",
+    "lodash": "^4.17.11",
+    "shelljs": "^0.8.3"
+  },
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "precommit": "yarn lint",
+    "prepush": "yarn lint"
+  },
+  "eslintConfig": {
+    "extends": "react-app-starter"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "husky": "^3.0.5"
+  },
+  "license": "Apache-2.0"
+}

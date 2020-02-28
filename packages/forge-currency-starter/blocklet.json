@@ -1,0 +1,19 @@
+{
+  "description": "A dApp starter that integrates forge-javascript-sdk and create-react-app, brings tons of thousands react libraries/components to dApps that run on forge powered blockchain, go to dapp solution if you are an experienced react developer.",
+  "logo": "logo.svg",
+  "group": "starter",
+  "provider": "official",
+  "color": "primary",
+  "type": "starter",
+  "documentation": "https://docs.arcblock.io",
+  "support": "support@arcblock.io",
+  "community": "https://gitter.im/ArcBlock/community",
+  "templates": "templates",
+  "install-scripts": {
+  },
+  "hooks": {
+    "post-copy": "git init && npm install",
+    "configure": "node scripts/configure.js",
+    "on-complete": "node scripts/on-complete.js"
+  }
+}
