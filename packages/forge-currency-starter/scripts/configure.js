@@ -11,12 +11,12 @@ const debug = require('debug')(require('../package.json').name);
 
 const getConfigs = async () => {
   const defaults = {
-    appName: 'Forge React Starter',
+    appName: 'Forge Currency Starter',
     appDescription: 'Starter dApp built on react that runs on forge powered blockchain',
     appPort: 3030,
     chainHost: 'https://playground.network.arcblockio.cn/api',
     assetChainHost: 'https://zinc.network.arcblockio.cn/api',
-    mongoUri: 'mongodb://127.0.0.1:27017/forge-react-starter',
+    mongoUri: 'mongodb://127.0.0.1:27017/forge-currency-starter',
   };
 
   const questions = [

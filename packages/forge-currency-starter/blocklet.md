@@ -6,11 +6,11 @@ On the other hand, having these libraries and frameworks makes our life easier b
 
 You can get your own blockchain up and running within minutes with [forge-cli](https://github.com/ArcBlock/forge-cli), but how to connect your application with forge-powered chains through [forge-sdk](https://github.com/ArcBlock/forge-js)? How to get your application communication to ABT Wallet users?
 
-`forge-react-starter` is here to help! **`forge-react-starter` is the go to solution if you want to build applications with [react](https://reactjs.org) that runs on forge powered chains.**
+`forge-currency-starter` is here to help! **`forge-currency-starter` is the go to solution if you want to build applications with [react](https://reactjs.org) that runs on forge powered chains.**
 
 ## What's Included?
 
-`forge-react-starter` is a typical full-stack javascript dApp template that have [forge-sdk](https://npmjs.org/package/@arcblock/forge-sdk) integrated, it consists of 2 core parts:
+`forge-currency-starter` is a typical full-stack javascript dApp template that have [forge-sdk](https://npmjs.org/package/@arcblock/forge-sdk) integrated, it consists of 2 core parts:
 
 ### Frontend Part
 
@@ -48,11 +48,12 @@ This starter needs some environment variables to work, which are stored in the .
 
 ## Use cases?
 
-`forge-react-starter` can be start point for any forge powered dapp, you can built many blockchain powered apps, such as:
+`forge-currency-starter` can be start point for any forge powered dapp, you can built many blockchain powered apps, such as:
 
 - Online store that sells digital assets and accept ABT as payments
 - Online community application that authentication users through ABT Wallet
 - Admin console for internal use that are protected by ABT Wallet
+- Atomic Swap between two forge chains
 
 ## Requirements?
 

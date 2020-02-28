@@ -14,7 +14,7 @@
     "@arcblock/did-agent-storage-mongo": "^1.0.13",
     "@arcblock/did-auth": "^1.0.35",
     "@arcblock/did-auth-storage-mongo": "^1.0.13",
-    "@arcblock/did-playground": "^0.67.0",
+    "@arcblock/did-playground": "latest",
     "@arcblock/did-react": "^0.68.4",
     "@arcblock/did-util": "^1.0.33",
     "@arcblock/event-client": "^1.0.23",

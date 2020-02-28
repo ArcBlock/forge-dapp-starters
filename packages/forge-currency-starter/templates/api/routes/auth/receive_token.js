@@ -7,34 +7,46 @@ const env = require('../../libs/env');
 
 module.exports = {
   action: 'receive_token',
-  claims: {
-    signature: async ({ userDid, extraParams: { locale, chain, amount } }) => {
-      const token = await getTokenInfo();
-      if (amount === 'random') {
-        // eslint-disable-next-line no-param-reassign
-        amount = (Math.random() * 10).toFixed(6);
-      }
-
-      if (!Number(amount)) {
-        throw new Error('Invalid amount param for receive token playground action');
-      }
-
-      const description = {
-        en: `Sign this text to get ${amount} ${token[chain].symbol} for test`,
-        zh: `签名该文本，你将获得 ${amount} 个测试用的 ${token[chain].symbol}`,
-      };
-
-      return {
-        description: description[locale],
-        data: JSON.stringify({ amount, userDid }, null, 2),
-        type: 'mime:text/plain',
+  authPrincipal: false,
+  claims: [
+    {
+      authPrincipal: async ({ extraParams: { chain } }) => ({
+        description: 'Please select the required DID',
         chainInfo: {
           host: chain === 'local' ? env.chainHost : env.assetChainHost,
           id: chain === 'local' ? env.chainId : env.assetChainId,
         },
-      };
+      }),
     },
-  },
+    {
+      signature: async ({ userDid, extraParams: { locale, chain, amount } }) => {
+        const token = await getTokenInfo();
+        if (amount === 'random') {
+          // eslint-disable-next-line no-param-reassign
+          amount = (Math.random() * 10).toFixed(6);
+        }
+
+        if (!Number(amount)) {
+          throw new Error('Invalid amount param for receive token playground action');
+        }
+
+        const description = {
+          en: `Sign this text to get ${amount} ${token[chain].symbol} for test`,
+          zh: `签名该文本，你将获得 ${amount} 个测试用的 ${token[chain].symbol}`,
+        };
+
+        return {
+          description: description[locale],
+          data: JSON.stringify({ amount, userDid }, null, 2),
+          type: 'mime:text/plain',
+          chainInfo: {
+            host: chain === 'local' ? env.chainHost : env.assetChainHost,
+            id: chain === 'local' ? env.chainId : env.assetChainId,
+          },
+        };
+      },
+    },
+  ],
 
   // eslint-disable-next-line object-curly-newline
   onAuth: async ({ userDid, userPk, claims, extraParams: { chain } }) => {
