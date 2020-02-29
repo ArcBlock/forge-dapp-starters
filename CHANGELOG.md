@@ -1,3 +1,8 @@
+## 1.0.9 (February 29, 2020)
+
+- fix: call charge api for currency starters
+- update readme
+
 ## 1.0.8 (February 29, 2020)
 
 - fix: currrency starter not install dependencies by default
