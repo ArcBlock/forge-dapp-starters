@@ -10,6 +10,7 @@
   "community": "https://gitter.im/ArcBlock/community",
   "templates": "templates",
   "install-scripts": {
+    "install-dependencies": "npm install"
   },
   "hooks": {
     "post-copy": "git init && npm install",
