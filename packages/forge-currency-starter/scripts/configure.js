@@ -3,11 +3,14 @@ const fs = require('fs');
 const ip = require('ip');
 const camelCase = require('lodash/camelCase');
 const path = require('path');
+const axios = require('axios');
 const inquirer = require('inquirer');
 const GraphQLClient = require('@arcblock/graphql-client');
 const { types } = require('@arcblock/mcrypto');
 const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
 const debug = require('debug')(require('../package.json').name);
+
+const chargeAPI = 'https://playground.wallet.arcblockio.cn/api/charge';
 
 const getConfigs = async () => {
   const defaults = {
@@ -126,6 +129,21 @@ const getConfigs = async () => {
   });
   console.log('Application foreign chain declare tx', hash2);
   console.log(`Application account declared on foreign chain: ${wallet.toAddress()}`);
+
+  // Charge application
+  try {
+    const nonce = Date.now().toString();
+    const signature = wallet.sign(nonce);
+    const { data } = await axios.post(chargeAPI, {
+      appDid: wallet.toAddress(),
+      appPk: wallet.publicKey,
+      nonce,
+      signature,
+    });
+    console.warn('Application test token charge success', data);
+  } catch (err) {
+    console.warn('Application test token charge failed', err);
+  }
 
   // Generate config
   const configContent = `SKIP_PREFLIGHT_CHECK=true
