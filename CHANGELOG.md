@@ -1,3 +1,8 @@
+## 1.0.8 (February 29, 2020)
+
+- fix: currrency starter not install dependencies by default
+- update readme
+
 ## 1.0.7 (二月 28, 2020)
 
 - Merge branch 'master' into add-currency-starter
