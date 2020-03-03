@@ -1,0 +1,30 @@
+{
+  "name": "xmark-currency-starter",
+  "version": "1.0.9",
+  "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
+  "keywords": [
+    "arcblock",
+    "starter",
+    "xmark",
+    "javascript"
+  ],
+  "homepage": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/xmark-currency-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/xmark-currency-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/ArcBlock/forge-dapp-starters/issues",
+    "email": "shijun@arcblock.io"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "debug": "^4.1.1",
+    "inquirer": "^7.0.0",
+    "lodash": "^4.17.11",
+    "shelljs": "^0.8.3"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "license": "Apache-2.0"
+}

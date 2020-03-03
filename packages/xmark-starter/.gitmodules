@@ -1,3 +1,0 @@
-[submodule "templates/api"]
-	path = templates/api
-	url = https://github.com/ArcBlock/forge-nodejs-server-demo.git

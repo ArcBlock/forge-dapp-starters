@@ -1,0 +1,20 @@
+{
+  "description": "A starter that let users build bootstrap their own forge powered currency dapps from our official sample",
+  "logo": "logo.svg",
+  "group": "starter",
+  "provider": "official",
+  "color": "primary",
+  "type": "starter",
+  "documentation": "https://docs.arcblock.io",
+  "support": "support@arcblock.io",
+  "community": "https://community.arcblockio.cn",
+  "templates": "templates",
+  "install-scripts": {
+    "install-dependencies": "npm install"
+  },
+  "hooks": {
+    "post-copy": "git init && npm install",
+    "configure": "node scripts/configure.js",
+    "on-complete": "node scripts/on-complete.js"
+  }
+}
