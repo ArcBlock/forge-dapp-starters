@@ -5,7 +5,7 @@ const inquirer = require('inquirer');
 
 const getConfigs = async () => {
   const defaults = {
-    connectAppDid: 'zNKioYRndr9NAMX1WbLHgXQ6pY9991gxg2JL',
+    connectAppDid: 'zNKWfcRpzUwDPPzmBszXDRLepJKHG9gLFeqv',
     connectHost: 'https://connect.wallet.arcblockio.cn',
     playgroundHost: 'https://playground.abtwallet.io/.netlify/functions/app',
   };
