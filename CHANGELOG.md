@@ -1,3 +1,9 @@
+## 1.1.0 (March 03, 2020)
+
+- chore: add currency starter for xmark
+- chore: add new starter for xmark
+- update readme
+
 ## 1.0.9 (February 29, 2020)
 
 - fix: call charge api for currency starters
