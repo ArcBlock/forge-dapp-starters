@@ -1,3 +1,8 @@
+## 1.1.2 (March 03, 2020)
+
+- chore: update demo connect did
+- update readme
+
 ## 1.1.1 (March 03, 2020)
 
 
