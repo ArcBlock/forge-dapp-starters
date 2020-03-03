@@ -1,3 +1,8 @@
+## 1.1.3 (March 03, 2020)
+
+- fix: connect app did
+- update readme
+
 ## 1.1.2 (March 03, 2020)
 
 - chore: update demo connect did
