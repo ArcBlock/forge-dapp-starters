@@ -7,8 +7,6 @@ layout: 'page'
 pageType: "product"
 disableLogin: true
 logoColor: "black"
-customHeader: true
-customFooter: true
 ---
 
 @include ./fragments/shared.zh.md

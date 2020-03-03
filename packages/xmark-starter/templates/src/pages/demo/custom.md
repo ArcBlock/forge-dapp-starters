@@ -9,8 +9,6 @@ pageType: 'product'
 path: "/demo/custom"
 logoImage: '../images/logo.jpg'
 logoColor: '#222222'
-customHeader: true
-customFooter: true
 ---
 
 @include ../fragments/shared.md

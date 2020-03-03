@@ -12,8 +12,6 @@ logoImage: '../images/logo.jpg'
 logoColor: '#222222'
 darkHeader: true
 disableLogin: true
-customHeader: true
-customFooter: true
 ---
 
 @include ../fragments/shared.md
