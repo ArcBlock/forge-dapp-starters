@@ -1,6 +1,6 @@
 {
   "name": "forge-currency-starter",
-  "version": "1.0.9",
+  "version": "1.1.1",
   "author": "wangshijun <shijun@arcblock.io> https://github.com/wangshijun",
   "keywords": [
     "arcblock",
@@ -34,6 +34,5 @@
   "eslintConfig": {
     "extends": "react-app-starter"
   },
-  "devDependencies": {},
   "license": "Apache-2.0"
 }
