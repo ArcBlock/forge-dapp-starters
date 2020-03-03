@@ -17,7 +17,7 @@ Markdown is awesome when building content dense websites, but markdown itself is
 This starter needs some environment variables to work, which are stored in the `.env` file in the project root directory:
 
 ```ini
-GATSBY_DID_CONNECT_APP_DID="zNKioYRndr9NAMX1WbLHgXQ6pY9991gxg2JL"
+GATSBY_DID_CONNECT_APP_DID="zNKWfcRpzUwDPPzmBszXDRLepJKHG9gLFeqv"
 GATSBY_DID_CONNECT_SERVICE="https://connect.wallet.arcblockio.cn"
 GATSBY_DID_CONNECT_AUTH_ACTION="profile"
 GATSBY_DID_CONNECT_API_PREFIX="/api/login/agent"
