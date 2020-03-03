@@ -1,3 +1,7 @@
+## 1.1.1 (March 03, 2020)
+
+
+
 ## 1.1.0 (March 03, 2020)
 
 - chore: add currency starter for xmark
