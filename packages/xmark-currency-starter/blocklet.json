@@ -1,5 +1,5 @@
 {
-  "description": "A starter that let users build bootstrap their own forge powered currency dapps from our official sample",
+  "description": "A starter that let users build their own forge powered currency dapps from our official sample",
   "logo": "logo.svg",
   "group": "starter",
   "provider": "official",
