@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "@arcblock/did": "^1.0.33",
-    "@arcblock/did-auth": "^1.0.35",
+    "@arcblock/did-auth": "^1.0.38",
     "@arcblock/did-auth-storage-mongo": "^1.0.13",
     "@arcblock/did-react": "^0.68.4",
     "@arcblock/forge-sdk": "^1.0.33",

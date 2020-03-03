@@ -71,7 +71,7 @@
     number-to-bn "^1.7.0"
     utf8 "^3.0.0"
 
-"@arcblock/forge-wallet@^1.0.33", "@arcblock/forge-wallet@^1.0.4":
+"@arcblock/forge-wallet@^1.0.33":
   version "1.0.33"
   resolved "https://registry.yarnpkg.com/@arcblock/forge-wallet/-/forge-wallet-1.0.33.tgz#0571e50b2737c53bc07f51c75733bb0c6178a5f1"
   integrity sha512-Da3xQerNJPuuZNRyzXR0msCVKX2k5CVtgPt6ufEOQZ+LsVBbuITsxlhZ/ZNWrlmqbcFwDJWyGTh8NCzkxcNRNw==
@@ -80,7 +80,7 @@
     "@arcblock/mcrypto" "^1.0.33"
     lodash.upperfirst "^4.3.1"
 
-"@arcblock/graphql-client@^1.0.33", "@arcblock/graphql-client@^1.0.4", "@arcblock/graphql-client@^1.0.7":
+"@arcblock/graphql-client@^1.0.33":
   version "1.0.33"
   resolved "https://registry.yarnpkg.com/@arcblock/graphql-client/-/graphql-client-1.0.33.tgz#9773e9e6e08e6c43a5002b411a3c677b1870dc69"
   integrity sha512-Dsta6JiXjykECc4aGVGroYce4uiFntMWFM/e5TdB/Sk8gyYYO9f1zagw489u1iyVIZYR5kLhHhG7EJkH4xHIVw==
@@ -95,7 +95,7 @@
     react-app-polyfill "^1.0.1"
     wolfy87-eventemitter "^5.2.5"
 
-"@arcblock/mcrypto@^1.0.33", "@arcblock/mcrypto@^1.0.4":
+"@arcblock/mcrypto@^1.0.33":
   version "1.0.33"
   resolved "https://registry.yarnpkg.com/@arcblock/mcrypto/-/mcrypto-1.0.33.tgz#798c20766bf2811fbebdf813b032cf64e22bb397"
   integrity sha512-NljWuoLI7jMcMAPzinJnXH47DWkOTKzgnoMfCoK0w90R/pDcrazJIMGHLK7ZmcJUh5ZzWOoJslVONio+Xuv8lg==

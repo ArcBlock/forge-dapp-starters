@@ -8,20 +8,20 @@ layout: 'page'
 
 ## XMark Sections {.section}
 
-- [Simple: Use ArcBlock Header and Footer](/en/sections/simple)
-- [Standalone: Use ArcBlock Footer Only](/en/sections/standalone)
-- [Webinar](/en/sections/webinar)
+- [Simple: Use ArcBlock Header and Footer](/sections/simple)
+- [Standalone: Use ArcBlock Footer Only](/sections/standalone)
+- [Webinar](/sections/webinar)
 
 ## XMark Extensions {.section}
 
-- [Common Extensions: Icons, Buttons](/en/extensions)
-- [DID Connect Extensions: Login](/en/extensions/did-connect)
-- [Wallet Playground Extensions: Anything you can imagine](/en/extensions/playground)
+- [Common Extensions: Icons, Buttons](/extensions)
+- [DID Connect Extensions: Login](/extensions/did-connect)
+- [Wallet Playground Extensions: Anything you can imagine](/extensions/playground)
 
 ## Demo Pages {.section}
 
-- [Background](/en/demo)
-- [Custom Header and Footer](/en/demo/custom)
-- [Custom Header and Footer: Custom](/en/demo/custom-dark)
-- [Raw HTML tags and scripts](/en/demo/raw)
-- [Complete product pages](/en/demo/product)
+- [Background](/demo)
+- [Custom Header and Footer](/demo/custom)
+- [Custom Header and Footer: Custom](/demo/custom-dark)
+- [Raw HTML tags and scripts](/demo/raw)
+- [Complete product pages](/demo/product)

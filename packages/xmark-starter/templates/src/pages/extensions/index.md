@@ -47,6 +47,6 @@ layout: 'page'
 
 ## More Extensions {.section}
 
-- [DID:Connect Components](/en/extensions/did-connect)
-- [Playground Action Buttons](/en/extensions/playground)
-- [Things can work together](/en/extensions/mixed)
+- [DID:Connect Components](/extensions/did-connect)
+- [Playground Action Buttons](/extensions/playground)
+- [Things can work together](/extensions/mixed)
