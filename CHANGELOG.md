@@ -1,3 +1,8 @@
+## 1.1.4 (March 03, 2020)
+
+- chore: bump xmark theme version
+- fix: update forge sdk and xmark theme version
+
 ## 1.1.3 (March 03, 2020)
 
 - fix: connect app did
