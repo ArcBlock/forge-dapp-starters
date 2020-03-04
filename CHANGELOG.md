@@ -1,3 +1,8 @@
+## 1.1.5 (March 04, 2020)
+
+- chore: bump ux lib and xmark theme version
+- update readme
+
 ## 1.1.4 (March 03, 2020)
 
 - chore: bump xmark theme version
