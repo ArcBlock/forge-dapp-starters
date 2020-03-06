@@ -1,3 +1,8 @@
+## 1.2.2 (March 06, 2020)
+
+- chore: trigger deploy
+- update readme
+
 ## 1.2.1 (March 06, 2020)
 
 - fix: markdown change caused publish failure
