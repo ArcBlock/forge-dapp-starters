@@ -1,0 +1,6 @@
+# https://www.netlify.com/docs/redirects/
+
+# Site page rules
+/  /zh/   302  Country=cn,hk,tw
+/  /zh/   302  Language=zh
+/  /en/   302
