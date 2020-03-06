@@ -1,3 +1,7 @@
+## 1.2.1 (March 06, 2020)
+
+- fix: markdown change caused publish failure
+
 ## 1.2.0 (March 06, 2020)
 
 - chore: polish xmark starter header
