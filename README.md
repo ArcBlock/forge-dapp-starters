@@ -7,9 +7,10 @@
 
 A collection of starters that can be used as boilerplates when building forge powered javascript dApps
 
-> Last updated at 3/6/2020, 9:23:50 AM
+> Last updated at 3/6/2020, 6:08:47 PM
 
 ## Packages
+
 
 - [forge-currency-starter v1.1.8](./packages/forge-currency-starter)
 - [forge-gatsby-starter v1.1.8](./packages/forge-gatsby-starter)
