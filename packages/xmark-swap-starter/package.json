@@ -24,6 +24,5 @@
     "lodash": "^4.17.11",
     "shelljs": "^0.8.3"
   },
-  "scripts": {},
   "license": "Apache-2.0"
 }
