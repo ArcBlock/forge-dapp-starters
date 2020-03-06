@@ -1,3 +1,8 @@
+## 1.1.9 (March 06, 2020)
+
+- chore: add xmark-swap-starter
+- update readme
+
 ## 1.1.8 (March 06, 2020)
 
 - update readme
