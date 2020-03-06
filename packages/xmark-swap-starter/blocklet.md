@@ -2,7 +2,7 @@
 
 Markdown is awesome when building content dense websites, but markdown itself is too simple, what about bring some extensions to it?
 
-`xmark-swap-starter` is here to help! **`xmark-swap-starter` is the go to solution if you want to build applications with [react](https://reactjs.org) that runs on forge powered chains**, One of the great use cases for decentralized identity and blockchain is around currency.
+`xmark-swap-starter` is here to help! **`xmark-swap-starter` is the go to solution if you want to build applications with markdown that runs on our playgroudn API which is baked by forge powered chains**, One of the great use cases for decentralized identity and blockchain is around currency.
 
 ## What's Included?
 
@@ -17,10 +17,6 @@ Markdown is awesome when building content dense websites, but markdown itself is
 This starter needs some environment variables to work, which are stored in the `.env` file in the project root directory:
 
 ```ini
-GATSBY_DID_CONNECT_APP_DID="zNKWfcRpzUwDPPzmBszXDRLepJKHG9gLFeqv"
-GATSBY_DID_CONNECT_SERVICE="https://connect.wallet.arcblockio.cn"
-GATSBY_DID_CONNECT_AUTH_ACTION="profile"
-GATSBY_DID_CONNECT_API_PREFIX="/api/login/agent"
 GATSBY_PLAYGROUND_SERVICE="https://playground.abtwallet.io/.netlify/functions/app"
 ```
 
