@@ -1,3 +1,7 @@
+## 1.1.8 (March 06, 2020)
+
+- update readme
+
 ## 1.1.7 (March 04, 2020)
 
 - update readme
