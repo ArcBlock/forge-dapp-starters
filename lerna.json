@@ -2,14 +2,6 @@
   "version": "1.1.9",
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "ignoreChanges": [
-    "**/tools/**",
-    "**/docs/**",
-    "**/test/**",
-    "**/*.md",
-    "README.md"
-  ],
-  "packages": [
-    "packages/*"
-  ]
+  "ignoreChanges": ["**/tools/**", "**/docs/**", "**/test/**", "README.md"],
+  "packages": ["packages/*"]
 }
