@@ -28,7 +28,7 @@
     "@arcblock/forge-sdk": "^1.0.38",
     "@arcblock/forge-util": "^1.0.33",
     "@arcblock/forge-wallet": "^1.0.38",
-    "@arcblock/gatsby-theme-www": "^7.2.6",
+    "@arcblock/gatsby-theme-www": "^7.2.8",
     "@arcblock/graphql-client": "^1.0.38",
     "@arcblock/mcrypto": "^1.0.38",
     "@arcblock/ux": "^0.69.2",

@@ -1,3 +1,7 @@
+## 1.2.3 (March 07, 2020)
+
+- update readme
+
 ## 1.2.2 (March 06, 2020)
 
 - chore: trigger deploy
