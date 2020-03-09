@@ -18,6 +18,10 @@ const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
 const { name } = require('../package.json');
 const debug = require('debug')(name);
 
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 const getConfigs = async () => {
   const defaults = {
     appName: 'Forge Gatsby Starter',

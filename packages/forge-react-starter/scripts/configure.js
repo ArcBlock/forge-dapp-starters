@@ -9,6 +9,10 @@ const { types } = require('@arcblock/mcrypto');
 const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
 const debug = require('debug')(require('../package.json').name);
 
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 const getConfigs = async () => {
   const defaults = {
     appName: 'Forge React Starter',

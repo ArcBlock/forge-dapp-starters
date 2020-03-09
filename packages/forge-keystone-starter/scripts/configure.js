@@ -18,6 +18,10 @@ const { fromRandom, WalletType } = require('@arcblock/forge-wallet');
 const { name } = require('../package.json');
 const debug = require('debug')(name);
 
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 /**
  * On project folder created and files synced
  * You can create new files/modifying existing files in the project folder
