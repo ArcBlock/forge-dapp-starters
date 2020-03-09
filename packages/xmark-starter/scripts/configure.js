@@ -3,6 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 const getConfigs = async () => {
   const defaults = {
     connectAppDid: 'zNKWfcRpzUwDPPzmBszXDRLepJKHG9gLFeqv',

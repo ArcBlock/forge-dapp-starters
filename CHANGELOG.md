@@ -1,3 +1,8 @@
+## 1.2.4 (March 09, 2020)
+
+- Throw error when unhandledRejection event occurs in nodejs scripts
+- update readme
+
 ## 1.2.3 (March 07, 2020)
 
 - update readme

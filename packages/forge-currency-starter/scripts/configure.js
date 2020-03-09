@@ -12,6 +12,10 @@ const debug = require('debug')(require('../package.json').name);
 
 const chargeAPI = 'https://playground.wallet.arcblockio.cn/api/charge';
 
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 const getConfigs = async () => {
   const defaults = {
     appName: 'Forge Currency Starter',

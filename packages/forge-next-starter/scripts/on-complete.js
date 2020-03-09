@@ -1,6 +1,10 @@
 const chalk = require('chalk');
 const shell = require('shelljs');
 
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 /**
  * On project ready to run
  * You can print basic steps for users to start the application
