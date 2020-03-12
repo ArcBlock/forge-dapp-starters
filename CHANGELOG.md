@@ -1,3 +1,8 @@
+## 1.2.6 (March 12, 2020)
+
+- add requirements to xmarker blocklet
+- update readme
+
 ## 1.2.5 (March 11, 2020)
 
 - update readme
