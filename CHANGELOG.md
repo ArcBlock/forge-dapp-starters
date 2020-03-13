@@ -1,3 +1,8 @@
+## 1.2.6 (March 13, 2020)
+
+- add usage config to xmark-starter
+- update readme
+
 ## 1.2.5 (March 11, 2020)
 
 - update readme
