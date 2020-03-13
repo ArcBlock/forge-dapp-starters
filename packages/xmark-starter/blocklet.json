@@ -16,5 +16,8 @@
     "post-copy": "git init && npm install",
     "configure": "node scripts/configure.js",
     "on-complete": "node scripts/on-complete.js"
-  }
+  },
+  "usages": [
+    "basic"
+  ]
 }
