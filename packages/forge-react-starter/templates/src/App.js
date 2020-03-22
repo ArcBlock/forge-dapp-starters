@@ -36,6 +36,8 @@ const theme = create({
   },
 });
 
+console.log(theme);
+
 const GlobalStyle = createGlobalStyle`
   a {
     color: ${props => props.theme.colors.green};
