@@ -1,8 +1,11 @@
+/* eslint-disable object-curly-newline */
 import React from 'react';
+import { create } from '@arcblock/ux/lib/Theme';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { BrowserRouter as Router, Route, Switch, Redirect, withRouter } from 'react-router-dom';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 
 import HomePage from './pages/index';
 import ProfilePage from './pages/profile';
@@ -11,7 +14,22 @@ import AppPage from './pages/application';
 import BlockPage from './pages/blocks';
 import ChainPage from './pages/chain';
 
-import theme from './libs/theme';
+const theme = create({
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
+});
 
 const GlobalStyle = createGlobalStyle`
   a {
@@ -34,6 +52,7 @@ export const App = () => (
             <Route exact path="/application" component={AppPage} />
             <Route exact path="/blocks" component={BlockPage} />
             <Route exact path="/chain" component={ChainPage} />
+            <Redirect to="/" />
           </Switch>
         </div>
       </React.Fragment>

@@ -8,7 +8,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import CodeBlock from '@arcblock/ux/lib/CodeBlock';
 
 import Layout from '../components/layout';
 
@@ -65,7 +64,7 @@ const renderExampleCard = x => (
         <Typography component="h2" variant="h5" gutterBottom>
           {x.title}
         </Typography>
-        <Typography component="p" variant="subtitle1" gutterBottom>
+        <Typography component="p" variant="body1" gutterBottom>
           {x.description}
         </Typography>
       </CardContent>
@@ -85,7 +84,7 @@ export default function IndexPage() {
         <Typography component="h2" variant="h4" className="page-header" color="textPrimary">
           dApps the Easy Way!
         </Typography>
-        <Typography component="p" variant="h6" className="page-description" color="textSecondary">
+        <Typography component="p" variant="body1" className="page-description" color="textSecondary">
           Application boilerplate built on top of{' '}
           <a href="https://www.arcblock.io/en/forge-sdk">forge (Ruby on Rails for Blockchain Space)</a> powered
           blockchain, with developer friendly{' '}
