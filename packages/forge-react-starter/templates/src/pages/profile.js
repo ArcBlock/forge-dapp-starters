@@ -44,7 +44,7 @@ export default function ProfilePage() {
     );
   }
 
-  const { user, token } = session;
+  const { user, token, poke } = session;
 
   return (
     <Layout title="Profile">
@@ -60,7 +60,7 @@ export default function ProfilePage() {
             </Button>
             {balance.value && (
               <Button color="primary" variant="contained" onClick={() => setOpen()} style={{ marginTop: '30px' }}>
-                Get 25 {token.symbol}
+                Get {poke.amount} {token.symbol}
               </Button>
             )}
           </Grid>
@@ -105,10 +105,10 @@ export default function ProfilePage() {
           onClose={() => setOpen()}
           onSuccess={() => window.location.reload()}
           messages={{
-            title: `Get 25 ${token.symbol} for FREE`,
-            scan: `Scan qrcode to get 25 ${token.symbol} for FREE`,
+            title: `Get ${poke.amount} ${token.symbol} for FREE`,
+            scan: `Scan qrcode to get ${poke.amount} ${token.symbol} for FREE`,
             confirm: 'Confirm on your ABT Wallet',
-            success: `25 ${token.symbol} sent to your account`,
+            success: `${poke.amount} ${token.symbol} sent to your account`,
           }}
         />
       )}
