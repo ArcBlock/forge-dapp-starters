@@ -4,26 +4,35 @@ import useAsync from 'react-use/lib/useAsync';
 import useToggle from 'react-use/lib/useToggle';
 
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+
 import Auth from '@arcblock/did-react/lib/Auth';
 import Avatar from '@arcblock/did-react/lib/Avatar';
+import Button from '@arcblock/ux/lib/Button';
 
 import Layout from '../components/layout';
-import api from '../libs/api';
-import { onAuthError } from '../libs/auth';
-
-async function fetchStatus() {
-  const [{ data: payment }, { data: session }] = await Promise.all([api.get('/api/payments'), api.get('/api/session')]);
-  return { payment, session };
-}
+import { SessionContext } from '../libs/session';
 
 export default function PaymentPage() {
-  const state = useAsync(fetchStatus);
   const [open, toggle] = useToggle(false);
+  const { api, session } = React.useContext(SessionContext);
+  const state = useAsync(async () => {
+    const { data: payment } = await api.get('/api/payments');
+    return payment;
+  }, [session.user]);
 
-  if (state.loading || !state.value) {
+  if (session.loading) {
+    return (
+      <Layout title="Profile">
+        <Main>
+          <CircularProgress />
+        </Main>
+      </Layout>
+    );
+  }
+
+  if (state.loading) {
     return (
       <Layout title="Payment">
         <Main>
@@ -41,15 +50,9 @@ export default function PaymentPage() {
     );
   }
 
-  if (!state.value.session.user) {
-    window.location.href = '/?openLogin=true';
-    return null;
-  }
+  const payment = state.value;
+  const { token, user } = session;
 
-  const {
-    payment,
-    session: { user, token },
-  } = state.value;
   return (
     <Layout title="Payment">
       <Main symbol={token.symbol}>
@@ -111,7 +114,6 @@ export default function PaymentPage() {
           responsive
           action="payment"
           checkFn={api.get}
-          onError={onAuthError}
           onClose={() => toggle()}
           onSuccess={() => window.location.reload()}
           messages={{

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import styled from 'styled-components';
-import useAsyncFn from 'react-use/lib/useAsyncFn';
+import useAsync from 'react-use/lib/useAsync';
 import useToggle from 'react-use/lib/useToggle';
 import { fromUnitToToken } from '@arcblock/forge-util';
 
@@ -10,39 +10,33 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+
 import CircularProgress from '@material-ui/core/CircularProgress';
+
+import Button from '@arcblock/ux/lib/Button';
 import Auth from '@arcblock/did-react/lib/Auth';
 import Avatar from '@arcblock/did-react/lib/Avatar';
 
 import Layout from '../components/layout';
-import useSession from '../hooks/session';
 import forge from '../libs/sdk';
-import api from '../libs/api';
-import { removeToken, onAuthError } from '../libs/auth';
+import { SessionContext } from '../libs/session';
 
 export default function ProfilePage() {
-  const session = useSession();
-  const [isFetched, setFetched] = useToggle(false);
+  const { api, session } = React.useContext(SessionContext);
   const [isOpen, setOpen] = useToggle(false);
-  const [balance, fetchBalance] = useAsyncFn(async () => {
-    if (session.value && session.value.user) {
-      const address = session.value.user.did.replace(/^did:abt:/, '');
-      const { state: account } = await forge.getAccountState({ address }, { ignoreFields: [] });
-      return account;
-    }
-
-    return null;
-  }, [session.value]);
+  const balance = useAsync(async () => {
+    const { state: account } = await forge.getAccountState({ address: session.user.did }, { ignoreFields: [] });
+    return account;
+  }, [session.user]);
 
   const onLogout = () => {
-    removeToken();
+    session.logout();
     window.location.href = '/';
   };
 
-  if (session.loading || !session.value) {
+  if (session.loading) {
     return (
-      <Layout title="Payment">
+      <Layout title="Profile">
         <Main>
           <CircularProgress />
         </Main>
@@ -50,27 +44,7 @@ export default function ProfilePage() {
     );
   }
 
-  if (session.error) {
-    return (
-      <Layout title="Payment">
-        <Main>{session.error.message}</Main>
-      </Layout>
-    );
-  }
-
-  if (!session.value.user) {
-    window.location.href = '/?openLogin=true';
-    return null;
-  }
-
-  if (!isFetched) {
-    setTimeout(() => {
-      setFetched(true);
-      fetchBalance();
-    }, 100);
-  }
-
-  const { user, token } = session.value;
+  const { user, token } = session;
 
   return (
     <Layout title="Profile">
@@ -128,7 +102,6 @@ export default function ProfilePage() {
           responsive
           action="checkin"
           checkFn={api.get}
-          onError={onAuthError}
           onClose={() => setOpen()}
           onSuccess={() => window.location.reload()}
           messages={{

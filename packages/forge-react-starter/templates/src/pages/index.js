@@ -113,8 +113,6 @@ export default function IndexPage() {
 }
 
 const Main = styled.main`
-  margin: 80px 0 0;
-
   a {
     color: ${props => props.theme.colors.green};
     text-decoration: none;
@@ -138,6 +136,9 @@ const Main = styled.main`
   .demos {
     .demo {
       height: 240px;
+      @media (max-width: ${props => props.theme.breakpoints.values.md - 1}px) {
+        height: auto;
+      }
     }
   }
 `;
