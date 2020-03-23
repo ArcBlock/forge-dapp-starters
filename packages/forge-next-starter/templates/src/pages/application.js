@@ -58,8 +58,6 @@ const res = await client.getAccountState(${addressStr});`}
 }
 
 const Main = styled.main`
-  margin: 80px 0 0;
-
   .page-header {
     margin-bottom: 20px;
   }
