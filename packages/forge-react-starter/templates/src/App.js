@@ -36,12 +36,16 @@ const theme = create({
   },
 });
 
-console.log(theme);
-
 const GlobalStyle = createGlobalStyle`
   a {
     color: ${props => props.theme.colors.green};
     text-decoration: none;
+  }
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 `;
 

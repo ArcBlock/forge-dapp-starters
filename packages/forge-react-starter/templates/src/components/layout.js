@@ -113,9 +113,32 @@ export default function Layout({ title, children, contentOnly }) {
         <div className="header-desktop">
           <Toolbar className="toolbar">
             <Container>
-              <Typography href="/" component="a" variant="h6" color="inherit" noWrap className="brand">
-                {env.appName}
-              </Typography>
+              <nav className="navbar">
+                <Typography href="/" component="a" variant="h5" color="inherit" noWrap className="brand">
+                  {env.appName}
+                </Typography>
+                <div className="nav-links">
+                  <Link href="/profile" className="nav-item">
+                    Profile
+                  </Link>
+                  <Link href="/payment" className="nav-item">
+                    Payment
+                  </Link>
+                  {!!env.chainHost && (
+                    <Link href={getExplorerUrl(env.chainHost, 'local')} target="_blank" className="nav-item">
+                      Local Chain
+                    </Link>
+                  )}
+                  {!!env.assetChainHost && (
+                    <Link href={getExplorerUrl(env.assetChainHost, 'foreign')} target="_blank" className="nav-item">
+                      Foreign Chain
+                    </Link>
+                  )}
+                  <Link href="https://github.com/ArcBlock/wallet-playground" target="_blank" className="nav-item">
+                    GitHub
+                  </Link>
+                </div>
+              </nav>
             </Container>
           </Toolbar>
         </div>
@@ -176,6 +199,17 @@ const Div = styled.div`
 
   .toolbar {
     min-height: 56px;
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-item {
+        margin: 8px 12px;
+        font-size: 16px;
+      }
+    }
   }
 
   .content {
