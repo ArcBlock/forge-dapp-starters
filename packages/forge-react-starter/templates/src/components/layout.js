@@ -136,10 +136,8 @@ export default function Layout({ title, children, contentOnly }) {
         </Drawer>
       </DrawerDiv>
       <div className="content">
-        <Hidden only={['md', 'lg', 'xl']}>
-          <div className="toolbar" />
-        </Hidden>
-        <Container>{children}</Container>
+        <div className="toolbar" />
+        <Container style={{ marginTop: 16 }}>{children}</Container>
         <Footer />
       </div>
     </Div>
@@ -185,7 +183,7 @@ const Div = styled.div`
   }
 
   .brand {
-    margin-right: 60px;
+    margin-right: 24;
     cursor: pointer;
     display: flex;
     justify-content: flex-start;

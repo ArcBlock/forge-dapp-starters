@@ -58,7 +58,7 @@ export default function PaymentPage() {
       <Main symbol={token.symbol}>
         <Grid container spacing={6}>
           <Grid item xs={12} md={3} className="avatar">
-            <Avatar size={240} did={user.did} />
+            <Avatar size={120} did={user.did} />
             <Button color="secondary" disabled={payment} variant="contained" onClick={() => toggle()}>
               {payment ? 'Already Paid' : 'Make Payment'}
             </Button>
@@ -129,7 +129,6 @@ export default function PaymentPage() {
 }
 
 const Main = styled.main`
-  margin: 80px 0;
   display: flex;
 
   .avatar {
@@ -139,7 +138,7 @@ const Main = styled.main`
     align-items: flex-center;
 
     svg {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
   }
 
@@ -158,7 +157,6 @@ const Main = styled.main`
   .document {
     margin-top: 30px;
     position: relative;
-    width: 800px;
 
     .document__body {
       filter: blur(4px);

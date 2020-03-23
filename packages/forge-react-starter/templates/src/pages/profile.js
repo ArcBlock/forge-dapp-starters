@@ -51,7 +51,7 @@ export default function ProfilePage() {
       <Main>
         <Grid container spacing={6}>
           <Grid item xs={12} md={3} className="avatar">
-            <Avatar size={240} did={user.did} />
+            <Avatar size={120} did={user.did} />
             <Button color="secondary" variant="outlined" onClick={onLogout}>
               Logout
             </Button>
@@ -117,7 +117,6 @@ export default function ProfilePage() {
 }
 
 const Main = styled.main`
-  margin: 80px 0;
   display: flex;
 
   .avatar {
@@ -127,7 +126,7 @@ const Main = styled.main`
     align-items: flex-center;
 
     svg {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
   }
 
