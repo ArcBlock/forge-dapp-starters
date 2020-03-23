@@ -128,6 +128,7 @@ const Main = styled.main`
 
   .section {
     margin-bottom: 50px;
+    padding: 0;
     .section__header {
       margin-bottom: 20px;
     }

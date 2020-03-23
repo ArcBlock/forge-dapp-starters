@@ -180,6 +180,8 @@ const Div = styled.div`
 
   .content {
     flex-grow: 1;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .brand {
