@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@arcblock/ux/lib/Button';
 
 import Layout from '../components/layout';
+import withRoot from '../components/withRoot';
 
 const graphqlDemos = [
   {
@@ -77,7 +78,7 @@ const renderExampleCard = x => (
   </Grid>
 );
 
-export default function IndexPage() {
+function IndexPage() {
   return (
     <Layout title="Home">
       <Main>
@@ -111,6 +112,8 @@ export default function IndexPage() {
     </Layout>
   );
 }
+
+export default withRoot(IndexPage);
 
 const Main = styled.main`
   a {

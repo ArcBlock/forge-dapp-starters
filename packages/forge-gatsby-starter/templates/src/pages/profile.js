@@ -19,10 +19,11 @@ import Auth from '@arcblock/did-react/lib/Auth';
 import Avatar from '@arcblock/did-react/lib/Avatar';
 
 import Layout from '../components/layout';
+import withRoot from '../components/withRoot';
 import forge from '../libs/sdk';
 import { SessionContext } from '../libs/session';
 
-export default function ProfilePage() {
+function ProfilePage() {
   const browser = useBrowser();
   const { api, session } = React.useContext(SessionContext);
   const [isOpen, setOpen] = useToggle(false);
@@ -119,6 +120,8 @@ export default function ProfilePage() {
     </Layout>
   );
 }
+
+export default withRoot(ProfilePage);
 
 const Main = styled.main`
   display: flex;

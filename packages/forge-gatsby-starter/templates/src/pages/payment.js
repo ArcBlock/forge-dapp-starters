@@ -12,9 +12,10 @@ import Avatar from '@arcblock/did-react/lib/Avatar';
 import Button from '@arcblock/ux/lib/Button';
 
 import Layout from '../components/layout';
+import withRoot from '../components/withRoot';
 import { SessionContext } from '../libs/session';
 
-export default function PaymentPage() {
+function PaymentPage() {
   const [open, toggle] = useToggle(false);
   const { api, session } = React.useContext(SessionContext);
   const state = useAsync(async () => {
@@ -127,6 +128,8 @@ export default function PaymentPage() {
     </Layout>
   );
 }
+
+export default withRoot(PaymentPage);
 
 const Main = styled.main`
   display: flex;
