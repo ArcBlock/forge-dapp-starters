@@ -57,7 +57,6 @@ copy: copy-starter-frontend copy-starter-tools
 copy-starter-frontend:
 	@echo "Copy starter frontend code here..."
 	@cp -r ../forge-react-starter/templates/src/components templates/src
-	@cp -r ../forge-react-starter/templates/src/hooks templates/src
 	@cp -r ../forge-react-starter/templates/src/libs templates/src
 	@cp -r ../forge-react-starter/templates/src/pages templates/src
 

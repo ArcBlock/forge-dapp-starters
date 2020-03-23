@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
 const ForgeSDK = require('@arcblock/forge-sdk');
+const get = require('lodash/get');
 const { toAddress } = require('@arcblock/did');
-const { fromTokenToUnit, toBN } = require('@arcblock/forge-util');
-
 const { wallet } = require('../libs/auth');
 
 module.exports = {
@@ -10,19 +9,20 @@ module.exports = {
     app.get('/api/payments', async (req, res) => {
       try {
         if (req.user) {
-          const { transactions = [] } = await ForgeSDK.listTransactions({
+          const { transactions } = await ForgeSDK.listTransactions({
             addressFilter: { sender: toAddress(req.user.did), receiver: wallet.toAddress() },
             typeFilter: { types: ['transfer'] },
           });
-
-          const tx = transactions.find(x => x.code === 'OK' && toBN(x.tx.itxJson.value).eq(fromTokenToUnit(2)));
+          const amount = (await ForgeSDK.fromTokenToUnit(2)).toString();
+          const tx = (transactions || [])
+            .filter(x => get(x, 'tx.itxJson.value'))
+            .filter(x => x.code === 'OK' && get(x, 'tx.itxJson.value').toString() === amount)
+            .shift();
           if (tx && tx.hash) {
-            console.log('api.payments.ok', tx);
             res.json(tx);
             return;
           }
         }
-
         res.json(null);
       } catch (err) {
         console.error('api.payments.error', err);

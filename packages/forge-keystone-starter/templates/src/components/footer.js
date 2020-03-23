@@ -79,15 +79,10 @@ export default function Footer() {
               <Typography variant="h6" color="textPrimary" gutterBottom>
                 {x.title}
               </Typography>
-              <ul style={{ padding: '0 0 0 16px' }}>
+              <ul>
                 {x.items.map(item => (
                   <li key={item.title}>
-                    <Typography
-                      component="a"
-                      href={item.link}
-                      variant="subtitle1"
-                      color="textSecondary"
-                      target="_blank">
+                    <Typography component="a" href={item.link} variant="body1" color="textSecondary" target="_blank">
                       {item.title}
                     </Typography>
                   </li>

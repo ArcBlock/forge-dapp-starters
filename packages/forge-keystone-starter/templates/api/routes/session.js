@@ -2,7 +2,7 @@ const ForgeSDK = require('@arcblock/forge-sdk');
 
 module.exports = {
   init(app) {
-    app.get('/api/session', async (req, res) => {
+    app.get('/api/did/session', async (req, res) => {
       const { getForgeState: data } = await ForgeSDK.doRawQuery(`{
           getForgeState {
             code
@@ -18,13 +18,18 @@ module.exports = {
                 totalSupply
                 unit
               }
+              txConfig {
+                poke {
+                  amount
+                }
+              }
             }
           }
         }`);
-      res.json({ user: req.user, token: data.state.token });
+      res.json({ user: req.user, token: data.state.token, poke: data.state.txConfig.poke });
     });
 
-    app.post('/api/logout', (req, res) => {
+    app.post('/api/did/logout', (req, res) => {
       req.user = null;
       res.json({ user: null });
     });
