@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Button from '@arcblock/ux/lib/Button';
 
 import Layout from '../components/layout';
 
@@ -54,24 +55,26 @@ const walletDemos = [
 ];
 
 const renderExampleCard = x => (
-  <Card key={x.title} className="demo">
-    <CardContent>
-      <Typography color="textSecondary" gutterBottom>
-        {x.subtitle}
-      </Typography>
-      <Typography component="h2" variant="h5" gutterBottom>
-        {x.title}
-      </Typography>
-      <Typography component="p" variant="subtitle1" gutterBottom>
-        {x.description}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button component="a" href={x.link} size="small" color="primary">
-        Try Now
-      </Button>
-    </CardActions>
-  </Card>
+  <Grid key={x.title} item xs={12} sm={6} md={4}>
+    <Card className="demo">
+      <CardContent>
+        <Typography color="textSecondary" gutterBottom>
+          {x.subtitle}
+        </Typography>
+        <Typography component="h2" variant="h5" gutterBottom>
+          {x.title}
+        </Typography>
+        <Typography component="p" variant="body1" gutterBottom>
+          {x.description}
+        </Typography>
+      </CardContent>
+      <CardActions style={{ padding: 16 }}>
+        <Button component="a" href={x.link} size="small" color="secondary" variant="outlined" rounded>
+          Try Now
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
 );
 
 export default function IndexPage() {
@@ -81,7 +84,7 @@ export default function IndexPage() {
         <Typography component="h2" variant="h4" className="page-header" color="textPrimary">
           dApps the Easy Way!
         </Typography>
-        <Typography component="p" variant="h6" className="page-description" color="textSecondary">
+        <Typography component="p" variant="body1" className="page-description" color="textSecondary">
           Application boilerplate built on top of{' '}
           <a href="https://www.arcblock.io/en/forge-sdk">forge (Ruby on Rails for Blockchain Space)</a> powered
           blockchain, with developer friendly{' '}
@@ -92,13 +95,17 @@ export default function IndexPage() {
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             Chain Data Reading/Displaying Examples
           </Typography>
-          <div className="section__body demos">{graphqlDemos.map(x => renderExampleCard(x))}</div>
+          <Grid container spacing={4} className="section__body demos">
+            {graphqlDemos.map(x => renderExampleCard(x))}
+          </Grid>
         </section>
         <section className="section">
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             ABT Wallet Examples
           </Typography>
-          <div className="section__body demos">{walletDemos.map(x => renderExampleCard(x))}</div>
+          <Grid container spacing={4} className="section__body demos">
+            {walletDemos.map(x => renderExampleCard(x))}
+          </Grid>
         </section>
       </Main>
     </Layout>
@@ -106,8 +113,6 @@ export default function IndexPage() {
 }
 
 const Main = styled.main`
-  margin: 80px 0 0;
-
   a {
     color: ${props => props.theme.colors.green};
     text-decoration: none;
@@ -122,20 +127,19 @@ const Main = styled.main`
   }
 
   .section {
-    margin-bottom: 50px;
+    margin-bottom: 32px;
+    padding: 0;
     .section__header {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
   }
 
   .demos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     .demo {
-      width: 30%;
       height: 240px;
+      @media (max-width: ${props => props.theme.breakpoints.values.md - 1}px) {
+        height: auto;
+      }
     }
   }
 `;
