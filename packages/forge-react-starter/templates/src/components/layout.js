@@ -126,12 +126,7 @@ export default function Layout({ title, children, contentOnly }) {
                   </Link>
                   {!!env.chainHost && (
                     <Link href={getExplorerUrl(env.chainHost, 'local')} target="_blank" className="nav-item">
-                      Local Chain
-                    </Link>
-                  )}
-                  {!!env.assetChainHost && (
-                    <Link href={getExplorerUrl(env.assetChainHost, 'foreign')} target="_blank" className="nav-item">
-                      Foreign Chain
+                      Explorer
                     </Link>
                   )}
                   <Link href="https://github.com/ArcBlock/wallet-playground" target="_blank" className="nav-item">
@@ -158,11 +153,9 @@ export default function Layout({ title, children, contentOnly }) {
           {drawer}
         </Drawer>
       </DrawerDiv>
-      <div className="content">
-        <div className="toolbar" />
-        <Container style={{ marginTop: 16 }}>{children}</Container>
-        <Footer />
-      </div>
+      <div className="toolbar" />
+      <Container style={{ marginTop: 16 }}>{children}</Container>
+      <Footer />
     </Div>
   );
 }
@@ -210,12 +203,6 @@ const Div = styled.div`
         font-size: 16px;
       }
     }
-  }
-
-  .content {
-    flex-grow: 1;
-    width: 100%;
-    overflow-x: hidden;
   }
 
   .brand {

@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import Button from '@arcblock/ux/lib/Button';
 
 import Layout from '../components/layout';
 
@@ -68,8 +68,8 @@ const renderExampleCard = x => (
           {x.description}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button component="a" href={x.link} size="small" color="primary">
+      <CardActions style={{ padding: 16 }}>
+        <Button component="a" href={x.link} size="small" color="secondary" variant="outlined" rounded>
           Try Now
         </Button>
       </CardActions>
@@ -95,7 +95,7 @@ export default function IndexPage() {
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             Chain Data Reading/Displaying Examples
           </Typography>
-          <Grid container spacing={6} className="section__body demos">
+          <Grid container spacing={4} className="section__body demos">
             {graphqlDemos.map(x => renderExampleCard(x))}
           </Grid>
         </section>
@@ -103,7 +103,7 @@ export default function IndexPage() {
           <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
             ABT Wallet Examples
           </Typography>
-          <Grid container spacing={6} className="section__body demos">
+          <Grid container spacing={4} className="section__body demos">
             {walletDemos.map(x => renderExampleCard(x))}
           </Grid>
         </section>
@@ -127,10 +127,10 @@ const Main = styled.main`
   }
 
   .section {
-    margin-bottom: 50px;
+    margin-bottom: 32px;
     padding: 0;
     .section__header {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
   }
 
