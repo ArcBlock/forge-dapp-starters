@@ -65,6 +65,11 @@ export default function Layout({ title, children, contentOnly }) {
             <ListItemText primary="Payment" />
           </ListItem>
         </Link>
+        <Link href="/admin" className="nav-item">
+          <ListItem button>
+            <ListItemText primary="Dashboard" />
+          </ListItem>
+        </Link>
       </List>
       <Divider />
       <List>
@@ -123,6 +128,9 @@ export default function Layout({ title, children, contentOnly }) {
                   </Link>
                   <Link href="/payment" className="nav-item">
                     Payment
+                  </Link>
+                  <Link href="/admin" className="nav-item">
+                    Dashboard
                   </Link>
                   {!!env.chainHost && (
                     <Link href={getExplorerUrl(env.chainHost, 'local')} target="_blank" className="nav-item">

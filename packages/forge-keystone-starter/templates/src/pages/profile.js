@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import useAsync from 'react-use/lib/useAsync';
 import useToggle from 'react-use/lib/useToggle';
+import useBrowser from '@arcblock/react-hooks/lib/useBrowser';
 import { fromUnitToToken } from '@arcblock/forge-util';
 
 import Grid from '@material-ui/core/Grid';
@@ -22,6 +23,7 @@ import forge from '../libs/sdk';
 import { SessionContext } from '../libs/session';
 
 export default function ProfilePage() {
+  const browser = useBrowser();
   const { api, session } = React.useContext(SessionContext);
   const [isOpen, setOpen] = useToggle(false);
   const balance = useAsync(async () => {
@@ -52,9 +54,11 @@ export default function ProfilePage() {
         <Grid container spacing={6}>
           <Grid item xs={12} md={3} className="avatar">
             <Avatar size={120} did={user.did} />
-            <Button color="secondary" variant="outlined" onClick={onLogout}>
-              Logout
-            </Button>
+            {!browser.wallet && (
+              <Button color="secondary" variant="outlined" onClick={onLogout}>
+                Logout
+              </Button>
+            )}
             <Button color="primary" variant="outlined" href="/payment" style={{ marginTop: '30px' }}>
               My Purchase
             </Button>
