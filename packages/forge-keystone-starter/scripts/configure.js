@@ -149,9 +149,10 @@ const printRequirements = () => {
 const configure = async () => {
   printRequirements();
 
-  const targetDir = process.env.FORGE_BLOCKLET_TARGET_DIR;
   const configs = await getConfigs();
-  const configPath = path.join(`${targetDir}`, '.env');
+  const configPath = process.env.FORGE_BLOCKLET_TARGET_DIR
+    ? path.join(`${process.env.FORGE_BLOCKLET_TARGET_DIR}`, '.env')
+    : path.join(process.cwd(), '.env');
 
   fs.writeFileSync(configPath, configs);
 

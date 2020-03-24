@@ -8,6 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import CodeBlock from '@arcblock/ux/lib/CodeBlock';
 
 import Layout from '../components/layout';
+import withRoot from '../components/withRoot';
 import forge from '../libs/sdk';
 import env from '../libs/env';
 
@@ -15,7 +16,7 @@ function fetchChainInfo() {
   return forge.getChainInfo();
 }
 
-export default function AppPage() {
+function ChainPage() {
   const endpoint = env.chainHost;
   const state = useAsync(fetchChainInfo);
 
@@ -55,9 +56,9 @@ const res = await client.getChainInfo();`}
   );
 }
 
-const Main = styled.main`
-  margin: 80px 0 0;
+export default withRoot(ChainPage);
 
+const Main = styled.main`
   .page-header {
     margin-bottom: 20px;
   }

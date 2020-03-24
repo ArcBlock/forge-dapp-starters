@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import styled from 'styled-components';
-import useAsyncFn from 'react-use/lib/useAsyncFn';
+import useAsync from 'react-use/lib/useAsync';
 import useToggle from 'react-use/lib/useToggle';
+import useBrowser from '@arcblock/react-hooks/lib/useBrowser';
 import { fromUnitToToken } from '@arcblock/forge-util';
 
 import Grid from '@material-ui/core/Grid';
@@ -10,39 +11,35 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+
 import CircularProgress from '@material-ui/core/CircularProgress';
+
+import Button from '@arcblock/ux/lib/Button';
 import Auth from '@arcblock/did-react/lib/Auth';
 import Avatar from '@arcblock/did-react/lib/Avatar';
 
 import Layout from '../components/layout';
-import useSession from '../hooks/session';
+import withRoot from '../components/withRoot';
 import forge from '../libs/sdk';
-import api from '../libs/api';
-import { removeToken, onAuthError } from '../libs/auth';
+import { SessionContext } from '../libs/session';
 
-export default function ProfilePage() {
-  const session = useSession();
-  const [isFetched, setFetched] = useToggle(false);
+function ProfilePage() {
+  const browser = useBrowser();
+  const { api, session } = React.useContext(SessionContext);
   const [isOpen, setOpen] = useToggle(false);
-  const [balance, fetchBalance] = useAsyncFn(async () => {
-    if (session.value && session.value.user) {
-      const address = session.value.user.did.replace(/^did:abt:/, '');
-      const { state: account } = await forge.getAccountState({ address }, { ignoreFields: [] });
-      return account;
-    }
-
-    return null;
-  }, [session.value]);
+  const balance = useAsync(async () => {
+    const { state: account } = await forge.getAccountState({ address: session.user.did }, { ignoreFields: [] });
+    return account;
+  }, [session.user]);
 
   const onLogout = () => {
-    removeToken();
+    session.logout();
     window.location.href = '/';
   };
 
-  if (session.loading || !session.value) {
+  if (session.loading) {
     return (
-      <Layout title="Payment">
+      <Layout title="Profile">
         <Main>
           <CircularProgress />
         </Main>
@@ -50,43 +47,25 @@ export default function ProfilePage() {
     );
   }
 
-  if (session.error) {
-    return (
-      <Layout title="Payment">
-        <Main>{session.error.message}</Main>
-      </Layout>
-    );
-  }
-
-  if (!session.value.user) {
-    window.location.href = '/?openLogin=true';
-    return null;
-  }
-
-  if (!isFetched) {
-    setTimeout(() => {
-      setFetched(true);
-      fetchBalance();
-    }, 100);
-  }
-
-  const { user, token } = session.value;
+  const { user, token, poke } = session;
 
   return (
     <Layout title="Profile">
       <Main>
         <Grid container spacing={6}>
           <Grid item xs={12} md={3} className="avatar">
-            <Avatar size={240} did={user.did} />
-            <Button color="secondary" variant="outlined" onClick={onLogout}>
-              Logout
-            </Button>
+            <Avatar size={120} did={user.did} />
+            {!browser.wallet && (
+              <Button color="secondary" variant="outlined" onClick={onLogout}>
+                Logout
+              </Button>
+            )}
             <Button color="primary" variant="outlined" href="/payment" style={{ marginTop: '30px' }}>
               My Purchase
             </Button>
             {balance.value && (
               <Button color="primary" variant="contained" onClick={() => setOpen()} style={{ marginTop: '30px' }}>
-                Get 25 {token.symbol}
+                Get {poke.amount} {token.symbol}
               </Button>
             )}
           </Grid>
@@ -128,14 +107,13 @@ export default function ProfilePage() {
           responsive
           action="checkin"
           checkFn={api.get}
-          onError={onAuthError}
           onClose={() => setOpen()}
           onSuccess={() => window.location.reload()}
           messages={{
-            title: `Get 25 ${token.symbol} for FREE`,
-            scan: `Scan qrcode to get 25 ${token.symbol} for FREE`,
+            title: `Get ${poke.amount} ${token.symbol} for FREE`,
+            scan: `Scan qrcode to get ${poke.amount} ${token.symbol} for FREE`,
             confirm: 'Confirm on your ABT Wallet',
-            success: `25 ${token.symbol} sent to your account`,
+            success: `${poke.amount} ${token.symbol} sent to your account`,
           }}
         />
       )}
@@ -143,8 +121,9 @@ export default function ProfilePage() {
   );
 }
 
+export default withRoot(ProfilePage);
+
 const Main = styled.main`
-  margin: 80px 0;
   display: flex;
 
   .avatar {
@@ -154,7 +133,7 @@ const Main = styled.main`
     align-items: flex-center;
 
     svg {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
   }
 

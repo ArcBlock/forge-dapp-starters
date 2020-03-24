@@ -8,6 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import CodeBlock from '@arcblock/ux/lib/CodeBlock';
 
 import Layout from '../components/layout';
+import withRoot from '../components/withRoot';
 import forge from '../libs/sdk';
 import env from '../libs/env';
 
@@ -15,7 +16,7 @@ function createFetchFn(address) {
   return () => forge.getAccountState({ address });
 }
 
-export default function AppPage() {
+function AppPage() {
   const endpoint = env.chainHost;
   const address = env.appId;
   const state = useAsync(createFetchFn(address));
@@ -57,9 +58,9 @@ const res = await client.getAccountState(${addressStr});`}
   );
 }
 
-const Main = styled.main`
-  margin: 80px 0 0;
+export default withRoot(AppPage);
 
+const Main = styled.main`
   .page-header {
     margin-bottom: 20px;
   }
