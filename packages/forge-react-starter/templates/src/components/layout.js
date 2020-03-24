@@ -20,7 +20,10 @@ export default function Layout({ title, children, contentOnly }) {
   if (env.chainHost) {
     links.push({ url: getExplorerUrl(env.chainHost), title: 'Explorer' });
   }
-  links.push({ url: 'https://github.com/ArcBlock/wallet-playground', title: 'GitHub' });
+  links.push({
+    url: 'https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter',
+    title: 'GitHub',
+  });
 
   return (
     <BaseLayout title={title} brand={env.appName} links={links} footer={<Footer />} contentOnly={contentOnly}>
