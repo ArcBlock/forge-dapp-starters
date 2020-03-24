@@ -7,18 +7,18 @@
 
 A collection of starters that can be used as boilerplates when building forge powered javascript dApps
 
-> Last updated at 3/13/2020, 7:51:04 AM
+> Last updated at 3/24/2020, 6:07:34 AM
 
 ## Packages
 
-- [forge-currency-starter v1.2.5](./packages/forge-currency-starter)
-- [forge-gatsby-starter v1.2.5](./packages/forge-gatsby-starter)
-- [forge-keystone-starter v1.2.5](./packages/forge-keystone-starter)
-- [forge-next-starter v1.2.5](./packages/forge-next-starter)
-- [forge-react-starter v1.2.5](./packages/forge-react-starter)
-- [xmark-currency-starter v1.2.5](./packages/xmark-currency-starter)
-- [xmark-starter v1.2.6](./packages/xmark-starter)
-- [xmark-swap-starter v1.2.5](./packages/xmark-swap-starter)
+- [forge-currency-starter v1.3.0](./packages/forge-currency-starter)
+- [forge-gatsby-starter v1.3.0](./packages/forge-gatsby-starter)
+- [forge-keystone-starter v1.3.0](./packages/forge-keystone-starter)
+- [forge-next-starter v1.3.0](./packages/forge-next-starter)
+- [forge-react-starter v1.3.0](./packages/forge-react-starter)
+- [xmark-currency-starter v1.3.0](./packages/xmark-currency-starter)
+- [xmark-starter v1.3.0](./packages/xmark-starter)
+- [xmark-swap-starter v1.3.0](./packages/xmark-swap-starter)
 
 ## Usage
 
