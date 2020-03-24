@@ -1,3 +1,25 @@
+## 1.3.0 (March 24, 2020)
+
+- chore: ues layout from ux lib
+- chore: bump ux lib version
+- chore: responsive gatsby.js starter
+- chore: responsive gatsby.js starter
+- chore: polish styles
+- chore: responsive keystone.js starter
+- chore: responsive next.js starter
+- chore: responsive desktop header
+- chore: responsive desktop header
+- fix: mobile overflow
+- chore: polish responsive
+- fix: poke amount
+- chore: make react starter responsive
+- chore: make react starter responsive
+- chore: use theme from arcblock ux
+- chore: make starter blocklet configure script local runnable
+- chore: remove version from starter templates
+- chore: bump forge sdk and ux lib version
+- update readme
+
 ## 1.2.6 (March 13, 2020)
 
 - add usage config to xmark-starter
