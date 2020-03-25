@@ -1,3 +1,8 @@
+## 1.3.1 (March 25, 2020)
+
+- chore: use open in wallet on layout
+- update readme
+
 ## 1.3.0 (March 24, 2020)
 
 - chore: ues layout from ux lib
