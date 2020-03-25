@@ -27,7 +27,13 @@ export default function Layout({ title, children, contentOnly }) {
   });
 
   return (
-    <BaseLayout title={title} brand={env.appName} links={links} footer={<Footer />} contentOnly={contentOnly}>
+    <BaseLayout
+      title={title}
+      brand={env.appName}
+      links={links}
+      footer={<Footer />}
+      contentOnly={contentOnly}
+      baseUrl={env.baseUrl}>
       {children}
     </BaseLayout>
   );

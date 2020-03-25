@@ -3,12 +3,10 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import Typography from '@material-ui/core/Typography';
-import Tag from '@arcblock/ux/lib/Tag';
 import { SessionContext, PlaygroundAction } from '@arcblock/did-playground';
 
 import Layout from '../components/layout';
-
-import { version } from '../../package.json';
+import env from '../libs/env';
 
 // 临时 demo 的页面
 export default function MiniPage() {
@@ -19,7 +17,7 @@ export default function MiniPage() {
     <Layout title="Home">
       <Main>
         <Typography component="h2" variant="h5" className="page-header" color="textPrimary">
-          ABT Wallet Playground Mini<Tag type="success">V{version}</Tag>
+          {env.appName}
         </Typography>
         <Typography component="h3" variant="subtitle1" color="textSecondary">
           {token.local.symbol} is the token on Local Chain, {token.foreign.symbol} is the token on Foreign Chain.

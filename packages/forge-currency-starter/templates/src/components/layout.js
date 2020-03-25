@@ -1,39 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Container from '@material-ui/core/Container';
-import styled from 'styled-components';
-import Helmet from 'react-helmet';
-import Footer from '@arcblock/ux/lib/Footer';
-
-import Header from './header';
+import BaseLayout from '@arcblock/ux/lib/Layout';
 
 import env from '../libs/env';
 
 export default function Layout({ title, children, contentOnly }) {
-  if (contentOnly) {
-    return <Container>{children}</Container>;
+  const getExplorerUrl = chainHost => {
+    const [host] = chainHost.split('/api');
+    return `${host}/node/explorer/txs`;
+  };
+
+  const links = [
+    { url: '/', title: 'Home' },
+    { url: '/profile', title: 'Profile' },
+    { url: '/orders', title: 'Orders' },
+  ];
+
+  if (env.chainHost) {
+    links.push({ url: getExplorerUrl(env.chainHost, 'local'), title: 'Local Chain' });
   }
+  if (env.assetChainHost) {
+    links.push({ url: getExplorerUrl(env.assetChainHost, 'foreign'), title: 'Foreign Chain' });
+  }
+  links.push({ url: 'https://github.com/ArcBlock/wallet-playground', title: 'GitHub' });
 
   return (
-    <Div>
-      <Helmet title={`${title} - ${env.appName}`} />
-      <AppBar position="static" color="default" style={{ height: 64 }}>
-        <Container>
-          <Header />
-        </Container>
-      </AppBar>
-      <Container style={{ minHeight: '60vh' }}>
-        {children}
-        <Footer />
-      </Container>
-    </Div>
+    <BaseLayout title={title} brand={env.appName} links={links} contentOnly={contentOnly} baseUrl={env.baseUrl}>
+      {children}
+    </BaseLayout>
   );
 }
 
 Layout.propTypes = {
   title: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.any.isRequired,
   contentOnly: PropTypes.bool,
 };
@@ -41,10 +40,3 @@ Layout.propTypes = {
 Layout.defaultProps = {
   contentOnly: false,
 };
-
-const Div = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: #fbfbfb;
-`;
