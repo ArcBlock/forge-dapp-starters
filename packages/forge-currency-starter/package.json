@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@arcblock/forge-wallet": "^1.0.39",
-    "@arcblock/graphql-client": "^1.1.1",
+    "@arcblock/graphql-client": "^1.2.0",
     "@arcblock/mcrypto": "^1.0.39",
     "axios": "^0.19.2",
     "chalk": "^3.0.0",

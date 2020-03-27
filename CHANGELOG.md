@@ -1,3 +1,7 @@
+## 1.3.2 (March 27, 2020)
+
+- update readme
+
 ## 1.3.1 (March 25, 2020)
 
 - chore: use open in wallet on layout
