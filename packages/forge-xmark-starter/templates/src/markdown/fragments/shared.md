@@ -1,7 +1,9 @@
 ::: CustomHeader
-- [App](/app)
 - [Profile](/profile)
 - [Payment](/payment)
+- [Application](/application)
+- [Chain](/chain)
+- [Blocks](/blocks)
 :::
 
 ::: CustomFooter {copyright="Copyright © 2020"}

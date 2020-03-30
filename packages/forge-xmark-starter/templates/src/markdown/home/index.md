@@ -34,7 +34,7 @@ W3C compliant [specification](https://arcblock.github.io/abt-did-spec/) and indu
 ![](./images/icons8-robot.svg)
 
 Build for scale, interoperability and security using the [ABT Network](https://www.abtnetwork.io).
-## Profile Page {.section .section--image-row columnSize="6:6"}
+## DID Profile {.section .section--image-row columnSize="6:6"}
 
 Check your account balance with our `@arcblock/forge-sdk`.
 
@@ -42,7 +42,7 @@ Check your account balance with our `@arcblock/forge-sdk`.
 
 ![](./images/profile.png)
 
-## Payment Page {.section .section--image-row .section--reversed columnSize="6:6"}
+## Payment {.section .section--image-row .section--reversed columnSize="6:6"}
 
 Simple paid content with `@arcblock/did-rect` and `@arcblock/forge-sdk`.
 
@@ -50,12 +50,18 @@ Simple paid content with `@arcblock/did-rect` and `@arcblock/forge-sdk`.
 
 ![](./images/payment.png)
 
-## Forge XMark Starter {.section .section--hero .section--image-row}
+## Application State {.section .section--image-row columnSize="6:6"}
 
-Using markdown to write static pages, using react to build dynamic pages.
+Reading application state from blockchain with `@arcblock/forge-sdk`.
 
 !ActionButton[Application State](/application){}
-<br />
+
+![](./images/app.png)
+
+## Block & Transactions {.section .section--image-row .section--reversed columnSize="6:6"}
+
+Reading application state from blockchain with `@arcblock/forge-sdk`.
 
 !ActionButton[Transaction/Block](/blocks){}
-<br />
+
+![](./images/block.png)

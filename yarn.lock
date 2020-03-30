@@ -80,13 +80,13 @@
     "@arcblock/mcrypto" "^1.0.39"
     lodash.upperfirst "^4.3.1"
 
-"@arcblock/graphql-client@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.npm.taobao.org/@arcblock/graphql-client/download/@arcblock/graphql-client-1.2.0.tgz#1101aaa059f4e366c28c6126f9b50a17aa26adcb"
-  integrity sha1-EQGqoFn042bCjGEm+bUKF6omrcs=
+"@arcblock/graphql-client@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npm.taobao.org/@arcblock/graphql-client/download/@arcblock/graphql-client-1.2.1.tgz?cache=0&sync_timestamp=1585573001393&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40arcblock%2Fgraphql-client%2Fdownload%2F%40arcblock%2Fgraphql-client-1.2.1.tgz#4f9d331e17c0570a45e8fd0f75c43ff09a781ab1"
+  integrity sha1-T50zHhfAVwpF6P0PdcQ/8Jp4GrE=
   dependencies:
     "@arcblock/client-extension" "^1.2.0"
-    "@arcblock/sdk-util" "^0.25.0"
+    "@arcblock/sdk-util" "^0.26.0"
     blueimp-md5 "^2.10.0"
     debug "^4.1.1"
     jsonpack "^1.1.5"
@@ -110,10 +110,10 @@
     randombytes "^2.0.6"
     tweetnacl "^1.0.1"
 
-"@arcblock/sdk-util@^0.25.0":
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/@arcblock/sdk-util/-/sdk-util-0.25.0.tgz#2967dc0798dde110f31491fe567e9eef68ee41bc"
-  integrity sha512-nV5ZDU53H2fgCStgieNYXT7NlmrhqnmI34VOCyH4qsUHDkDxwmBuB5YgHoZsmjc0oKU2zhMNPQ94N9U02jLfVA==
+"@arcblock/sdk-util@^0.26.0":
+  version "0.26.0"
+  resolved "https://registry.npm.taobao.org/@arcblock/sdk-util/download/@arcblock/sdk-util-0.26.0.tgz#6e3a90484e75f2dd5b8e4a30bf14276f3f4b9ae7"
+  integrity sha1-bjqQSE518t1bjkowvxQnbz9Lmuc=
   dependencies:
     axios "^0.19.0"
     debug "^4.1.1"

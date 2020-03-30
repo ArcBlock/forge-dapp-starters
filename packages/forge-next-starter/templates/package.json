@@ -26,11 +26,11 @@
   },
   "dependencies": {
     "@arcblock/did": "^1.0.39",
-    "@arcblock/did-auth": "^1.2.0",
+    "@arcblock/did-auth": "^1.2.1",
     "@arcblock/did-auth-storage-mongo": "^1.0.13",
     "@arcblock/did-react": "^0.73.3",
     "@arcblock/forge-message": "^1.2.0",
-    "@arcblock/forge-sdk": "^1.2.0",
+    "@arcblock/forge-sdk": "^1.2.1",
     "@arcblock/forge-util": "^1.0.33",
     "@arcblock/forge-wallet": "^1.0.39",
     "@arcblock/mcrypto": "^1.0.39",
