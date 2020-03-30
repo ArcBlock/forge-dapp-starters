@@ -1,10 +1,10 @@
-![forge-gatsby-starter](https://www.arcblock.io/.netlify/functions/badge/?text=forge-gatsby-starter)
+![forge-xmark-starter](https://www.arcblock.io/.netlify/functions/badge/?text=forge-xmark-starter)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e0c63e91-97b5-45df-95d1-1bad86153559/deploy-status)](https://app.netlify.com/sites/forge-gatsby-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e0c63e91-97b5-45df-95d1-1bad86153559/deploy-status)](https://app.netlify.com/sites/forge-xmark-starter/deploys)
 
 > Brings tons of thousands react libraries/components to dApps that run on [forge](https://www.arcblock.io/en/forge-sdk) powered blockchain.
 
-[Live preview](https://forge-gatsby-starter.netlify.com/)
+[Live preview](https://forge-xmark-starter.netlify.com/)
 
 ![](./docs/starter-home.png)
 
@@ -65,12 +65,12 @@ Other javascript project goodies:
 
 ```terminal
 # [Optional] setup a chain node by forge
-npm install -g @arcblock/forge-cli forge-gatsby-starter
+npm install -g @arcblock/forge-cli forge-xmark-starter
 forge install
 forge start
 
 # create a dApp
-forge blocklet:use forge-gatsby-starter --target hello-forge
+forge blocklet:use forge-xmark-starter --target hello-forge
 cd hello-forge
 npm start
 ```
@@ -81,7 +81,7 @@ npm start
 
 ```terminal
 git clone https://github.com/ArcBlock/forge-dapp-starters.git
-cd forge-dapp-starters/packages/forge-gatsby-starter/templates
+cd forge-dapp-starters/packages/forge-xmark-starter/templates
 npm install
 npm start
 ```
@@ -92,7 +92,7 @@ dApp configuration file is auto generated and stored in `.env`, example configur
 
 ```text
 # server only
-MONGO_URI="mongodb://localhost/forge-gatsby-starter"
+MONGO_URI="mongodb://localhost/forge-xmark-starter"
 APP_TOKEN_SECRET="you_should_change_this"
 APP_TOKEN_TTL="1d"
 APP_SK="0x830985b12c7dca7b08def3aeb1a1412483948805ef93aa915cac2bc933677796bb7518ab0158039f0a2cea9ba8da3d858f9d5391c9b142d5ceddbe7500002983"

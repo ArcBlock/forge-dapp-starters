@@ -18,7 +18,7 @@ package-lock.json
 .compiled
 yarn-error.log
 
-packages/forge-gatsby-starter/templates/api/
+packages/forge-xmark-starter/templates/api/
 packages/forge-keystone-starter/templates/api/
 packages/forge-next-starter/templates/api/
 packages/forge-react-starter/templates/api/

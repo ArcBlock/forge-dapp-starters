@@ -21,7 +21,7 @@ export default function Layout({ title, children, contentOnly }) {
     links.push({ url: getExplorerUrl(env.chainHost), title: 'Explorer' });
   }
   links.push({
-    url: 'https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-gatsby-starter',
+    url: 'https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-xmark-starter',
     title: 'GitHub',
   });
 
