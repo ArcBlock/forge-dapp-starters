@@ -1,20 +1,19 @@
 ## What is This For?
 
-What can I do when I need to leverage gatsby to building web dApps?
+What can I do when I need to leverage xmark and react.js to building web dApps?
 
-`forge-gatsby-starter` is here to help! **`forge-gatsby-starter` is the go to solution if you want to build applications with [gatsby](https://www.gatsbyjs.org/) that runs on forge powered chains.**
+`forge-xmark-starter` is here to help! **`forge-xmark-starter` is the go to solution if you want to build applications with xmark and react.js that runs on forge powered chains.**
 
 `forge-next-starter` is based on the awesome `forge-react-starter`.
 
 ## What's Included?
 
-`forge-gatsby-starter` is a gatsby dApp template that have [forge-sdk](https://npmjs.org/package/@arcblock/forge-sdk) integrated, it consists of 2 core parts:
+`forge-xmark-starter` is a gatsby dApp template that have [forge-sdk](https://npmjs.org/package/@arcblock/forge-sdk) integrated, it consists of 2 core parts:
 
 ### Frontend Part
 
 Built upon the application skeleton we got after running `create-react-app`, dApps bootstrapped with this starter have several widely used react libraries integrated to make page composing easier:
 
-- [gatsby.js](https://reactjs.org/) this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - [styled-components](https://www.styled-components.com) as styling solution
 - [@material-ui/core](https://material-ui.com) as component library
 - [react-router-dom](https://reacttraining.com/react-router/) for client side routing
@@ -42,12 +41,12 @@ This starter needs some environment variables to work, which are stored in the .
 - `GATSBY_CHAIN_HOST`: The graphQL API server host of the chain
 - `GATSBY_APP_NAME`: dAPP's name
 - `GATSBY_APP_DESCRIPTION`: dAPP's description
-- `GATSBY_APP_ID`:  dAPP's ID
+- `GATSBY_APP_ID`: dAPP's ID
 - `GATSBY_BASE_URL`: Base url of server
 
 ## Use cases?
 
-`forge-gatsby-starter` can be start point for gatsby and forge powered dApp, you can built many blockchain powered apps, such as:
+`forge-xmark-starter` can be start point for gatsby and forge powered dApp, you can built many blockchain powered apps, such as:
 
 - Online store that sells digital assets and accept ABT as payments
 - Online community application that authentication users through ABT Wallet

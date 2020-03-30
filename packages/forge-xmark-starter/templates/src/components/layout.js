@@ -15,7 +15,6 @@ export default function Layout({ title, children, contentOnly }) {
     { url: '/', title: 'Home' },
     { url: '/profile', title: 'Profile' },
     { url: '/payment', title: 'Payment' },
-    { url: '/admin', title: 'Admin' },
   ];
 
   if (env.chainHost) {

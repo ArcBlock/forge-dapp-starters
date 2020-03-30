@@ -24,11 +24,11 @@ process.on('unhandledRejection', err => {
 
 const getConfigs = async () => {
   const defaults = {
-    appName: 'Forge Gatsby Starter',
-    appDescription: 'Starter dApp built on gatsby.js and runs on forge powered blockchain',
+    appName: 'Forge XMark Starter',
+    appDescription: 'Starter dApp built on react.js and xmark and runs on forge powered blockchain',
     appPort: 3030,
     chainHost: 'http://localhost:8210/api',
-    mongoUri: 'mongodb://127.0.0.1:27017/forge-gatsby-starter',
+    mongoUri: 'mongodb://127.0.0.1:27017/forge-xmark-starter',
   };
 
   const questions = [

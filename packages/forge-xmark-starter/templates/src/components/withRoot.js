@@ -6,8 +6,8 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import env from '../../../../forge-keystone-starter/templates/src/libs/env';
-import { SessionProvider } from '../../../../forge-keystone-starter/templates/src/libs/session';
+import env from '../libs/env';
+import { SessionProvider } from '../libs/session';
 
 const theme = create({
   typography: {
