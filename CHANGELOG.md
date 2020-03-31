@@ -1,3 +1,7 @@
+## 1.3.6 (March 31, 2020)
+
+- [skip travis] update readme
+
 ## 1.3.5 (March 31, 2020)
 
 - update readme
