@@ -7,7 +7,7 @@
 
 A collection of starters that can be used as boilerplates when building forge powered javascript dApps
 
-> Last updated at 3/30/2020, 11:42:35 PM
+> Last updated at 3/31/2020, 12:55:51 AM
 
 ## Packages
 
@@ -15,10 +15,10 @@ A collection of starters that can be used as boilerplates when building forge po
 - [forge-keystone-starter v1.3.4](./packages/forge-keystone-starter)
 - [forge-next-starter v1.3.4](./packages/forge-next-starter)
 - [forge-react-starter v1.3.4](./packages/forge-react-starter)
-- [forge-xmark-starter v1.3.5](./packages/forge-xmark-starter)
-- [xmark-currency-starter v1.3.4](./packages/xmark-currency-starter)
-- [xmark-starter v1.3.4](./packages/xmark-starter)
-- [xmark-swap-starter v1.3.4](./packages/xmark-swap-starter)
+- [forge-xmark-starter v1.3.6](./packages/forge-xmark-starter)
+- [xmark-currency-starter v1.3.6](./packages/xmark-currency-starter)
+- [xmark-starter v1.3.6](./packages/xmark-starter)
+- [xmark-swap-starter v1.3.6](./packages/xmark-swap-starter)
 
 ## Usage
 
