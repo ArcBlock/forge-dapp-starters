@@ -9,7 +9,7 @@
   "community": "https://gitter.im/ArcBlock/community",
   "templates": "templates",
   "install-scripts": {
-    "install-dependencies": "git init && git submodule add --force https://github.com/ArcBlock/forge-nodejs-server-demo.git ./templates/api && git submodule update --remote ./templates/api/ && npm install"
+    "install-dependencies": "git init && if [ ! -d ./templates/api ]; then git submodule add --force https://github.com/ArcBlock/forge-nodejs-server-demo.git ./templates/api; fi && git submodule update --remote ./templates/api/ && npm install"
   },
   "hooks": {
     "post-copy": "git init && npm install",

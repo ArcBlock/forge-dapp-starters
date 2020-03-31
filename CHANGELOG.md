@@ -1,3 +1,7 @@
+## 1.3.7 (March 31, 2020)
+
+- fix git submodule add bug
+
 ## 1.3.6 (March 31, 2020)
 
 - [skip travis] update readme
