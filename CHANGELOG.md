@@ -1,3 +1,7 @@
+## 1.3.9 (April 09, 2020)
+
+- [skip travis] update readme
+
 ## 1.3.8 (April 07, 2020)
 
 - chore(deps): bump acorn from 6.4.0 to 6.4.1 (#67)

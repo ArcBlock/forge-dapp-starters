@@ -10,10 +10,10 @@
   "community": "https://gitter.im/ArcBlock/community",
   "templates": "templates",
   "install-scripts": {
-    "install-dependencies": "git init && if [ ! -d ./templates/api ]; then git submodule add --force https://github.com/ArcBlock/forge-nodejs-server-demo.git ./templates/api; fi && git submodule update --remote ./templates/api/ && npm install"
+    "install-dependencies": "git init && if [ ! -d ./templates/api ]; then git submodule add --force https://github.com/ArcBlock/forge-nodejs-server-demo.git ./templates/api; fi && git submodule update --remote ./templates/api/ && npm_config_loglevel=error npm install"
   },
   "hooks": {
-    "post-copy": "git init && npm install",
+    "post-copy": "git init && npm_config_loglevel=error npm install",
     "configure": "node scripts/configure.js",
     "on-complete": "node scripts/on-complete.js"
   }
