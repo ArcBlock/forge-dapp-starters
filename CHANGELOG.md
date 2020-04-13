@@ -1,3 +1,7 @@
+## 1.3.10 (April 14, 2020)
+
+- [skip travis] update readme
+
 ## 1.3.9 (April 09, 2020)
 
 - [skip travis] update readme
