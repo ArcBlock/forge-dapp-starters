@@ -19,9 +19,9 @@
     "email": "shijun@arcblock.io"
   },
   "dependencies": {
-    "@arcblock/forge-wallet": "^1.0.39",
-    "@arcblock/graphql-client": "^1.2.1",
-    "@arcblock/mcrypto": "^1.0.39",
+    "@arcblock/forge-wallet": "^1.2.13",
+    "@arcblock/graphql-client": "^1.2.13",
+    "@arcblock/mcrypto": "^1.2.13",
     "axios": "^0.19.2",
     "chalk": "^3.0.0",
     "debug": "^4.1.1",
