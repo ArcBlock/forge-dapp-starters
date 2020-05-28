@@ -11,8 +11,8 @@
   "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
   "license": "MIT",
   "dependencies": {
-    "@arcblock/gatsby-theme-www": "^7.24.0",
+    "@arcblock/gatsby-theme-www": "^7.24.7",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.20.3"
+    "gatsby": "^2.22.11"
   }
 }
