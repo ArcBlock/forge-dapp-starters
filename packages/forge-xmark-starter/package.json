@@ -1,6 +1,6 @@
 {
   "name": "forge-xmark-starter",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "dApp starter build with xmark and javascript that can run on forge powered blockchain",
   "repository": {
     "type": "git",
