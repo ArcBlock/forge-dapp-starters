@@ -1,3 +1,7 @@
+## 1.4.2 (June 16, 2020)
+
+- [skip travis] update readme
+
 ## 1.4.1 (May 27, 2020)
 
 - bump gatsby related dependencies
