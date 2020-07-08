@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BaseLayout from '@arcblock/ux/lib/Layout';
 
-import env from '../libs/env';
 import Footer from './footer';
 
 export default function Layout({ title, children, contentOnly }) {
@@ -17,8 +16,8 @@ export default function Layout({ title, children, contentOnly }) {
     { url: '/payment', title: 'Payment' },
   ];
 
-  if (env.chainHost) {
-    links.push({ url: getExplorerUrl(env.chainHost), title: 'Explorer' });
+  if (window.env.chainHost) {
+    links.push({ url: getExplorerUrl(window.env.chainHost), title: 'Explorer' });
   }
   links.push({
     url: 'https://github.com/ArcBlock/forge-dapp-starters/tree/master/packages/forge-react-starter',
@@ -28,11 +27,11 @@ export default function Layout({ title, children, contentOnly }) {
   return (
     <BaseLayout
       title={title}
-      brand={env.appName}
+      brand={window.env.appName}
       links={links}
       footer={<Footer />}
       contentOnly={contentOnly}
-      baseUrl={env.baseUrl}>
+      baseUrl={window.env.baseUrl}>
       {children}
     </BaseLayout>
   );

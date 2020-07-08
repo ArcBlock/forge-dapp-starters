@@ -34,3 +34,6 @@ client/.next
 .cache
 dist
 .vscode
+
+blocklet.js
+_blocklet

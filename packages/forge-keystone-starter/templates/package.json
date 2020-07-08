@@ -1,5 +1,7 @@
 {
   "name": "forge-keystone-starter",
+  "description": "Starter project that can be used to bootstrap a dapp which can then be bundled and deployed to ABT Node",
+  "version": "0.1.0",
   "license": "Apache-2.0",
   "keywords": [
     "arcblock",
@@ -27,14 +29,14 @@
     ]
   },
   "dependencies": {
-    "@arcblock/did": "^1.2.13",
-    "@arcblock/did-auth": "^1.3.1",
+    "@arcblock/did": "^1.3.3",
+    "@arcblock/did-auth": "^1.3.4",
     "@arcblock/did-auth-storage-mongo": "^1.2.7",
-    "@arcblock/did-react": "^0.78.0",
+    "@arcblock/did-react": "^0.78.1",
     "@arcblock/forge-message": "^1.3.1",
-    "@arcblock/forge-sdk": "^1.3.1",
+    "@arcblock/forge-sdk": "^1.3.4",
     "@arcblock/forge-util": "^1.2.13",
-    "@arcblock/forge-wallet": "^1.2.13",
+    "@arcblock/forge-wallet": "^1.3.3",
     "@arcblock/mcrypto": "^1.2.13",
     "@arcblock/react-hooks": "^0.78.0",
     "@arcblock/ux": "^0.78.0",
@@ -44,6 +46,7 @@
     "@material-ui/styles": "^4.3.3",
     "@zeit/next-css": "^1.0.1",
     "axios": "^0.19.0",
+    "batch-promises": "^0.0.3",
     "body-parser": "^1.19.0",
     "chalk": "^2.4.2",
     "cookie-parser": "^1.4.4",
@@ -76,6 +79,7 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
+    "@abtnode/cli": "^0.7.1",
     "babel-eslint": "^10.0.3",
     "babel-plugin-styled-components": "^1.10.0",
     "chai": "^4.2.0",
@@ -90,6 +94,41 @@
     "prettier": "^1.17.0",
     "set-npm-auth-token-for-ci": "^2.0.13",
     "webpack-node-externals": "^1.7.2"
+  },
+  "blocklet": {
+    "title": "Forge Keystone Starter",
+    "group": "dapp",
+    "color": "primary",
+    "main": "api/index.js",
+    "provider": "arcblock",
+    "public_url": "/",
+    "hooks": {
+      "pre-start": "node api/hooks/pre-start.js",
+      "pre-deploy": "npm run bundle"
+    },
+    "hookFiles": [
+      "api/hooks/pre-start.js"
+    ],
+    "requiredEnvironments": [
+      {
+        "name": "MONGO_URI",
+        "description": "Mongodb connection string",
+        "required": true,
+        "default": ""
+      },
+      {
+        "name": "LOCAL_CHAIN_ID",
+        "description": "ID of the chain dapp lives",
+        "required": false,
+        "default": "playground"
+      },
+      {
+        "name": "LOCAL_CHAIN_HOST",
+        "description": "Host of the chain dapp lives",
+        "required": false,
+        "default": "https://playground.network.arcblockio.cn/api"
+      }
+    ]
   },
   "husky": {
     "hooks": {

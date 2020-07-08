@@ -9,15 +9,14 @@ import CodeBlock from '@arcblock/ux/lib/CodeBlock';
 
 import Layout from '../components/layout';
 import forge from '../libs/sdk';
-import env from '../libs/env';
 
 function createFetchFn(address) {
   return () => forge.getAccountState({ address });
 }
 
 export default function AppPage() {
-  const endpoint = env.chainHost;
-  const address = env.appId;
+  const endpoint = window.env.chainHost;
+  const address = window.env.appId;
   const state = useAsync(createFetchFn(address));
 
   const endpointStr = `{ endpoint: "${endpoint}" }`;
