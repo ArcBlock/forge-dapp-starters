@@ -9,14 +9,13 @@ import CodeBlock from '@arcblock/ux/lib/CodeBlock';
 
 import Layout from '../components/layout';
 import forge from '../libs/sdk';
-import env from '../libs/env';
 
 function fetchChainInfo() {
   return forge.getChainInfo();
 }
 
 export default function AppPage() {
-  const endpoint = env.chainHost;
+  const endpoint = window.env.chainHost;
   const state = useAsync(fetchChainInfo);
 
   const endpointStr = `{ endpoint: "${endpoint}" }`;

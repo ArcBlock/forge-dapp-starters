@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect, withRouter } from 're
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Center from '@arcblock/ux/lib/Center';
 
 import HomePage from './pages/index';
 import ProfilePage from './pages/profile';
@@ -15,7 +16,6 @@ import AppPage from './pages/application';
 import BlockPage from './pages/blocks';
 import ChainPage from './pages/chain';
 
-import env from './libs/env';
 import { SessionProvider } from './libs/session';
 
 const theme = create({
@@ -52,10 +52,14 @@ const GlobalStyle = createGlobalStyle`
 export const App = () => (
   <MuiThemeProvider theme={theme}>
     <ThemeProvider theme={theme}>
-      <SessionProvider serviceHost={env.baseUrl} autoLogin>
+      <SessionProvider serviceHost={window.env.apiPrefix} autoLogin>
         {({ session }) => {
           if (session.loading) {
-            return <CircularProgress />;
+            return (
+              <Center>
+                <CircularProgress />
+              </Center>
+            );
           }
 
           return (
@@ -83,8 +87,14 @@ export const App = () => (
 
 const WrappedApp = withRouter(App);
 
-export default () => (
-  <Router>
-    <WrappedApp />
-  </Router>
-);
+export default () => {
+  let basename = '/';
+  if (window.env && window.env.apiPrefix) {
+    basename = (window.env.apiPrefix.indexOf('.netlify/')) > -1 ? '/' : window.env.apiPrefix;
+  }
+  return (
+    <Router basename={basename}>
+      <WrappedApp />
+    </Router>
+  );
+};

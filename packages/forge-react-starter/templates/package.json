@@ -1,5 +1,7 @@
 {
   "name": "forge-react-starter",
+  "description": "Starter project that can be used to bootstrap a dapp which can then be bundled and deployed to ABT Node",
+  "version": "0.1.0",
   "keywords": [
     "arcblock",
     "forge",
@@ -7,22 +9,26 @@
     "react",
     "javascript"
   ],
+  "homepage": ".",
   "dependencies": {
-    "@arcblock/did": "^1.2.13",
-    "@arcblock/did-auth": "^1.3.1",
+    "@abtnode/router-adapter": "^0.9.0",
+    "@arcblock/did": "^1.3.3",
+    "@arcblock/did-auth": "^1.3.4",
     "@arcblock/did-auth-storage-mongo": "^1.2.7",
-    "@arcblock/did-react": "^0.78.0",
-    "@arcblock/react-hooks": "^0.78.0",
-    "@arcblock/forge-sdk": "^1.3.1",
+    "@arcblock/did-react": "^0.78.1",
+    "@arcblock/forge-sdk": "^1.3.4",
     "@arcblock/forge-util": "^1.2.13",
-    "@arcblock/forge-wallet": "^1.2.13",
+    "@arcblock/forge-wallet": "^1.3.3",
     "@arcblock/mcrypto": "^1.2.13",
+    "@arcblock/react-hooks": "^0.78.0",
     "@arcblock/ux": "^0.78.0",
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "4.5.1",
     "axios": "^0.19.0",
+    "batch-promises": "^0.0.3",
     "body-parser": "^1.19.0",
     "chalk": "^2.4.2",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
     "core-js": "2.5.7",
     "cors": "^2.8.5",
@@ -30,6 +36,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-bearer-token": "^2.4.0",
+    "express-history-api-fallback": "^2.2.1",
     "http-proxy-middleware": "^0.19.1",
     "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
@@ -60,6 +67,10 @@
     "build": "yarn clean && npm-run-all build:*",
     "build:client": "react-scripts build",
     "build:server": "netlify-lambda build api/functions",
+    "bundle": "yarn clean && npm-run-all bundle:*",
+    "bundle:client": "REACT_APP_API_PREFIX=\"\" REACT_APP_APP_NAME=\"Forge React Starter\" react-scripts build",
+    "bundle:server": "NODE_ENV=production abtnode bundle",
+    "prepublishOnly": "npm run bundle && rm -f _blocklet/build/**/*.{js,css}.map",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -78,7 +89,43 @@
       "last 1 safari version"
     ]
   },
+  "blocklet": {
+    "title": "Forge React Starter",
+    "group": "dapp",
+    "color": "primary",
+    "main": "api/index.js",
+    "provider": "arcblock",
+    "public_url": "/",
+    "hooks": {
+      "pre-start": "node api/hooks/pre-start.js",
+      "pre-deploy": "npm run bundle"
+    },
+    "hookFiles": [
+      "api/hooks/pre-start.js"
+    ],
+    "requiredEnvironments": [
+      {
+        "name": "MONGO_URI",
+        "description": "Mongodb connection string",
+        "required": true,
+        "default": ""
+      },
+      {
+        "name": "LOCAL_CHAIN_ID",
+        "description": "ID of the chain dapp lives",
+        "required": false,
+        "default": "playground"
+      },
+      {
+        "name": "LOCAL_CHAIN_HOST",
+        "description": "Host of the chain dapp lives",
+        "required": false,
+        "default": "https://playground.network.arcblockio.cn/api"
+      }
+    ]
+  },
   "devDependencies": {
+    "@abtnode/cli": "^0.7.1",
     "babel-eslint": "^10.0.3",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",

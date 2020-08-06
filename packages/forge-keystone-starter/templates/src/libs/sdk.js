@@ -1,16 +1,13 @@
 /* eslint-disable no-console */
 import ForgeSDK from '@arcblock/forge-sdk/lite';
-import env from './env';
 
-if (!env.chainHost) {
-  throw new Error('chainHost is required to start this application, please set `CHAIN_HOST` in `.env` file');
+if (window.env.chainHost) {
+  ForgeSDK.connect(window.env.chainHost, { chainId: window.env.chainId, name: 'app' });
+  console.log(`connected to app chain: ${window.env.chainHost}`);
 }
-
-ForgeSDK.connect(env.chainHost, { chainId: env.chainId, name: 'app' });
-console.log(`connected to app chain: ${env.chainHost}`);
-if (env.assetChainHost) {
-  ForgeSDK.connect(env.assetChainHost, { chainId: env.assetChainId, name: 'asset' });
-  console.log(`connected to asset chain: ${env.assetChainHost}`);
+if (window.env.assetChainHost) {
+  ForgeSDK.connect(window.env.assetChainHost, { chainId: window.env.assetChainId, name: 'asset' });
+  console.log(`connected to asset chain: ${window.env.assetChainHost}`);
 }
 
 export default ForgeSDK;
