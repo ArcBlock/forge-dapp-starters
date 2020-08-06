@@ -1,6 +1,6 @@
 ## 1.4.3 (August 06, 2020)
 
-- make forge-react-starter work in abtnode as blocklet
+- make forge-react-starter work in abt node as blocklet
 
 ## 1.4.2 (June 16, 2020)
 
