@@ -1,3 +1,8 @@
+## 1.5.0 (March 08, 2021)
+
+- chore: bump forge sdk version
+- [skip travis] update readme
+
 ## 1.4.3 (August 06, 2020)
 
 - make forge-react-starter work in abt node as blocklet
