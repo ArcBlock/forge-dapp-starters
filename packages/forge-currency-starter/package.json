@@ -22,7 +22,7 @@
     "@arcblock/forge-wallet": "^1.6.0",
     "@arcblock/graphql-client": "^1.6.0",
     "@arcblock/mcrypto": "^1.6.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chalk": "^3.0.0",
     "debug": "^4.1.1",
     "inquirer": "^7.0.0",
